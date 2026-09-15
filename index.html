@@ -131,6 +131,22 @@
   <img src="assets/images/lp-05.jpg" alt="セラピスト紹介 後藤あけみ：忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。">
 </div>
 
+<!-- 画像が .png / .jpeg / .webp で入っていても表示できるようにする保険 -->
+<script>
+(function () {
+  var exts = ['.jpg', '.png', '.jpeg', '.webp', '.JPG', '.PNG'];
+  Array.prototype.forEach.call(document.querySelectorAll('.lp img'), function (img) {
+    img.addEventListener('error', function () {
+      var i = exts.indexOf(img.dataset.ext || '.jpg');
+      var next = exts[i + 1];
+      if (!next) return;
+      img.dataset.ext = next;
+      img.src = img.src.replace(/\.[a-zA-Z]+$/, next);
+    });
+  });
+})();
+</script>
+
 <div class="cta" id="reserve">
   <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
   <a class="cta__btn" href="#reserve">ご予約はこちら<span aria-hidden="true">›</span></a>
