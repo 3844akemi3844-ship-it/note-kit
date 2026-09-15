@@ -4,275 +4,149 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>A＋salon｜40代女性のための上質なヘッドマッサージ（福岡県宗像市・完全予約制／女性専用）</title>
-<meta name="description" content="福岡県宗像市くりえいとのA＋salon。頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたヘッドマッサージでゆったり60分。完全予約制・女性専用・駐車場完備。">
+<meta name="description" content="福岡県宗像市のA＋salon。頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたヘッドマッサージでゆったり60分。完全予約制・女性専用。">
 <meta property="og:title" content="A＋salon｜頭から、ふっと軽くなる。">
 <meta property="og:description" content="40代女性のための上質なヘッドマッサージ。わたしに、やさしい時間を。">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/images/hero.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&family=Noto+Serif+JP:wght@300;400;500;600&family=Klee+One:wght@400;600&family=Parisienne&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<meta property="og:image" content="assets/images/lp-01.jpg">
+<style>
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+  body{
+    margin:0;
+    background:#efe9dd;
+    color:#3a2a20;
+    font-family:"Hiragino Mincho ProN","Yu Mincho",serif;
+    /* 固定ボタンの高さぶん、下に余白をとる */
+    padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px));
+  }
+  /* デザイン画像をそのまま縦に並べるだけ（すき間なし） */
+  .lp{
+    max-width:600px;
+    margin:0 auto;
+    background:#fcfaf5;
+    box-shadow:0 0 60px rgba(120,100,70,.12);
+  }
+  .lp img{
+    display:block;
+    width:100%;
+    height:auto;
+    margin:0;
+    vertical-align:bottom;
+  }
+
+  /* ページ下部のご予約ボタン */
+  .cta{
+    max-width:600px;
+    margin:0 auto;
+    padding:34px 24px 40px;
+    background:#f3ede1;
+    text-align:center;
+  }
+  .cta__btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.6em;
+    min-height:60px;
+    padding:0 26px;
+    border-radius:999px;
+    background:#8c8e60;
+    color:#fff;
+    font-size:19px;
+    letter-spacing:.14em;
+    text-decoration:none;
+    box-shadow:0 10px 24px rgba(110,110,70,.26);
+  }
+  .cta__line{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:54px;
+    margin-top:12px;
+    border:1px solid #06c755;
+    border-radius:999px;
+    background:#fff;
+    color:#3f7d4c;
+    font-size:16px;
+    letter-spacing:.1em;
+    text-decoration:none;
+  }
+  .foot{
+    margin:0;
+    padding:26px 24px calc(30px + env(safe-area-inset-bottom, 0px));
+    background:#efe9dd;
+    text-align:center;
+    font-size:12px;
+    line-height:1.9;
+    letter-spacing:.06em;
+    color:#8b7c6d;
+  }
+
+  /* スマホで常に出しておく予約ボタン（不要なら .fixed-cta ごと削除してください） */
+  .fixed-cta{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    z-index:10;
+    display:flex;
+    justify-content:center;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+    background:rgba(252,250,245,.92);
+    backdrop-filter:blur(6px);
+    border-top:1px solid #ece2d1;
+  }
+  .fixed-cta a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5em;
+    width:100%;
+    max-width:520px;
+    min-height:54px;
+    border-radius:999px;
+    background:#8c8e60;
+    color:#fff;
+    font-size:17px;
+    letter-spacing:.12em;
+    text-decoration:none;
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .cta__btn,.cta__line,.fixed-cta a{ transition:opacity .2s ease; }
+    .cta__btn:hover,.cta__line:hover,.fixed-cta a:hover{ opacity:.85; }
+  }
+</style>
 </head>
 <body>
 
-<div class="page">
-
-  <!-- ============================================================
-       01. ファーストビュー
-       ============================================================ -->
-  <header class="hero" id="top">
-    <img class="deco deco--hero-tr" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-    <img class="deco deco--hero-l"  src="assets/images/leaf.svg" alt="" aria-hidden="true">
-
-    <div class="hero__head">
-      <div class="brand">
-        <p class="brand__logo">A<span class="brand__plus">＋</span>salon</p>
-        <p class="brand__tag">完全予約制・女性専用｜宗像市</p>
-      </div>
-      <p class="script script--hero">
-        <span class="script__ja">わたしに、<br>やさしい時間を。</span>
-        <span class="script__en">A calmer me.</span>
-      </p>
-    </div>
-
-    <h1 class="hero__title">
-      <span>頭から、</span>
-      <span>ふっと軽くなる。</span>
-    </h1>
-
-    <svg class="swash swash--hero" viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M2 17C60 4 130 2 200 6s90 8 118 12" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-    </svg>
-
-    <p class="hero__lead">40代女性のための<br>上質なヘッドマッサージ</p>
-
-    <figure class="hero__photo">
-      <img src="assets/images/hero.jpg" alt="ヘッドマッサージの施術を受ける女性" width="812" height="1240">
-    </figure>
-
-    <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
-    <a class="btn btn--cta hero__cta" href="#reserve">ご予約はこちら<span class="btn__arrow" aria-hidden="true">›</span></a>
-  </header>
-
-
-  <!-- ============================================================
-       02. お悩み ＋ A＋salonのヘッドマッサージ
-       ============================================================ -->
-  <section class="worry">
-    <img class="deco deco--worry-tr" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-    <img class="deco deco--worry-bl" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-
-    <h2 class="title-rule">
-      <span>こんなお悩み、</span>
-      <span class="title-rule__accent">ありませんか？</span>
-    </h2>
-
-    <ul class="checklist">
-      <li>頭が重い</li>
-      <li>眠りが浅い</li>
-      <li>首肩がつらい</li>
-      <li>自分時間がほしい</li>
-    </ul>
-
-    <p class="label-rule">A<span class="label-rule__plus">＋</span>salon のヘッドマッサージ</p>
-
-    <div class="points">
-      <article class="point">
-        <div class="point__icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M32 13c9 0 15 6.5 15 16 0 11-6.5 19-15 19s-15-8-15-19c0-9.5 6-16 15-16z"/>
-              <path d="M17.5 24c5-4 10-6 14.5-6s9.5 2 14.5 6"/>
-              <path d="M26 33c1.6 1.4 3.4 1.4 5 0M33 33c1.6 1.4 3.4 1.4 5 0"/>
-              <path d="M29 42c2 1.4 4 1.4 6 0"/>
-              <path d="M13 30c-2.5 1-4 3-4 5.6 0 3 2 5.4 5 6.4M51 30c2.5 1 4 3 4 5.6 0 3-2 5.4-5 6.4"/>
-              <path d="M14 36c1.6-.6 3.2-.4 4.6.6M50 36c-1.6-.6-3.2-.4-4.6.6"/>
-            </g>
-          </svg>
-        </div>
-        <p class="point__text">頭・顔・首・肩・<br>デコルテまで</p>
-      </article>
-
-      <article class="point">
-        <div class="point__icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <path d="M32 56V26" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-            <path d="M32 30c-2-9-9-14-18-14 0 9 7 16 18 16zM32 30c2-9 9-14 18-14 0 9-7 16-18 16z" fill="currentColor"/>
-            <path d="M32 44c-2-8-8-12-16-12 0 8 6 14 16 14zM32 44c2-8 8-12 16-12 0 8-6 14-16 14z" fill="currentColor" opacity=".72"/>
-          </svg>
-        </div>
-        <p class="point__text">アーユルヴェーダの<br>知恵を取り入れた<br>ケア</p>
-      </article>
-
-      <article class="point">
-        <div class="point__icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M46 14A21 21 0 1 0 53 30"/>
-              <path d="M46 6v9h-9"/>
-              <path d="M32 19v13h9"/>
-            </g>
-            <text class="point__num" x="39" y="44" text-anchor="middle">60</text>
-          </svg>
-        </div>
-        <p class="point__text">ゆったり<br><strong>60分</strong></p>
-      </article>
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       03. 60分後、こんな感覚を。
-       ============================================================ -->
-  <section class="after">
-    <img class="deco deco--after-tr" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-    <img class="deco deco--after-bl" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-
-    <h2 class="title-sides">60分後、こんな感覚を。</h2>
-
-    <div class="after__list">
-      <figure class="after__card">
-        <img src="assets/images/feel-1.jpg" alt="" width="688" height="232">
-        <figcaption>頭がふわっと<br>軽く感じる</figcaption>
-      </figure>
-      <figure class="after__card">
-        <img src="assets/images/feel-2.jpg" alt="" width="688" height="232">
-        <figcaption>深くひと息<br>つける</figcaption>
-      </figure>
-      <figure class="after__card">
-        <img src="assets/images/feel-3.jpg" alt="" width="688" height="232">
-        <figcaption>鏡を見るのが<br>少し楽しみになる</figcaption>
-      </figure>
-    </div>
-
-    <p class="script script--center">
-      <span class="script__ja">わたしに、やさしい時間を。</span>
-      <svg class="swash" viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M2 8c60 12 130 14 200 8s90-8 118-12" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-      </svg>
-      <span class="script__en">A calmer me.</span>
-    </p>
-  </section>
-
-
-  <!-- ============================================================
-       04. メニュー・料金
-       ============================================================ -->
-  <section class="menu" id="menu">
-    <img class="deco deco--menu-tr" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-    <img class="deco deco--menu-bl" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-
-    <h2 class="title-bar">メニュー・料金</h2>
-    <p class="title-bar__sub">心とからだに、やさしいご褒美を。</p>
-
-    <div class="menu__grid">
-      <article class="menu__card">
-        <img src="assets/images/menu-1.jpg" alt="ヘッドマッサージ" width="519" height="363">
-        <div class="menu__body">
-          <h3 class="menu__name">ヘッドマッサージ</h3>
-          <p class="menu__price">¥11,000</p>
-        </div>
-      </article>
-
-      <article class="menu__card">
-        <img src="assets/images/menu-2.jpg" alt="シミケア" width="519" height="363">
-        <div class="menu__body">
-          <h3 class="menu__name">シミケア</h3>
-          <dl class="menu__rows">
-            <div><dt>全顔</dt><dd>¥38,000</dd></div>
-            <div><dt>スポット1個</dt><dd>¥6,500</dd></div>
-          </dl>
-        </div>
-      </article>
-
-      <article class="menu__card">
-        <img src="assets/images/menu-3.jpg" alt="足裏角質ケア" width="519" height="366">
-        <div class="menu__body">
-          <h3 class="menu__name">足裏角質ケア</h3>
-          <p class="menu__price">¥11,000</p>
-        </div>
-      </article>
-
-      <article class="menu__card">
-        <img src="assets/images/menu-4.jpg" alt="毛穴クリアトリートメント" width="519" height="366">
-        <div class="menu__body">
-          <h3 class="menu__name">毛穴クリア<br>トリートメント</h3>
-          <p class="menu__price">¥11,000</p>
-        </div>
-      </article>
-
-      <article class="menu__card menu__card--wide">
-        <img src="assets/images/menu-5.jpg" alt="全身デトックスセラピー（タラソテラピー）" width="1074" height="345">
-        <div class="menu__body">
-          <h3 class="menu__name">全身デトックスセラピー<span class="menu__name-sub">（タラソテラピー）</span></h3>
-          <p class="menu__price">¥13,500</p>
-        </div>
-      </article>
-    </div>
-
-    <p class="menu__note">※表示はすべて税込価格です。</p>
-  </section>
-
-
-  <!-- ============================================================
-       05. セラピスト紹介
-       ============================================================ -->
-  <section class="therapist">
-    <img class="deco deco--thera-tr" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-    <img class="deco deco--thera-bl" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-
-    <h2 class="title-bar">セラピスト紹介</h2>
-
-    <div class="therapist__body">
-      <figure class="therapist__photo">
-        <img src="assets/images/therapist.jpg" alt="A＋salon セラピスト 後藤あけみ" width="393" height="822">
-      </figure>
-      <div class="therapist__text">
-        <p class="therapist__name">後藤 あけみ</p>
-        <p class="therapist__msg">忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。</p>
-      </div>
-    </div>
-
-    <svg class="swash swash--wide" viewBox="0 0 320 30" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M2 8c70 16 150 18 220 10s70-10 96-14" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
-      <path d="M12 20c70 14 150 14 216 6s62-8 90-12" fill="none" stroke="currentColor" stroke-width=".8" stroke-linecap="round" opacity=".55"/>
-    </svg>
-  </section>
-
-
-  <!-- ============================================================
-       06. ご予約
-       ============================================================ -->
-  <section class="closing" id="reserve">
-    <img class="deco deco--close-l" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-    <img class="deco deco--close-r" src="assets/images/leaf.svg" alt="" aria-hidden="true">
-
-    <h2 class="closing__title">頭からゆるむ時間を、<br>ご予約ください。</h2>
-    <p class="closing__text">
-      完全予約制・女性専用のプライベートサロンです。<br>
-      はじめての方も、どうぞ気軽にお越しください。
-    </p>
-
-    <div class="closing__actions">
-      <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
-      <a class="btn btn--cta" href="#reserve">ご予約はこちら<span class="btn__arrow" aria-hidden="true">›</span></a>
-      <!-- ▼ href をLINE公式アカウントのURL（https://lin.ee/xxxx）に差し替えてください -->
-      <a class="btn btn--line" href="#reserve">LINEで相談する</a>
-    </div>
-
-    <p class="script script--center script--small">
-      <span class="script__en">A calmer me.</span>
-    </p>
-  </section>
-
-  <footer class="site-footer">
-    <p class="site-footer__logo">A<span class="brand__plus">＋</span>salon</p>
-    <p>完全予約制・女性専用 ／ 福岡県宗像市くりえいと ／ 駐車場完備</p>
-  </footer>
-
+<!-- ============================================================
+     デザイン画像をそのまま掲載
+     assets/images/lp-01.jpg 〜 lp-05.jpg を差し替えてください
+     （画像を追加・削除するときは <img> を増やす／減らすだけ）
+     ============================================================ -->
+<div class="lp">
+  <img src="assets/images/lp-01.jpg" alt="A＋salon／頭から、ふっと軽くなる。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
+  <img src="assets/images/lp-02.jpg" alt="こんなお悩みありませんか？ 頭が重い・眠りが浅い・首肩がつらい・自分時間がほしい。A＋salonのヘッドマッサージは、頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたケアをゆったり60分。">
+  <img src="assets/images/lp-03.jpg" alt="60分後、こんな感覚を。頭がふわっと軽く感じる／深くひと息つける／鏡を見るのが少し楽しみになる">
+  <img src="assets/images/lp-04.jpg" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
+  <img src="assets/images/lp-05.jpg" alt="セラピスト紹介 後藤あけみ：忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。">
 </div>
 
-<script src="assets/js/main.js" defer></script>
+<div class="cta" id="reserve">
+  <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
+  <a class="cta__btn" href="#reserve">ご予約はこちら<span aria-hidden="true">›</span></a>
+  <!-- ▼ href をLINE公式アカウントのURL（https://lin.ee/xxxx）に差し替えてください／不要なら削除 -->
+  <a class="cta__line" href="#reserve">LINEで相談する</a>
+</div>
+
+<p class="foot">
+  A＋salon<br>
+  完全予約制・女性専用 ／ 福岡県宗像市くりえいと ／ 駐車場完備
+</p>
+
+<div class="fixed-cta">
+  <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
+  <a href="#reserve">ご予約はこちら<span aria-hidden="true">›</span></a>
+</div>
+
 </body>
 </html>
