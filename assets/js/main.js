@@ -1,11 +1,13 @@
 // 画面に入った要素をふわっと表示（控えめなスクロール演出）
 (function () {
   var targets = document.querySelectorAll(
-    '.hero__inner > *, .worry__body, .message__text, .feature, .after__card, ' +
-    '.range__text, .range__figure, .voice__card, .menu__card, .therapist__body, ' +
-    '.faq__item, .closing__title, .closing__text, .closing__actions'
+    '.hero__head, .hero__title, .hero__lead, .hero__photo, .hero__cta, ' +
+    '.title-rule, .checklist, .label-rule, .point, .title-sides, .after__card, ' +
+    '.script--center, .title-bar, .title-bar__sub, .menu__card, ' +
+    '.therapist__body, .closing__title, .closing__text, .closing__actions'
   );
   if (!('IntersectionObserver' in window) || !targets.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
   Array.prototype.forEach.call(targets, function (el) { el.classList.add('reveal'); });
 
