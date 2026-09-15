@@ -147,7 +147,7 @@ li{ list-style:none; }
 }
 .deco--hero-left{  left:-52px; top:150px;  width:130px; transform:scaleX(-1) rotate(-8deg); opacity:.45; }
 .deco--hero-right{ right:-30px; bottom:-10px; width:150px; transform:rotate(6deg); }
-.deco--worry{ right:-26px; bottom:-14px; width:140px; transform:rotate(-4deg); opacity:.5; }
+.deco--worry{ right:-30px; bottom:-28px; width:132px; transform:rotate(-4deg); opacity:.45; }
 .deco--message{ right:-34px; bottom:-6px; width:135px; transform:rotate(10deg); opacity:.45; }
 .deco--therapist{ right:-30px; top:6px; width:130px; transform:rotate(-6deg); opacity:.5; }
 .deco--closing-left{ left:-46px; top:20px; width:150px; transform:scaleX(-1) rotate(4deg); opacity:.42; }
@@ -239,21 +239,23 @@ li{ list-style:none; }
 .worry .heading-rule{ margin-bottom:20px; }
 .worry__body{
   position:relative;
-  display:grid; grid-template-columns:38% 1fr; align-items:stretch; gap:14px;
+  display:grid; grid-template-columns:34% 1fr; align-items:stretch; gap:12px;
+  row-gap:0;
 }
 .worry__photo{ margin:0; display:flex; }
 .worry__photo img{
-  width:100%; height:100%; min-height:210px; aspect-ratio:3/4; object-fit:cover;
-  -webkit-mask-image:linear-gradient(90deg,#000 72%,transparent 100%);
-          mask-image:linear-gradient(90deg,#000 72%,transparent 100%);
+  width:100%; height:100%; min-height:190px; aspect-ratio:3/4; object-fit:cover;
+  object-position:56% center;
+  -webkit-mask-image:linear-gradient(90deg,#000 80%,transparent 100%);
+          mask-image:linear-gradient(90deg,#000 80%,transparent 100%);
 }
-.checklist{ padding-right:var(--pad); }
+.checklist{ padding-right:10px; }
 .checklist li{
   position:relative;
-  padding-left:34px;
+  padding-left:28px;
   margin-bottom:16px;
   font-family:var(--serif);
-  font-size:14.5px; letter-spacing:.03em;
+  font-size:clamp(12.5px,3.7vw,15px); letter-spacing:.02em;
 }
 .checklist li:last-child{ margin-bottom:0; }
 .checklist li::before{
@@ -268,10 +270,14 @@ li{ list-style:none; }
   transform:rotate(-45deg);
 }
 .worry__badge{
-  position:absolute; right:12px; bottom:16px; max-width:120px;
+  position:relative; z-index:2;
+  grid-column:1 / -1;
+  justify-self:end;
+  margin:10px var(--pad) 0 0;
   font-family:var(--serif); font-size:11.5px; line-height:1.7; color:var(--gold);
-  text-align:center;
-  transform:rotate(-6deg);
+  text-align:right;
+  transform:rotate(-4deg);
+  transform-origin:right center;
 }
 
 /* =========================================================
@@ -293,24 +299,24 @@ li{ list-style:none; }
 .about .heading-rule{ font-size:clamp(14px,3.6vw,20px); gap:12px; }
 
 .about{
-  padding:34px var(--pad) 36px;
+  padding:34px clamp(14px,4vw,22px) 36px;
   background:linear-gradient(180deg,#faf6ef 0%,var(--cream-deep) 100%);
 }
-.about__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.about__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(7px,2vw,10px); }
 .feature{
   background:rgba(255,255,255,.55);
   border:1px solid rgba(201,177,130,.35);
   border-radius:8px;
-  padding:18px 10px 20px;
+  padding:18px clamp(6px,1.8vw,10px) 20px;
   text-align:center;
 }
 .feature__icon{ height:52px; display:flex; align-items:center; justify-content:center; }
 .feature__icon svg{ width:48px; height:48px; }
 .feature__title{
-  margin-top:10px; font-size:14px; line-height:1.6; letter-spacing:.02em;
+  margin-top:10px; font-size:clamp(10.5px,2.8vw,14px); line-height:1.6; letter-spacing:.01em;
 }
 .feature__text{
-  margin-top:10px; font-size:11px; line-height:1.85; color:var(--ink-mute); text-align:left;
+  margin-top:10px; font-size:clamp(9.8px,2.5vw,11px); line-height:1.85; color:var(--ink-mute); text-align:left;
 }
 
 /* =========================================================
@@ -378,26 +384,26 @@ li{ list-style:none; }
    お客様の声
    ========================================================= */
 .voice{
-  padding:34px var(--pad) 36px;
+  padding:34px clamp(14px,4vw,22px) 36px;
   background:#fbf8f2;
 }
-.voice__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin-top:6px; }
+.voice__grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(7px,1.8vw,9px); margin-top:6px; }
 .voice__card{
   background:var(--card);
   border:1px solid rgba(201,177,130,.3);
   border-radius:4px;
-  padding:14px 11px 16px;
+  padding:14px clamp(7px,2vw,11px) 16px;
 }
-.voice__card h3{ font-size:12.5px; line-height:1.6; letter-spacing:.01em; }
+.voice__card h3{ font-size:clamp(10.5px,2.7vw,12.5px); line-height:1.6; letter-spacing:.01em; }
 .voice__meta{ margin-top:6px; font-size:10.5px; color:var(--ink-mute); letter-spacing:.08em; }
-.voice__text{ margin-top:8px; font-size:10.5px; line-height:1.85; color:var(--ink-soft); }
+.voice__text{ margin-top:8px; font-size:clamp(9.6px,2.4vw,10.5px); line-height:1.85; color:var(--ink-soft); }
 .voice .btn--outline{ display:flex; width:fit-content; margin:24px auto 0; }
 
 /* =========================================================
    メニュー・料金
    ========================================================= */
 .menu{
-  padding:36px var(--pad) 34px;
+  padding:36px clamp(14px,4vw,22px) 34px;
   background:linear-gradient(180deg,#fdfaf5 0%,var(--cream-warm) 100%);
 }
 .menu__grid{
@@ -414,18 +420,18 @@ li{ list-style:none; }
 .menu__card--wide{ grid-column:1 / -1; }
 .menu__card--wide img{ aspect-ratio:3.1/1; }
 .menu__body{ padding:16px 14px 18px; display:flex; flex-direction:column; flex:1; }
-.menu__card h3{ font-size:16px; letter-spacing:.04em; line-height:1.5; }
+.menu__card h3{ font-size:clamp(14px,4vw,16px); letter-spacing:.03em; line-height:1.5; }
 .menu__desc{
-  margin-top:8px; font-size:11.5px; color:var(--ink-mute); line-height:1.85;
+  margin-top:8px; font-size:clamp(10.4px,2.85vw,11.5px); color:var(--ink-mute); line-height:1.85;
 }
 .menu__price{
   margin-top:auto; padding-top:14px;
   display:grid; grid-template-columns:auto 1fr; align-items:baseline; gap:2px 8px;
 }
-.menu__price dt{ font-size:11.5px; color:var(--ink-mute); }
+.menu__price dt{ font-size:clamp(9.6px,2.55vw,11.5px); color:var(--ink-mute); white-space:nowrap; }
 .menu__price dd{
-  margin:0; text-align:right;
-  font-family:var(--serif); font-size:19px; letter-spacing:.02em;
+  margin:0; text-align:right; white-space:nowrap;
+  font-family:var(--serif); font-size:clamp(16px,4.4vw,19px); letter-spacing:.02em;
 }
 .menu__price dd:only-child{ grid-column:1 / -1; }
 .menu__card--wide .menu__row{
@@ -433,7 +439,7 @@ li{ list-style:none; }
   display:flex; align-items:baseline; justify-content:space-between; gap:12px;
 }
 .menu__card--wide .menu__desc{ margin-top:0; }
-.menu__amount{ font-family:var(--serif); font-size:19px; white-space:nowrap; }
+.menu__amount{ font-family:var(--serif); font-size:clamp(16px,4.4vw,19px); white-space:nowrap; }
 .menu__note{
   margin-top:20px; text-align:center;
   font-size:11px; color:var(--ink-mute); letter-spacing:.04em;
@@ -543,15 +549,10 @@ li{ list-style:none; }
    小さい端末 / 大きい画面の微調整
    ========================================================= */
 @media (max-width:359px){
-  .worry__badge{
-    position:static; transform:none; max-width:none;
-    grid-column:1 / -1; text-align:right;
-    margin-top:12px; padding-right:var(--pad);
-  }
   .voice__grid{ grid-template-columns:1fr; gap:10px; }
   .voice__card h3{ font-size:14px; }
   .voice__meta,.voice__text{ font-size:12px; }
-  .checklist li{ font-size:13px; padding-left:28px; margin-bottom:12px; }
+  .checklist li{ padding-left:26px; margin-bottom:12px; }
   .checklist li::before{ width:17px; height:17px; }
   .checklist li::after{ left:4px; top:5px; }
 }
