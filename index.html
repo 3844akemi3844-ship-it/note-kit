@@ -35,45 +35,20 @@
     vertical-align:bottom;
   }
 
-  /* ページ下部のご予約ボタン */
-  .cta{
+  /* 最後の画像の上に置くリンク（見た目は透明） */
+  .lp__last{ position:relative; display:block; }
+  .hot{
+    position:absolute;
+    display:block;
+    border-radius:999px;
+    -webkit-tap-highlight-color:rgba(140,142,96,.2);
+  }
+  .hot--reserve{ left:3.7%;  top:58.2%; width:48%;   height:6.6%; }
+  .hot--line{    left:53.7%; top:58.2%; width:42.8%; height:6.6%; }
+
+  .foot{
     max-width:600px;
     margin:0 auto;
-    padding:34px 24px 40px;
-    background:#f3ede1;
-    text-align:center;
-  }
-  .cta__btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:.6em;
-    min-height:60px;
-    padding:0 26px;
-    border-radius:999px;
-    background:#8c8e60;
-    color:#fff;
-    font-size:19px;
-    letter-spacing:.14em;
-    text-decoration:none;
-    box-shadow:0 10px 24px rgba(110,110,70,.26);
-  }
-  .cta__line{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:54px;
-    margin-top:12px;
-    border:1px solid #06c755;
-    border-radius:999px;
-    background:#fff;
-    color:#3f7d4c;
-    font-size:16px;
-    letter-spacing:.1em;
-    text-decoration:none;
-  }
-  .foot{
-    margin:0;
     padding:26px 24px calc(30px + env(safe-area-inset-bottom, 0px));
     background:#efe9dd;
     text-align:center;
@@ -111,8 +86,8 @@
     text-decoration:none;
   }
   @media (prefers-reduced-motion:no-preference){
-    .cta__btn,.cta__line,.fixed-cta a{ transition:opacity .2s ease; }
-    .cta__btn:hover,.cta__line:hover,.fixed-cta a:hover{ opacity:.85; }
+    .fixed-cta a{ transition:opacity .2s ease; }
+    .fixed-cta a:hover{ opacity:.85; }
   }
 </style>
 </head>
@@ -129,6 +104,17 @@
   <img src="assets/images/lp-03.jpg" alt="60分後、こんな感覚を。頭がふわっと軽く感じる／深くひと息つける／鏡を見るのが少し楽しみになる">
   <img src="assets/images/lp-04.jpg" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
   <img src="assets/images/lp-05.jpg" alt="セラピスト紹介 後藤あけみ：忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。">
+  <img src="assets/images/lp-06.jpg" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
+  <img src="assets/images/lp-07.jpg" alt="よくある質問：オイルは使いますか？／メイクをしたままでも大丈夫ですか？／初めてでも大丈夫ですか？">
+
+  <!-- 最後の1枚はボタン部分をリンクにしています（位置は下の .hot--reserve / .hot--line の % で調整できます） -->
+  <span class="lp__last">
+    <img src="assets/images/lp-08.jpg" alt="毎日頑張っているあなたに、頭からゆるむ時間を。A＋salon｜完全予約制・女性専用｜福岡県宗像市">
+    <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
+    <a class="hot hot--reserve" href="#reserve" aria-label="ご予約はこちら"></a>
+    <!-- ▼ href をLINE公式アカウントのURL（https://lin.ee/xxxx）に差し替えてください -->
+    <a class="hot hot--line" href="#reserve" aria-label="LINEで相談する"></a>
+  </span>
 </div>
 
 <!-- 画像が .png / .jpeg / .webp で入っていても表示できるようにする保険 -->
@@ -147,16 +133,8 @@
 })();
 </script>
 
-<div class="cta" id="reserve">
-  <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
-  <a class="cta__btn" href="#reserve">ご予約はこちら<span aria-hidden="true">›</span></a>
-  <!-- ▼ href をLINE公式アカウントのURL（https://lin.ee/xxxx）に差し替えてください／不要なら削除 -->
-  <a class="cta__line" href="#reserve">LINEで相談する</a>
-</div>
-
-<p class="foot">
-  A＋salon<br>
-  完全予約制・女性専用 ／ 福岡県宗像市くりえいと ／ 駐車場完備
+<p class="foot" id="reserve">
+  A＋salon ／ 完全予約制・女性専用 ／ 福岡県宗像市くりえいと ／ 駐車場完備
 </p>
 
 <div class="fixed-cta">
