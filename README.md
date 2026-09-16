@@ -43,8 +43,8 @@
    - ご予約（3か所：1枚目のボタン／8枚目のボタン／画面下に固定のボタン）
      … `https://utage-system.com/p/iQg0VtOIWxzt`
      どのボタンから来たか分かるように `utm_content=hero / closing / fixed` を付けています。
-   - LINEで相談する（8枚目のボタン） … `https://lin.ee/52UReQL`
-   - 予約ページを変えるときは `index.html` 内の `utage-system.com` の3か所を書き換えてください。
+   - LINEで相談する（8枚目のボタン） … `https://utage-system.com/p/mo21mpxjZvXn`（`utm_content=line`）
+   - リンク先を変えるときは `index.html` 内の `utage-system.com` の4か所を書き換えてください。
    - LINEが不要なら `.hot--line` の `<a>` 行を削除してください。
 
    透明リンクの位置は `index.html` のスタイル内 `.hot--hero` / `.hot--reserve` / `.hot--line` の
