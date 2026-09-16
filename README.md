@@ -8,7 +8,8 @@
 | --- | --- |
 | `index.html` | **デザイン画像をそのまま縦に並べただけのLP**（現在の本番用） |
 | `coded.html` | 同じデザインをHTML/CSSで組み直したもの（文字が選択・検索でき、SEOにも有利） |
-| `utage-embed.html` | **UTAGEのカスタムHTML枠に貼る用**（貼り付け手順はファイル冒頭のコメント参照） |
+| `utage-embed.html` | **UTAGEに貼る用**（画像URLは差し替え式。冒頭のコメント参照） |
+| `utage-embed-with-images.html` | 同じものに画像7枚を埋め込んだ版（アップロード不要・約1.4MB） |
 
 どちらもビルド不要です。使うほうを `index.html` として、`assets/` と一緒にサーバーへアップロードしてください。
 
