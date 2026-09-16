@@ -36,15 +36,16 @@
   }
 
   /* 最後の画像の上に置くリンク（見た目は透明） */
-  .lp__last{ position:relative; display:block; }
+  .lp__linked{ position:relative; display:block; }
   .hot{
     position:absolute;
     display:block;
     border-radius:999px;
     -webkit-tap-highlight-color:rgba(140,142,96,.2);
   }
-  .hot--reserve{ left:3.7%;  top:58.2%; width:48%;   height:6.6%; }
-  .hot--line{    left:53.7%; top:58.2%; width:42.8%; height:6.6%; }
+  .hot--hero{    left:18.6%; top:88.0%; width:61.2%; height:6.2%; }
+  .hot--reserve{ left:4.5%;  top:56.3%; width:47.5%; height:7.3%; }
+  .hot--line{    left:53.5%; top:56.3%; width:43%;   height:7.3%; }
 
   .foot{
     max-width:600px;
@@ -99,7 +100,12 @@
      （画像を追加・削除するときは <img> を増やす／減らすだけ）
      ============================================================ -->
 <div class="lp">
-  <img src="assets/images/lp-01.jpg" alt="A＋salon／頭から、ふっと軽くなる。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
+  <!-- 1枚目もボタン部分をリンクにしています（位置は .hot--hero の % で調整できます） -->
+  <span class="lp__linked">
+    <img src="assets/images/lp-01.jpg" alt="A＋salon／頭から、ふっと軽くなる。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
+    <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
+    <a class="hot hot--hero" href="#reserve" aria-label="ご予約はこちら"></a>
+  </span>
   <img src="assets/images/lp-02.jpg" alt="こんなお悩みありませんか？ 頭が重い・眠りが浅い・首肩がつらい・自分時間がほしい。A＋salonのヘッドマッサージは、頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたケアをゆったり60分。">
   <img src="assets/images/lp-03.jpg" alt="60分後、こんな感覚を。頭がふわっと軽く感じる／深くひと息つける／鏡を見るのが少し楽しみになる">
   <img src="assets/images/lp-04.jpg" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
@@ -107,8 +113,8 @@
   <img src="assets/images/lp-06.jpg" alt="セラピスト紹介 後藤あけみ：忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。">
   <img src="assets/images/lp-07.jpg" alt="よくある質問：オイルは使いますか？／メイクをしたままでも大丈夫ですか？／初めてでも大丈夫ですか？">
 
-  <!-- 最後の1枚はボタン部分をリンクにしています（位置は下の .hot--reserve / .hot--line の % で調整できます） -->
-  <span class="lp__last">
+  <!-- 最後の1枚もボタン部分をリンクにしています（位置は下の .hot--reserve / .hot--line の % で調整できます） -->
+  <span class="lp__linked">
     <img src="assets/images/lp-08.jpg" alt="毎日頑張っているあなたに、頭からゆるむ時間を。A＋salon｜完全予約制・女性専用｜福岡県宗像市">
     <!-- ▼ href を予約ページ／予約フォームのURLに差し替えてください -->
     <a class="hot hot--reserve" href="#reserve" aria-label="ご予約はこちら"></a>
