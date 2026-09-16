@@ -155,8 +155,9 @@ body{
   color:#8b7c6d;
 }
 
-/* 画面下に出しっぱなしの予約ボタン */
+/* 画面下に出しっぱなしの予約ボタン（最後の画像のボタンが見えたら引っ込みます） */
 .aps-lp-fixed{
+  transition:transform .3s ease, opacity .3s ease;
   position:fixed;
   left:0; right:0; bottom:0;
   z-index:100;
@@ -168,6 +169,11 @@ body{
   backdrop-filter:blur(6px);
   border-top:1px solid #ece2d1;
   box-sizing:border-box;
+}
+.aps-lp-fixed.is-hidden{
+  transform:translateY(130%);
+  opacity:0;
+  pointer-events:none;
 }
 .aps-lp-fixed a{
   display:flex;
@@ -237,7 +243,7 @@ body{
 
       <details class="aps-lp__item">
         <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">駐車場はありますか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">はい、ご用意しています。駐車場所は、ご予約後にあらためてご案内いたします。</span></div>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">はい、ご用意しています。</span></div>
       </details>
 
     </div>
@@ -258,6 +264,21 @@ body{
 <div class="aps-lp-fixed">
   <a href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=fixed">ご予約はこちら<span aria-hidden="true">›</span></a>
 </div>
+
+<script>
+/* 最後の画像の「ご予約はこちら」が画面に入ったら、下の固定ボタンを引っ込める */
+(function () {
+  var bar = document.querySelector(".aps-lp-fixed");
+  var target = document.querySelector(".aps-lp__hot--reserve");
+  if (!bar || !target || !("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      bar.classList.toggle("is-hidden", e.isIntersecting);
+    });
+  }, { threshold: 0.5 });
+  io.observe(target);
+})();
+</script>
 
 </body>
 </html>

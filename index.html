@@ -65,6 +65,7 @@
   /* スマホで常に出しておく予約ボタン（不要なら .fixed-cta ごと削除してください） */
   .fixed-cta{
     position:fixed;
+    transition:transform .3s ease, opacity .3s ease;
     left:0; right:0; bottom:0;
     z-index:10;
     display:flex;
@@ -73,6 +74,11 @@
     background:rgba(252,250,245,.92);
     backdrop-filter:blur(6px);
     border-top:1px solid #ece2d1;
+  }
+  .fixed-cta.is-hidden{
+    transform:translateY(130%);
+    opacity:0;
+    pointer-events:none;
   }
   .fixed-cta a{
     display:flex;
@@ -90,7 +96,12 @@
     text-decoration:none;
   }
   @media (prefers-reduced-motion:no-preference){
-    .fixed-cta a{ transition:opacity .2s ease; }
+    .fixed-cta.is-hidden{
+    transform:translateY(130%);
+    opacity:0;
+    pointer-events:none;
+  }
+  .fixed-cta a{ transition:opacity .2s ease; }
     .fixed-cta a:hover{ opacity:.85; }
   }
 
@@ -217,7 +228,7 @@
     </details>
     <details class="faq__item">
       <summary class="faq__q"><span class="faq__mark">Q</span><span class="faq__text">駐車場はありますか？</span><svg class="faq__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
-      <div class="faq__a"><span class="faq__mark">A</span><span class="faq__text">はい、ご用意しています。駐車場所は、ご予約後にあらためてご案内いたします。</span></div>
+      <div class="faq__a"><span class="faq__mark">A</span><span class="faq__text">はい、ご用意しています。</span></div>
     </details>
   </div>
 </section>
@@ -255,6 +266,21 @@
 <div class="fixed-cta">
   <a href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=fixed">ご予約はこちら<span aria-hidden="true">›</span></a>
 </div>
+
+<script>
+/* 最後の画像の「ご予約はこちら」が画面に入ったら、下の固定ボタンを引っ込める */
+(function () {
+  var bar = document.querySelector(".fixed-cta");
+  var target = document.querySelector(".hot--reserve");
+  if (!bar || !target || !("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      bar.classList.toggle("is-hidden", e.isIntersecting);
+    });
+  }, { threshold: 0.5 });
+  io.observe(target);
+})();
+</script>
 
 </body>
 </html>
