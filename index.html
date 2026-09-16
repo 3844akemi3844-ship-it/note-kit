@@ -9,6 +9,9 @@
 <meta property="og:description" content="40代女性のための上質なヘッドマッサージ。わたしに、やさしい時間を。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/images/lp-01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{ box-sizing:border-box; }
   html{ -webkit-text-size-adjust:100%; }
@@ -90,6 +93,90 @@
     .fixed-cta a{ transition:opacity .2s ease; }
     .fixed-cta a:hover{ opacity:.85; }
   }
+
+  /* よくある質問（ここだけ画像ではなく、開閉できるHTMLにしています） */
+  .faq{
+    max-width:600px;
+    margin:0 auto;
+    padding:46px 22px 52px;
+    background:linear-gradient(180deg,#faf9f6 0%,#fefefe 55%,#fefefe 100%);
+    font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  }
+  .faq__head{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:0 0 22px;
+    padding-left:14px;
+    border-left:3px solid #c3a87b;
+    font-size:clamp(22px,6.8vw,30px);
+    font-weight:600;
+    letter-spacing:.08em;
+    color:#3a2a20;
+    white-space:nowrap;
+  }
+  .faq__head::after{
+    content:"";
+    flex:1 1 auto;
+    height:1px;
+    background:linear-gradient(90deg,#c3a87b,rgba(195,168,123,0));
+  }
+  .faq__list{ display:flex; flex-direction:column; gap:12px; }
+  .faq__item{
+    background:#fff;
+    border:1px solid #efe7da;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(150,125,90,.07);
+    overflow:hidden;
+  }
+  .faq__q{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    padding:16px;
+    list-style:none;
+    cursor:pointer;
+    font-size:clamp(14px,4.2vw,17px);
+    line-height:1.55;
+    color:#3a2a20;
+  }
+  .faq__q::-webkit-details-marker{ display:none; }
+  .faq__q::marker{ content:""; }
+  .faq__q:focus-visible{ outline:2px solid #c3a87b; outline-offset:-4px; }
+  .faq__mark{
+    flex:0 0 auto;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#8d7a53;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    line-height:1;
+  }
+  .faq__text{ flex:1 1 auto; }
+  .faq__chev{
+    flex:0 0 auto;
+    width:18px;
+    height:18px;
+    color:#8d7a53;
+    transition:transform .25s ease;
+  }
+  .faq__item[open] .faq__chev{ transform:rotate(180deg); }
+  .faq__a{
+    display:flex;
+    gap:14px;
+    padding:0 16px 18px;
+    font-size:clamp(13px,3.8vw,15px);
+    line-height:1.95;
+    color:#5a4a3c;
+  }
+  .faq__a .faq__mark{ background:#efe7da; color:#8d7a53; }
+  @media (prefers-reduced-motion:reduce){
+    .faq__chev{ transition:none; }
+  }
 </style>
 </head>
 <body>
@@ -110,7 +197,28 @@
   <img src="assets/images/lp-04.jpg" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
   <img src="assets/images/lp-05.jpg" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
   <img src="assets/images/lp-06.jpg" alt="セラピスト紹介 後藤あけみ：忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。">
-  <img src="assets/images/lp-07.jpg" alt="よくある質問：オイルは使いますか？／メイクをしたままでも大丈夫ですか？／初めてでも大丈夫ですか？">
+</div>
+
+<!-- よくある質問：答えを開けるように、ここだけ画像ではなくHTMLにしています -->
+<section class="faq">
+  <h2 class="faq__head">よくある質問</h2>
+  <div class="faq__list">
+    <details class="faq__item">
+      <summary class="faq__q"><span class="faq__mark">Q</span><span class="faq__text">オイルは使いますか？</span><svg class="faq__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="faq__a"><span class="faq__mark">A</span><span class="faq__text">ヘッドマッサージではオイルを使用しないため、施術後もそのままお帰りいただけます。</span></div>
+    </details>
+    <details class="faq__item">
+      <summary class="faq__q"><span class="faq__mark">Q</span><span class="faq__text">メイクをしたままでも大丈夫ですか？</span><svg class="faq__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="faq__a"><span class="faq__mark">A</span><span class="faq__text">基本的にはメイクをしたままでも受けていただけます。気になる方はお気軽にご相談ください。</span></div>
+    </details>
+    <details class="faq__item">
+      <summary class="faq__q"><span class="faq__mark">Q</span><span class="faq__text">初めてでも大丈夫ですか？</span><svg class="faq__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="faq__a"><span class="faq__mark">A</span><span class="faq__text">もちろんです。最初にお悩みや体の状態をうかがってから、心地よい強さで施術いたします。</span></div>
+    </details>
+  </div>
+</section>
+
+<div class="lp">
 
   <!-- 最後の1枚もボタン部分をリンクにしています（位置は下の .hot--reserve / .hot--line の % で調整できます） -->
   <span class="lp__linked">
