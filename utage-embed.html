@@ -1,19 +1,35 @@
-<!-- ============================================================
-     A＋salon ランディングページ ／ UTAGE貼り付け用
-     ============================================================
-     使い方
-     1. UTAGEの「カスタムHTML」の枠に、このファイルの中身をすべて貼り付ける
-     2. 画像8枚をUTAGEのファイル管理にアップロードし、
-        下の IMAGE_1_URL 〜 IMAGE_8_URL を、そのURLに差し替える
-        （※ 7枚目「よくある質問」は画像ではなくHTMLなので、画像は7枚です）
-     3. 画面下に固定の予約ボタンが不要なら、末尾の「固定ボタン」のブロックを削除する
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A＋salon｜40代女性のための上質なヘッドマッサージ（福岡県宗像市・完全予約制／女性専用）</title>
+<meta name="description" content="福岡県宗像市のA＋salon。頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたヘッドマッサージでゆったり60分。完全予約制・女性専用。">
+<meta property="og:title" content="A＋salon｜頭から、ふっと軽くなる。">
+<meta property="og:description" content="40代女性のための上質なヘッドマッサージ。わたしに、やさしい時間を。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="IMAGE_1_URL">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 
-     このHTMLはすべて .aps-lp というクラスの中だけに効くように書いてあるので、
-     UTAGEの他の部分のデザインには影響しません。
+<!-- ============================================================
+     A＋salon ランディングページ ／ UTAGE貼り付け用（HTML全体）
+     ============================================================
+     1. このファイルの中身をすべて、UTAGEのHTML入力欄に貼り付ける
+     2. IMAGE_1_URL 〜 IMAGE_8_URL を、UTAGEにアップロードした画像のURLに差し替える
+        （7番は欠番です。よくある質問は画像ではなくHTMLで作っています）
+     3. 画面下に固定の予約ボタンが不要なら、末尾の「固定ボタン」のブロックを削除する
      ============================================================ -->
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap");
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0;
+  background:#efe9dd;
+  /* 画面下の固定ボタンに隠れないよう、下に余白をとる */
+  padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px));
+}
 
 .aps-lp{
   max-width:600px;
@@ -173,6 +189,8 @@
   .aps-lp__chev{ transition:none; }
 }
 </style>
+</head>
+<body>
 
 <div class="aps-lp">
 
@@ -240,3 +258,6 @@
 <div class="aps-lp-fixed">
   <a href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=fixed">ご予約はこちら<span aria-hidden="true">›</span></a>
 </div>
+
+</body>
+</html>
