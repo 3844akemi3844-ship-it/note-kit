@@ -1,0 +1,242 @@
+<!-- ============================================================
+     A＋salon ランディングページ ／ UTAGE貼り付け用
+     ============================================================
+     使い方
+     1. UTAGEの「カスタムHTML」の枠に、このファイルの中身をすべて貼り付ける
+     2. 画像8枚をUTAGEのファイル管理にアップロードし、
+        下の IMAGE_1_URL 〜 IMAGE_8_URL を、そのURLに差し替える
+        （※ 7枚目「よくある質問」は画像ではなくHTMLなので、画像は7枚です）
+     3. 画面下に固定の予約ボタンが不要なら、末尾の「固定ボタン」のブロックを削除する
+
+     このHTMLはすべて .aps-lp というクラスの中だけに効くように書いてあるので、
+     UTAGEの他の部分のデザインには影響しません。
+     ============================================================ -->
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap");
+
+.aps-lp{
+  max-width:600px;
+  margin:0 auto;
+  background:#fcfaf5;
+  color:#3a2a20;
+  font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  box-sizing:border-box;
+}
+.aps-lp *,
+.aps-lp *::before,
+.aps-lp *::after{ box-sizing:border-box; }
+
+.aps-lp img{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0;
+  border:0;
+  vertical-align:bottom;
+}
+
+/* 画像に描かれたボタンの上に重ねる透明リンク
+   （画像を差し替えてボタンの位置がずれたら、この％だけ調整してください） */
+.aps-lp__linked{ position:relative; display:block; }
+.aps-lp__hot{
+  position:absolute;
+  display:block;
+  border-radius:999px;
+  -webkit-tap-highlight-color:rgba(140,142,96,.2);
+}
+.aps-lp__hot--hero{    left:18.6%; top:88.0%; width:61.2%; height:6.2%; }
+.aps-lp__hot--reserve{ left:4.5%;  top:56.3%; width:47.5%; height:7.3%; }
+.aps-lp__hot--line{    left:53.5%; top:56.3%; width:43%;   height:7.3%; }
+
+/* よくある質問（タップで答えが開きます） */
+.aps-lp__faq{
+  padding:46px 22px 52px;
+  background:linear-gradient(180deg,#faf9f6 0%,#fefefe 55%,#fefefe 100%);
+}
+.aps-lp__faq-head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0 0 22px;
+  padding-left:14px;
+  border-left:3px solid #c3a87b;
+  font-size:clamp(22px,6.8vw,30px);
+  font-weight:600;
+  letter-spacing:.08em;
+  line-height:1.4;
+  color:#3a2a20;
+  white-space:nowrap;
+}
+.aps-lp__faq-head::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:linear-gradient(90deg,#c3a87b,rgba(195,168,123,0));
+}
+.aps-lp__faq-list{ display:flex; flex-direction:column; gap:12px; }
+.aps-lp__item{
+  background:#fff;
+  border:1px solid #efe7da;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(150,125,90,.07);
+  overflow:hidden;
+}
+.aps-lp__q{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  list-style:none;
+  cursor:pointer;
+  font-size:clamp(14px,4.2vw,17px);
+  line-height:1.55;
+  color:#3a2a20;
+}
+.aps-lp__q::-webkit-details-marker{ display:none; }
+.aps-lp__q::marker{ content:""; }
+.aps-lp__q:focus-visible{ outline:2px solid #c3a87b; outline-offset:-4px; }
+.aps-lp__mark{
+  flex:0 0 auto;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#8d7a53;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  line-height:1;
+}
+.aps-lp__text{ flex:1 1 auto; }
+.aps-lp__chev{
+  flex:0 0 auto;
+  width:18px;
+  height:18px;
+  color:#8d7a53;
+  transition:transform .25s ease;
+}
+.aps-lp__item[open] .aps-lp__chev{ transform:rotate(180deg); }
+.aps-lp__a{
+  display:flex;
+  gap:14px;
+  padding:0 16px 18px;
+  font-size:clamp(13px,3.8vw,15px);
+  line-height:1.95;
+  color:#5a4a3c;
+}
+.aps-lp__a .aps-lp__mark{ background:#efe7da; color:#8d7a53; }
+
+.aps-lp__foot{
+  margin:0;
+  padding:26px 24px 30px;
+  background:#efe9dd;
+  text-align:center;
+  font-size:12px;
+  line-height:1.9;
+  letter-spacing:.06em;
+  color:#8b7c6d;
+}
+
+/* 画面下に出しっぱなしの予約ボタン */
+.aps-lp-fixed{
+  position:fixed;
+  left:0; right:0; bottom:0;
+  z-index:100;
+  display:flex;
+  justify-content:center;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+  background:rgba(252,250,245,.92);
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
+  border-top:1px solid #ece2d1;
+  box-sizing:border-box;
+}
+.aps-lp-fixed a{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  width:100%;
+  max-width:520px;
+  min-height:54px;
+  border-radius:999px;
+  background:#8c8e60;
+  color:#fff;
+  font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  font-size:17px;
+  letter-spacing:.12em;
+  text-decoration:none;
+}
+@media (prefers-reduced-motion:reduce){
+  .aps-lp__chev{ transition:none; }
+}
+</style>
+
+<div class="aps-lp">
+
+  <!-- 1枚目：ファーストビュー -->
+  <span class="aps-lp__linked">
+    <img src="IMAGE_1_URL" alt="A＋salon／頭から、ふっと軽くなる。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
+    <a class="aps-lp__hot aps-lp__hot--hero" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=hero" aria-label="ご予約はこちら"></a>
+  </span>
+
+  <!-- 2枚目：こんなお悩み・特長 -->
+  <img src="IMAGE_2_URL" alt="こんなお悩みありませんか？ 頭が重い・眠りが浅い・首肩がつらい・自分時間がほしい。A＋salonのヘッドマッサージは、頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたケアをゆったり60分。">
+
+  <!-- 3枚目：60分後、こんな感覚を。 -->
+  <img src="IMAGE_3_URL" alt="60分後、こんな感覚を。頭がふわっと軽く感じる／深くひと息つける／鏡を見るのが少し楽しみになる">
+
+  <!-- 4枚目：施術範囲 -->
+  <img src="IMAGE_4_URL" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
+
+  <!-- 5枚目：メニュー・料金 -->
+  <img src="IMAGE_5_URL" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
+
+  <!-- 6枚目：セラピスト紹介 -->
+  <img src="IMAGE_6_URL" alt="セラピスト紹介 後藤あけみ：忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。">
+
+  <!-- よくある質問（画像ではなくHTML。質問・答えはここを直接書き換えてください） -->
+  <section class="aps-lp__faq">
+    <h2 class="aps-lp__faq-head">よくある質問</h2>
+    <div class="aps-lp__faq-list">
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">オイルは使いますか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">ヘッドマッサージではオイルを使用しないため、施術後もそのままお帰りいただけます。</span></div>
+      </details>
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">メイクをしたままでも大丈夫ですか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">基本的にはメイクをしたままでも受けていただけます。気になる方はお気軽にご相談ください。</span></div>
+      </details>
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">初めてでも大丈夫ですか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">もちろんです。最初にお悩みや体の状態をうかがってから、心地よい強さで施術いたします。</span></div>
+      </details>
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">駐車場はありますか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">はい、ご用意しています。駐車場所は、ご予約後にあらためてご案内いたします。</span></div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- 8枚目：クロージング（画像のボタンにリンクを重ねています） -->
+  <span class="aps-lp__linked">
+    <img src="IMAGE_8_URL" alt="毎日頑張っているあなたに、頭からゆるむ時間を。A＋salon｜完全予約制・女性専用｜福岡県宗像市">
+    <a class="aps-lp__hot aps-lp__hot--reserve" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=closing" aria-label="ご予約はこちら"></a>
+    <a class="aps-lp__hot aps-lp__hot--line" href="https://utage-system.com/p/mo21mpxjZvXn?utm_source=lp&amp;utm_medium=web&amp;utm_content=line" aria-label="LINEで相談する"></a>
+  </span>
+
+  <p class="aps-lp__foot">A＋salon ／ 完全予約制・女性専用 ／ 福岡県宗像市くりえいと ／ 駐車場完備</p>
+
+</div>
+
+<!-- 固定ボタン：画面下に出しっぱなしの「ご予約はこちら」。不要ならこの4行を削除してください -->
+<div class="aps-lp-fixed">
+  <a href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=fixed">ご予約はこちら<span aria-hidden="true">›</span></a>
+</div>
