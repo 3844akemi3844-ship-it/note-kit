@@ -259,6 +259,49 @@ body{
   text-decoration:none;
 }
 
+/* お客様の声 */
+.aps-lp__voice{
+  padding:46px 22px 50px;
+  background:linear-gradient(180deg,#fbf9f4 0%,#fdfcfa 100%);
+}
+.aps-lp__voice-list{ display:flex; flex-direction:column; gap:14px; }
+.aps-lp__voice-card{
+  background:#fff;
+  border:1px solid #efe7da;
+  border-radius:14px;
+  padding:20px 18px;
+  box-shadow:0 6px 18px rgba(150,125,90,.07);
+}
+.aps-lp__stars{ display:flex; gap:3px; color:#d6b263; margin-bottom:10px; }
+.aps-lp__star{ width:15px; height:15px; }
+.aps-lp__voice-who{
+  margin:0 0 12px;
+  font-size:clamp(13px,3.8vw,15px);
+  letter-spacing:.04em;
+  color:#3a2a20;
+}
+.aps-lp__voice-who span{
+  display:block;
+  margin-top:3px;
+  font-size:.82em;
+  letter-spacing:.02em;
+  color:#9a8b7b;
+}
+.aps-lp__voice-card p:not(.aps-lp__voice-who){
+  margin:0 0 .9em;
+  font-size:clamp(12.5px,3.6vw,14.5px);
+  line-height:1.95;
+  letter-spacing:.01em;
+  color:#5a4a3c;
+}
+.aps-lp__voice-card p:last-child{ margin-bottom:0; }
+.aps-lp__voice-note{
+  margin:16px 0 0;
+  font-size:11.5px;
+  line-height:1.8;
+  color:#9a8b7b;
+}
+
 /* セラピスト紹介（写真サイズは .aps-lp__photo の width で調整できます） */
 .aps-lp__therapist{
   padding:44px 22px 46px;
@@ -399,6 +442,35 @@ body{
       </p>
       <a class="aps-lp__offer-btn" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=offer">この価格で予約する<span aria-hidden="true">›</span></a>
     </div>
+  </section>
+
+  <!-- お客様の声（Googleの口コミ。文言はお客様が書かれたままです） -->
+  <section class="aps-lp__voice">
+    <h2 class="aps-lp__head">お客様の声</h2>
+    <div class="aps-lp__voice-list">
+      <article class="aps-lp__voice-card">
+        <div class="aps-lp__stars" aria-label="5段階評価のうち5"><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="aps-lp__voice-who">30代・宗像市　S様<span>足裏ケア ＋ ヘッドマッサージ</span></p>
+        <p>今回初めて、足裏ケアとヘッドマッサージを受けに伺いました。</p>
+        <p>普段は靴下が苦手で素足で過ごすことが多いため、自分へのご褒美として足裏ケアをお願いしました。施術後は足裏の血色が良くなり、むくみもスッキリ。歩いた時の何とも言えない心地よい感覚が戻ってきて、とても感動しました。思わずクセになりそうで、ぜひまた受けたいと思っています。</p>
+        <p>ヘッドマッサージは、1歳になる娘の育児で上半身がガチガチに凝り固まり、頭痛まで出て日常生活がつらくなっていたためお願いしました。施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。血行や巡りが良くなったおかげか頭痛もなくなり、生活の質がぐんと上がりました。</p>
+        <p>また、ご自宅でサロンをされているので、まるで友人の家を訪ねるような気軽な気持ちで通えるのも魅力です。サロン内は清潔感があり、とても居心地の良い空間でした。</p>
+        <p>心も体もリフレッシュできる素敵な時間をありがとうございました。これからも定期的に通って、体のメンテナンスをお願いしたいと思います。</p>
+      </article>
+      <article class="aps-lp__voice-card">
+        <div class="aps-lp__stars" aria-label="5段階評価のうち5"><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="aps-lp__voice-who">50代・宗像市　K様<span>シミケア ＋ ヘッドマッサージ</span></p>
+        <p>本当は教えたくない、最高のシミケアサロンです！たった1回の施術で、毎日のメイクが驚くほど楽になりました。シミの変化はもちろんですが、毎月受けているヘッドマッサージも最高に気持ちよくて、自分へのご褒美に欠かせない時間になっています。そして何より、オーナーの明美さんのセンスが抜群！明美さんがおすすめしてくれるものは、どれも本当に間違いがありません。サロン選びに迷っている方に、自信を持っておすすめしたい場所です。宗像の方、是非！</p>
+      </article>
+      <article class="aps-lp__voice-card">
+        <div class="aps-lp__stars" aria-label="5段階評価のうち5"><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="aps-lp__voice-who">40代・宮若市　A様<span>ヘッドマッサージ ＋ 足裏角質ケア</span></p>
+        <p>宗像市でサロンをしていて、月1で宮若市から伺ってます。ここでしかうけれない、ヘッドマッサージ屋、足裏角質ケアをしていただいてます。</p>
+        <p>ヘッドマッサージは、他店とは違い終わったあと顔のトーンアップや小顔効果を感じました。顔のくすみもとんで、気分もスッキリ！リラックス効果も抜群です！</p>
+        <p>足裏角質ケアも一般的な角質ケアと違い地に足がついて本来の感覚がとりもどせました。また、これからもよろしくお願いします！</p>
+      </article>
+    </div>
+    <p class="aps-lp__voice-note">Googleマップにいただいた口コミより掲載しています。<br>※ 感じ方には個人差があります。</p>
   </section>
 
 
