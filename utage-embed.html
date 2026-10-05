@@ -155,6 +155,110 @@ body{
   color:#8b7c6d;
 }
 
+/* 特別価格（初回限定） */
+.aps-lp__offer{
+  padding:44px 22px 48px;
+  background:linear-gradient(180deg,#f7f3ea 0%,#f3ede0 100%);
+}
+.aps-lp__offer-box{
+  position:relative;
+  background:#fffdf9;
+  border:1px solid #d8c49a;
+  border-radius:4px;
+  padding:30px 20px 26px;
+  text-align:center;
+  box-shadow:0 10px 26px rgba(150,125,90,.10);
+}
+.aps-lp__offer-box::after{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid #ede1c9;
+  border-radius:2px;
+  pointer-events:none;
+}
+.aps-lp__offer-eyebrow{
+  display:inline-block;
+  margin:0 0 14px;
+  padding:5px 16px;
+  background:#8d7a53;
+  color:#fff;
+  font-size:clamp(11px,3.2vw,13px);
+  letter-spacing:.14em;
+}
+.aps-lp__offer-limit{
+  margin:0 0 4px;
+  font-size:clamp(20px,6.2vw,27px);
+  line-height:1.5;
+  letter-spacing:.04em;
+  color:#3a2a20;
+}
+.aps-lp__offer-limit span{
+  display:block;
+  margin-bottom:4px;
+  font-size:.62em;
+  letter-spacing:.1em;
+  color:#5a4a3c;
+}
+.aps-lp__offer-limit b{
+  font-size:1.5em;
+  font-weight:600;
+  color:#8a6f3f;
+  padding:0 .08em;
+}
+.aps-lp__offer-menu{
+  margin:14px 0 0;
+  padding-top:14px;
+  border-top:1px solid #ece2cd;
+  font-size:clamp(14px,4.2vw,17px);
+  letter-spacing:.04em;
+  color:#3a2a20;
+}
+.aps-lp__offer-price{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:4px 12px;
+  margin:10px 0 0;
+}
+.aps-lp__offer-was{
+  font-size:clamp(13px,3.8vw,16px);
+  color:#9a8b7b;
+  text-decoration:line-through;
+  text-decoration-thickness:1px;
+}
+.aps-lp__offer-now{
+  font-size:clamp(30px,9vw,42px);
+  font-weight:600;
+  letter-spacing:.02em;
+  color:#3a2a20;
+  font-variant-numeric:tabular-nums;
+}
+.aps-lp__offer-now span{ font-size:.45em; font-weight:400; letter-spacing:.06em; }
+.aps-lp__offer-note{
+  margin:16px 0 0;
+  font-size:clamp(11.5px,3.3vw,13px);
+  line-height:1.9;
+  color:#6b5b4c;
+  text-align:left;
+}
+.aps-lp__offer-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  margin:20px auto 0;
+  max-width:420px;
+  min-height:56px;
+  border-radius:999px;
+  background:#8c8e60;
+  color:#fff;
+  font-size:clamp(15px,4.6vw,18px);
+  letter-spacing:.1em;
+  text-decoration:none;
+}
+
 /* セラピスト紹介（写真サイズは .aps-lp__photo の width で調整できます） */
 .aps-lp__therapist{
   padding:44px 22px 46px;
@@ -277,6 +381,25 @@ body{
 
   <!-- 5枚目：メニュー・料金 -->
   <img src="IMAGE_5_URL" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
+
+  <!-- 特別価格（人数・金額・条件を変えるときはこの中の文字を書き換えてください） -->
+  <section class="aps-lp__offer">
+    <div class="aps-lp__offer-box">
+      <p class="aps-lp__offer-eyebrow">初めての方へ</p>
+      <p class="aps-lp__offer-limit"><span>今月のご予約は</span><b>3</b>名様まで</p>
+      <p class="aps-lp__offer-menu">ヘッドマッサージ（60分）</p>
+      <p class="aps-lp__offer-price">
+        <span class="aps-lp__offer-was">通常 ¥11,000</span>
+        <span class="aps-lp__offer-now">¥9,800<span>（税込）</span></span>
+      </p>
+      <p class="aps-lp__offer-note">
+        ※ はじめてご来店の方に限ります。<br>
+        ※ ご予約時に「ホームページを見ました」とお伝えください。<br>
+        ※ 3名様に達し次第、受付を終了します。
+      </p>
+      <a class="aps-lp__offer-btn" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=offer">この価格で予約する<span aria-hidden="true">›</span></a>
+    </div>
+  </section>
 
 
   <!-- セラピスト紹介（写真の大きさを変えられるよう、ここだけHTMLにしています）
