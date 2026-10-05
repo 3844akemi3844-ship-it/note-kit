@@ -36,11 +36,15 @@
    | `lp-08.jpg` | 8枚目：クロージング（ご予約／LINE） |
 
    拡張子は `.jpg` でなくても構いません（`.png` / `.webp` でもそのまま表示されます）。
-   次の2か所は画像ではなくHTMLで作っています（元の画像 `lp-06.jpg` / `lp-07.jpg` は参考用に残置）。
+   次の各所は画像ではなくHTMLで作っています（元の画像 `lp-06.jpg` / `lp-07.jpg` は参考用に残置）。
    - よくある質問 … `<section class="faq">`（答えを開閉できるようにするため）
    - セラピスト紹介 … `<section class="lp__therapist">`（写真の大きさを調整できるようにするため。
      写真は `assets/images/therapist-photo.jpg`、大きさは `.lp__thera-body` の
      `grid-template-columns` の％で変わります）
+   - 60分後、こんな感覚を。 … `<section class="lp__feel">`（サロンの実写 `feel-01〜03.jpg` に差し替え済み）
+   - 特別価格 … `<section class="lp__offer">`（人数・金額・条件は文字を書き換えるだけ）
+   - お客様の声 … `<section class="lp__voice">`（Googleの口コミ3件）
+   - サロン情報 … `<section class="lp__salon">`（営業時間・定休日・駐車場・ご予約方法。写真は `salon-01.jpg`）
    並び順を変えたいときは、`index.html` の `<img>` の行を入れ替えるだけです。
 
    - 横幅は **1000〜1200px** 程度あれば十分きれいです（縦の長さは自由、画像ごとに違っても大丈夫）。

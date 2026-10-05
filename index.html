@@ -11,7 +11,7 @@
 <meta property="og:image" content="assets/images/lp-01.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Parisienne&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{ box-sizing:border-box; }
   html{ -webkit-text-size-adjust:100%; }
@@ -99,6 +99,124 @@
     .fixed-cta a{ transition:opacity .2s ease; }
     .fixed-cta a:hover{ opacity:.85; }
   }
+
+  /* 60分後、こんな感覚を。 */
+  .lp__feel{
+    padding:46px 22px 44px;
+    background:linear-gradient(180deg,#fdfcf8 0%,#faf7f0 100%);
+  }
+  .lp__feel-head{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin:0 0 22px;
+    font-size:clamp(19px,5.6vw,26px);
+    font-weight:500;
+    letter-spacing:.03em;
+    color:#3a2a20;
+    white-space:nowrap;
+  }
+  .lp__feel-head::before,
+  .lp__feel-head::after{
+    content:"";
+    flex:1 1 auto;
+    height:1px;
+    background:linear-gradient(90deg,transparent,#c3a87b);
+  }
+  .lp__feel-head::after{ background:linear-gradient(90deg,#c3a87b,transparent); }
+  .lp__feel-list{ display:flex; flex-direction:column; gap:14px; }
+  .lp__feel-card{
+    position:relative;
+    margin:0;
+    min-height:168px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 24px rgba(150,125,90,.12);
+  }
+  .lp__feel-card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .lp__feel-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(255,253,248,.72),rgba(255,253,248,.60));
+  }
+  .lp__feel-card figcaption{
+    position:relative;
+    z-index:1;
+    padding:24px 18px 26px;
+    text-align:center;
+    font-size:clamp(17px,5.4vw,25px);
+    line-height:1.6;
+    letter-spacing:.05em;
+    color:#3a2a20;
+    text-shadow:0 1px 12px rgba(255,255,255,.95);
+  }
+  .lp__feel-card figcaption::after{
+    content:"";
+    display:block;
+    width:62px;
+    height:1px;
+    margin:14px auto 0;
+    background:#c3a87b;
+  }
+  .lp__script{ margin:32px 0 0; text-align:center; color:#a98553; }
+  .lp__script-ja{
+    display:block;
+    font-family:"Klee One","Shippori Mincho",serif;
+    font-size:clamp(17px,5.2vw,23px);
+    letter-spacing:.06em;
+  }
+  .lp__swash{ display:block; width:min(240px,70%); height:14px; margin:4px auto; color:#c6ad80; }
+  .lp__script-en{
+    display:block;
+    font-family:"Parisienne",cursive;
+    font-size:clamp(15px,4.6vw,20px);
+    letter-spacing:.06em;
+  }
+
+  /* サロン情報 */
+  .lp__salon{
+    padding:46px 22px 50px;
+    background:linear-gradient(180deg,#faf7f0 0%,#fdfcfa 100%);
+  }
+  .lp__salon-photo{ margin:0 0 22px; }
+  .lp__salon-photo img{
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    box-shadow:0 10px 24px rgba(150,125,90,.14);
+  }
+  .lp__info{ margin:0; }
+  .lp__info > div{
+    display:grid;
+    grid-template-columns:78px 1fr;
+    gap:12px;
+    padding:13px 0;
+    border-bottom:1px solid #ece2d1;
+  }
+  .lp__info > div:first-child{ border-top:1px solid #ece2d1; }
+  .lp__info dt{
+    font-size:clamp(12.5px,3.5vw,14px);
+    letter-spacing:.08em;
+    color:#8d7a53;
+  }
+  .lp__info dd{
+    margin:0;
+    font-size:clamp(13px,3.8vw,15.5px);
+    line-height:1.8;
+    letter-spacing:.02em;
+    color:#3a2a20;
+  }
+  .lp__info dd span{ font-size:.82em; color:#9a8b7b; }
 
   /* 特別価格（初回限定） */
   .lp__offer{
@@ -433,7 +551,30 @@
     <a class="hot hot--hero" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=hero" aria-label="ご予約はこちら"></a>
   </span>
   <img src="assets/images/lp-02.jpg" alt="こんなお悩みありませんか？ 頭が重い・眠りが浅い・首肩がつらい・自分時間がほしい。A＋salonのヘッドマッサージは、頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたケアをゆったり60分。">
-  <img src="assets/images/lp-03.jpg" alt="60分後、こんな感覚を。頭がふわっと軽く感じる／深くひと息つける／鏡を見るのが少し楽しみになる">
+
+  <!-- 60分後、こんな感覚を。（サロンの実写） -->
+  <section class="lp__feel">
+    <h2 class="lp__feel-head">60分後、こんな感覚を。</h2>
+    <div class="lp__feel-list">
+      <figure class="lp__feel-card">
+        <img src="assets/images/feel-01.jpg" alt="">
+        <figcaption>頭がふわっと<br>軽く感じる</figcaption>
+      </figure>
+      <figure class="lp__feel-card">
+        <img src="assets/images/feel-02.jpg" alt="">
+        <figcaption>深くひと息<br>つける</figcaption>
+      </figure>
+      <figure class="lp__feel-card">
+        <img src="assets/images/feel-03.jpg" alt="">
+        <figcaption>鏡を見るのが<br>少し楽しみになる</figcaption>
+      </figure>
+    </div>
+    <p class="lp__script">
+      <span class="lp__script-ja">わたしに、やさしい時間を。</span>
+      <svg class="lp__swash" viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9c60 11 130 13 200 7s88-8 114-11" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+      <span class="lp__script-en">A calmer me.</span>
+    </p>
+  </section>
   <img src="assets/images/lp-04.jpg" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
   <img src="assets/images/lp-05.jpg" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
 
@@ -532,6 +673,22 @@
 </section>
 
 <div class="lp">
+
+
+  <!-- サロン情報・ご予約 -->
+  <section class="lp__salon">
+    <h2 class="lp__head">サロン情報</h2>
+    <figure class="lp__salon-photo">
+      <img src="assets/images/salon-01.jpg" alt="カウンセリングの様子">
+    </figure>
+    <dl class="lp__info">
+      <div><dt>所在地</dt><dd>福岡県宗像市くりえいと<br><span>※ 詳しい場所はご予約後にご案内します</span></dd></div>
+      <div><dt>営業時間</dt><dd>9:00〜17:00<br><span>※ 土曜日は午前のみ</span></dd></div>
+      <div><dt>定休日</dt><dd>日曜日・祝日</dd></div>
+      <div><dt>駐車場</dt><dd>あり</dd></div>
+      <div><dt>ご予約</dt><dd>公式LINEの「ご予約はこちら」、<br>またはInstagramのプロフィールから</dd></div>
+    </dl>
+  </section>
 
   <!-- 最後の1枚もボタン部分をリンクにしています（位置は下の .hot--reserve / .hot--line の % で調整できます） -->
   <span class="lp__linked">
