@@ -248,6 +248,32 @@
     color:#9a8b7b;
   }
 
+  .lp__voice-who em{
+    font-style:normal;
+    font-size:.82em;
+    color:#9a8b7b;
+    letter-spacing:.02em;
+  }
+  .lp__more{ margin-top:6px; }
+  .lp__more > summary{
+    list-style:none;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:clamp(12px,3.4vw,13.5px);
+    letter-spacing:.04em;
+    color:#8d7a53;
+    border-bottom:1px solid #e0d2b4;
+    padding-bottom:2px;
+  }
+  .lp__more > summary::-webkit-details-marker{ display:none; }
+  .lp__more > summary::marker{ content:""; }
+  .lp__more > summary::after{ content:"＋"; font-size:.95em; }
+  .lp__more[open] > summary::after{ content:"−"; }
+  .lp__more[open] > summary{ margin-bottom:10px; }
+  .lp__more > summary:focus-visible{ outline:2px solid #c3a87b; outline-offset:3px; }
+
   /* セラピスト紹介（写真サイズは .lp__photo の width で調整できます） */
   .lp__therapist{
     padding:44px 22px 46px;
@@ -436,12 +462,19 @@
     <div class="lp__voice-list">
       <article class="lp__voice-card">
         <div class="lp__stars" aria-label="5段階評価のうち5"><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
-        <p class="lp__voice-who">30代・宗像市　S様<span>足裏ケア ＋ ヘッドマッサージ</span></p>
+        <p class="lp__voice-who">30代・宗像市　S様<em>（抜粋）</em><span>足裏ケア ＋ ヘッドマッサージ</span></p>
         <p>今回初めて、足裏ケアとヘッドマッサージを受けに伺いました。</p>
-        <p>普段は靴下が苦手で素足で過ごすことが多いため、自分へのご褒美として足裏ケアをお願いしました。施術後は足裏の血色が良くなり、むくみもスッキリ。歩いた時の何とも言えない心地よい感覚が戻ってきて、とても感動しました。思わずクセになりそうで、ぜひまた受けたいと思っています。</p>
-        <p>ヘッドマッサージは、1歳になる娘の育児で上半身がガチガチに凝り固まり、頭痛まで出て日常生活がつらくなっていたためお願いしました。施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。血行や巡りが良くなったおかげか頭痛もなくなり、生活の質がぐんと上がりました。</p>
-        <p>また、ご自宅でサロンをされているので、まるで友人の家を訪ねるような気軽な気持ちで通えるのも魅力です。サロン内は清潔感があり、とても居心地の良い空間でした。</p>
-        <p>心も体もリフレッシュできる素敵な時間をありがとうございました。これからも定期的に通って、体のメンテナンスをお願いしたいと思います。</p>
+        <p>施術後は足裏の血色が良くなり、むくみもスッキリ。歩いた時の何とも言えない心地よい感覚が戻ってきて、とても感動しました。</p>
+        <p>ヘッドマッサージは、1歳になる娘の育児で上半身がガチガチに凝り固まり、日常生活がつらくなっていたためお願いしました。施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。</p>
+        <p>ご自宅でサロンをされているので、まるで友人の家を訪ねるような気軽な気持ちで通えるのも魅力です。サロン内は清潔感があり、とても居心地の良い空間でした。</p>
+        <details class="lp__more">
+          <summary>口コミの全文を読む</summary>
+          <p>今回初めて、足裏ケアとヘッドマッサージを受けに伺いました。</p>
+          <p>普段は靴下が苦手で素足で過ごすことが多いため、自分へのご褒美として足裏ケアをお願いしました。施術後は足裏の血色が良くなり、むくみもスッキリ。歩いた時の何とも言えない心地よい感覚が戻ってきて、とても感動しました。思わずクセになりそうで、ぜひまた受けたいと思っています。</p>
+          <p>ヘッドマッサージは、1歳になる娘の育児で上半身がガチガチに凝り固まり、頭痛まで出て日常生活がつらくなっていたためお願いしました。施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。血行や巡りが良くなったおかげか頭痛もなくなり、生活の質がぐんと上がりました。</p>
+          <p>また、ご自宅でサロンをされているので、まるで友人の家を訪ねるような気軽な気持ちで通えるのも魅力です。サロン内は清潔感があり、とても居心地の良い空間でした。</p>
+          <p>心も体もリフレッシュできる素敵な時間をありがとうございました。これからも定期的に通って、体のメンテナンスをお願いしたいと思います。</p>
+        </details>
       </article>
       <article class="lp__voice-card">
         <div class="lp__stars" aria-label="5段階評価のうち5"><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
