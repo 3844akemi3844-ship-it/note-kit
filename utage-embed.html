@@ -330,63 +330,82 @@ body{
 
 /* 特別価格（初回限定） */
 .aps-lp__offer{
-  padding:44px 22px 48px;
-  background:linear-gradient(180deg,#f7f3ea 0%,#f3ede0 100%);
+  padding:46px 20px 50px;
+  background:linear-gradient(180deg,#f6f1e6 0%,#f1e9d9 100%);
 }
 .aps-lp__offer-box{
   position:relative;
   background:#fffdf9;
-  border:1px solid #d8c49a;
+  border:1px solid #d3bd90;
   border-radius:4px;
-  padding:30px 20px 26px;
+  padding:34px 18px 26px;
   text-align:center;
-  box-shadow:0 10px 26px rgba(150,125,90,.10);
+  box-shadow:0 12px 30px rgba(150,125,90,.14);
 }
 .aps-lp__offer-box::after{
   content:"";
   position:absolute;
   inset:5px;
-  border:1px solid #ede1c9;
+  border:1px solid #ece0c6;
   border-radius:2px;
   pointer-events:none;
 }
-.aps-lp__offer-eyebrow{
-  display:inline-block;
-  margin:0 0 14px;
-  padding:5px 16px;
+.aps-lp__offer-seal{
+  position:absolute;
+  top:-13px;
+  left:50%;
+  transform:translateX(-50%);
+  margin:0;
+  padding:6px 22px;
   background:#8d7a53;
   color:#fff;
-  font-size:clamp(11px,3.2vw,13px);
-  letter-spacing:.14em;
+  font-size:clamp(12px,3.4vw,14px);
+  letter-spacing:.18em;
+  white-space:nowrap;
+  box-shadow:0 4px 12px rgba(141,122,83,.28);
 }
 .aps-lp__offer-limit{
-  margin:0 0 4px;
-  font-size:clamp(20px,6.2vw,27px);
-  line-height:1.5;
+  margin:6px 0 0;
+  font-size:clamp(22px,6.6vw,30px);
+  line-height:1.35;
   letter-spacing:.04em;
   color:#3a2a20;
 }
 .aps-lp__offer-limit span{
-  display:block;
-  margin-bottom:4px;
   font-size:.62em;
-  letter-spacing:.1em;
+  letter-spacing:.08em;
   color:#5a4a3c;
+  padding-right:.2em;
 }
 .aps-lp__offer-limit b{
-  font-size:1.5em;
+  font-size:1.65em;
   font-weight:600;
   color:#8a6f3f;
-  padding:0 .08em;
+  padding:0 .06em;
+}
+.aps-lp__offer-remain{
+  display:inline-block;
+  margin:12px 0 0;
+  padding:5px 16px;
+  border:1px solid #d9c49b;
+  border-radius:999px;
+  font-size:clamp(12px,3.4vw,14px);
+  letter-spacing:.06em;
+  color:#8a6f3f;
+}
+.aps-lp__offer-remain b{ font-size:1.25em; font-weight:600; padding:0 .12em; }
+.aps-lp__offer-main{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid #ece2cd;
 }
 .aps-lp__offer-menu{
-  margin:14px 0 0;
-  padding-top:14px;
-  border-top:1px solid #ece2cd;
-  font-size:clamp(14px,4.2vw,17px);
+  margin:0;
+  font-size:clamp(15px,4.4vw,18px);
   letter-spacing:.04em;
   color:#3a2a20;
-}.aps-lp__offer-menu span{
+}
+.aps-lp__offer-menu span{
   display:block;
   margin-top:6px;
   font-size:clamp(11px,3.1vw,12.5px);
@@ -394,14 +413,40 @@ body{
   letter-spacing:.02em;
   color:#8d7a53;
 }
-
+.aps-lp__offer-incl{
+  display:inline-flex;
+  flex-direction:column;
+  gap:6px;
+  margin:14px 0 0;
+  padding:0;
+  list-style:none;
+  text-align:left;
+}
+.aps-lp__offer-incl li{
+  position:relative;
+  padding-left:22px;
+  font-size:clamp(12.5px,3.5vw,14.5px);
+  line-height:1.7;
+  color:#5a4a3c;
+}
+.aps-lp__offer-incl li::before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:.42em;
+  width:12px;
+  height:7px;
+  border-left:1.6px solid #a98553;
+  border-bottom:1.6px solid #a98553;
+  transform:rotate(-45deg);
+}
 .aps-lp__offer-price{
   display:flex;
   align-items:baseline;
   justify-content:center;
   flex-wrap:wrap;
-  gap:4px 12px;
-  margin:10px 0 0;
+  gap:2px 10px;
+  margin:16px 0 0;
 }
 .aps-lp__offer-was{
   font-size:clamp(13px,3.8vw,16px);
@@ -409,16 +454,27 @@ body{
   text-decoration:line-through;
   text-decoration-thickness:1px;
 }
+.aps-lp__offer-arrow{ font-size:11px; color:#c3a87b; }
 .aps-lp__offer-now{
-  font-size:clamp(30px,9vw,42px);
+  font-size:clamp(34px,10vw,46px);
   font-weight:600;
-  letter-spacing:.02em;
+  letter-spacing:.01em;
   color:#3a2a20;
   font-variant-numeric:tabular-nums;
 }
-.aps-lp__offer-now span{ font-size:.45em; font-weight:400; letter-spacing:.06em; }
+.aps-lp__offer-now span{ font-size:.42em; font-weight:400; letter-spacing:.06em; }
+.aps-lp__offer-save{
+  display:inline-block;
+  margin:6px 0 0;
+  padding:4px 14px;
+  background:#f3ece0;
+  border-radius:999px;
+  font-size:clamp(12px,3.4vw,14px);
+  letter-spacing:.06em;
+  color:#8a6f3f;
+}
 .aps-lp__offer-note{
-  margin:16px 0 0;
+  margin:18px 0 0;
   font-size:clamp(11.5px,3.3vw,13px);
   line-height:1.9;
   color:#6b5b4c;
@@ -429,16 +485,44 @@ body{
   align-items:center;
   justify-content:center;
   gap:.5em;
-  margin:20px auto 0;
+  margin:18px auto 0;
   max-width:420px;
-  min-height:56px;
+  min-height:58px;
   border-radius:999px;
   background:#8c8e60;
   color:#fff;
   font-size:clamp(15px,4.6vw,18px);
   letter-spacing:.1em;
   text-decoration:none;
+  box-shadow:0 10px 22px rgba(110,110,70,.26);
 }
+
+/* ファーストビュー直下のお知らせ帯 */
+.aps-lp__teaser{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px 14px;
+  flex-wrap:wrap;
+  padding:14px 18px;
+  background:#8d7a53;
+  color:#fff;
+  text-decoration:none;
+  text-align:center;
+}
+.aps-lp__teaser-label{
+  padding:3px 12px;
+  border:1px solid rgba(255,255,255,.6);
+  border-radius:999px;
+  font-size:clamp(10.5px,3vw,12px);
+  letter-spacing:.14em;
+  white-space:nowrap;
+}
+.aps-lp__teaser-text{
+  font-size:clamp(13px,3.9vw,16px);
+  letter-spacing:.04em;
+}
+.aps-lp__teaser-text b{ font-size:1.25em; font-weight:600; padding:0 .1em; }
 
 /* お客様の声 */
 .aps-lp__voice{
@@ -619,6 +703,10 @@ body{
     <img src="IMAGE_1_URL" alt="A＋salon／頭から、ふっと軽くなる。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
     <a class="aps-lp__hot aps-lp__hot--hero" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=hero" aria-label="ご予約はこちら"></a>
   </span>
+  <a class="aps-lp__teaser" href="#first-visit">
+    <span class="aps-lp__teaser-label">初めての方へ</span>
+    <span class="aps-lp__teaser-text">今月<b>3</b>名様限定　ヘッドマッサージ <b>¥9,800</b> ›</span>
+  </a>
 
   <!-- 2枚目：こんなお悩み・特長 -->
   <img src="IMAGE_2_URL" alt="こんなお悩みありませんか？ 頭が重い・眠りが浅い・首肩がつらい・自分時間がほしい。A＋salonのヘッドマッサージは、頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたケアをゆったり60分。">
@@ -655,20 +743,32 @@ body{
   <!-- 5枚目：メニュー・料金 -->
   <img src="IMAGE_5_URL" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
 
-  <!-- 特別価格（人数・金額・条件を変えるときはこの中の文字を書き換えてください） -->
-  <section class="aps-lp__offer">
+  <!-- 特別価格（人数・金額・残り枠はこの中の文字を書き換えてください） -->
+  <section class="aps-lp__offer" id="first-visit">
     <div class="aps-lp__offer-box">
-      <p class="aps-lp__offer-eyebrow">初めての方へ</p>
-      <p class="aps-lp__offer-limit"><span>今月のご予約は</span><b>3</b>名様まで</p>
-      <p class="aps-lp__offer-menu">ヘッドマッサージ（60分）<span>アーユルヴェーダに基づくマルマ（ツボ）をゆるめる施術です</span></p>
-      <p class="aps-lp__offer-price">
-        <span class="aps-lp__offer-was">通常 ¥11,000</span>
-        <span class="aps-lp__offer-now">¥9,800<span>（税込）</span></span>
-      </p>
+      <p class="aps-lp__offer-seal">初回限定</p>
+      <p class="aps-lp__offer-limit"><span>毎月</span><b>3</b>名様まで</p>
+      <p class="aps-lp__offer-remain">今月の受付：あと<b>3</b>名</p>
+
+      <div class="aps-lp__offer-main">
+        <p class="aps-lp__offer-menu">ヘッドマッサージ（60分）<span>アーユルヴェーダに基づくマルマ（ツボ）をゆるめる施術です</span></p>
+        <ul class="aps-lp__offer-incl">
+          <li>事前カウンセリングつき</li>
+          <li>頭・顔・首・肩・デコルテまで</li>
+          <li>ゆったり60分</li>
+        </ul>
+        <p class="aps-lp__offer-price">
+          <span class="aps-lp__offer-was">通常 ¥11,000</span>
+          <span class="aps-lp__offer-arrow" aria-hidden="true">▶</span>
+          <span class="aps-lp__offer-now">¥9,800<span>（税込）</span></span>
+        </p>
+        <p class="aps-lp__offer-save">1,200円 おトク</p>
+      </div>
+
       <p class="aps-lp__offer-note">
         ※ はじめてご来店の方に限ります。<br>
         ※ ご予約時に「ホームページを見ました」とお伝えください。<br>
-        ※ 3名様に達し次第、受付を終了します。
+        ※ 3名様に達し次第、今月の受付を終了します。
       </p>
       <a class="aps-lp__offer-btn" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=offer">この価格で予約する<span aria-hidden="true">›</span></a>
     </div>
