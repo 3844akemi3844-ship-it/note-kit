@@ -426,7 +426,7 @@
   }
   .lp__thera-body{
     display:grid;
-    grid-template-columns:34% 1fr;
+    grid-template-columns:38% 1fr;
     gap:20px;
     align-items:center;
   }
@@ -457,6 +457,54 @@
     line-height:2;
     letter-spacing:.02em;
     color:#5a4a3c;
+  }
+
+  .lp__role{
+    margin:10px 0 0;
+    font-size:clamp(12px,3.4vw,14px);
+    line-height:1.8;
+    letter-spacing:.04em;
+    color:#8d7a53;
+  }
+  .lp__thera-text{ margin-top:22px; }
+  .lp__thera-text p{
+    margin:0 0 .9em;
+    font-size:clamp(13px,3.7vw,15.5px);
+    line-height:2;
+    letter-spacing:.02em;
+    color:#5a4a3c;
+  }
+  .lp__thera-text p:last-child{ margin-bottom:0; }
+  .lp__credit{
+    margin-top:22px;
+    padding:18px 18px 16px;
+    background:#faf7f0;
+    border:1px solid #ece2d1;
+    border-radius:12px;
+  }
+  .lp__credit-title{
+    margin:0 0 10px;
+    font-size:clamp(12px,3.3vw,13.5px);
+    letter-spacing:.14em;
+    color:#8d7a53;
+  }
+  .lp__credit ul{ margin:0; padding:0; list-style:none; }
+  .lp__credit li{
+    position:relative;
+    padding-left:16px;
+    font-size:clamp(12.5px,3.6vw,15px);
+    line-height:1.9;
+    color:#3a2a20;
+  }
+  .lp__credit li::before{
+    content:"";
+    position:absolute;
+    left:2px;
+    top:.85em;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:#c3a87b;
   }
 
   /* よくある質問（ここだけ画像ではなく、開閉できるHTMLにしています） */
@@ -640,8 +688,7 @@
     <p class="lp__voice-note">Googleマップにいただいた口コミより掲載しています。<br>※ 感じ方には個人差があります。</p>
   </section>
 
-  <!-- セラピスト紹介（写真の大きさを変えられるよう、ここだけHTMLにしています）
-       写真を大きく／小さくするには lp__photo の width の % を変えてください -->
+  <!-- セラピスト紹介（写真の大きさを変えるには .lp__thera-body の grid-template-columns の％） -->
   <section class="lp__therapist">
     <h2 class="lp__head">セラピスト紹介</h2>
     <div class="lp__thera-body">
@@ -650,8 +697,22 @@
       </figure>
       <div>
         <p class="lp__name">後藤 あけみ</p>
-        <p class="lp__msg">忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。</p>
+        <p class="lp__role">歯科衛生士<br>A＋salon オーナーセラピスト</p>
       </div>
+    </div>
+    <div class="lp__thera-text">
+      <p>歯科衛生士として20年以上、お口と体の健康に向き合ってきました。</p>
+      <p>自分自身の健康を見直すできごとをきっかけに、「中からのケア」と「外からのケア」を同時に叶えられるサロンをはじめました。</p>
+      <p>忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。</p>
+    </div>
+    <div class="lp__credit">
+      <p class="lp__credit-title">資格・ディプロマ</p>
+      <ul>
+        <li>歯科衛生士（実務20年以上）</li>
+        <li>韓国式足裏角質ケア ディプロマ</li>
+        <li>シミケア ディプロマ</li>
+        <li>マルマトリートメント ディプロマ</li>
+      </ul>
     </div>
   </section>
 </div>
