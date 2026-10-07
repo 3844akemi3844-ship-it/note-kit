@@ -467,22 +467,35 @@ body{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:12px;
+  flex-wrap:wrap;
+  gap:6px 10px;
   margin:14px 0 0;
 }
-.aps-lp__seat-row{ display:flex; gap:6px; }
+.aps-lp__seat-label{
+  font-size:clamp(11px,3.1vw,12.5px);
+  letter-spacing:.1em;
+  color:#8d7a53;
+}
+.aps-lp__seat-row{ display:flex; gap:4px; }
 .aps-lp__seat{
-  width:11px;
-  height:11px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:22px;
+  height:22px;
   border-radius:50%;
-  border:1.5px solid #c0a877;
-  background:#fff;
+  background:#fdfaf3;
+  border:1px solid #e3d5b4;
+  font-size:13px;
+  line-height:1;
+  color:#a8903f;
 }
 .aps-lp__seat.is-taken{
-  background:#c0a877;
-  border-color:#c0a877;
-  opacity:.45;
+  background:#f1ece2;
+  border-color:#e0d8c8;
+  color:#b3a897;
 }
+.aps-lp__seat-arrow{ font-size:13px; color:#c3a87b; }
 .aps-lp__seat-text{
   font-size:clamp(13px,3.7vw,15px);
   letter-spacing:.06em;
@@ -957,9 +970,11 @@ body{
     <div class="aps-lp__offer-box">
       <p class="aps-lp__offer-seal">初回限定</p>
       <p class="aps-lp__offer-limit"><span>先着</span><b>5</b>名様限定</p>
-      <!-- 残席：ご予約が入ったら ① 下の is-taken を1つ増やし ② 「残り◯名」の数字を減らしてください -->
-      <p class="aps-lp__seats">
-        <span class="aps-lp__seat-row" aria-hidden="true"><span class="aps-lp__seat is-taken"></span><span class="aps-lp__seat is-taken"></span><span class="aps-lp__seat"></span><span class="aps-lp__seat"></span><span class="aps-lp__seat"></span></span>
+      <!-- ご予約状況：予約が入ったら ① ○ を1つ ×（class に is-taken）に変え ② 「残り◯名」の数字を減らしてください -->
+      <p class="aps-lp__seats" aria-label="5名様のうち、残り3名様">
+        <span class="aps-lp__seat-label">ご予約状況</span>
+        <span class="aps-lp__seat-row" aria-hidden="true"><span class="aps-lp__seat is-taken">×</span><span class="aps-lp__seat is-taken">×</span><span class="aps-lp__seat">○</span><span class="aps-lp__seat">○</span><span class="aps-lp__seat">○</span></span>
+        <span class="aps-lp__seat-arrow" aria-hidden="true">→</span>
         <span class="aps-lp__seat-text">残り<b>3</b>名</span>
       </p>
 
