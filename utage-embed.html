@@ -52,20 +52,98 @@ body{
   vertical-align:bottom;
 }
 
-/* 画像に描かれたボタンの上に重ねる透明リンク
-   （画像を差し替えてボタンの位置がずれたら、この％だけ調整してください） */
-.aps-lp__linked{ position:relative; display:block; }
-/* 画像に描かれたボタンの上に重ねる透明リンク（見た目は変えず、押せるだけ） */
-.aps-lp__hot{
+/* 画像の上に置く本物のボタン（画像に描かれたボタンを覆っています） */
+.aps-lp__imgbtn{
   position:absolute;
-  display:block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.4em;
   border-radius:999px;
+  text-decoration:none;
+  white-space:nowrap;
+  letter-spacing:.08em;
+  font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  transition:background-position 1.1s ease, transform .25s ease, box-shadow .25s ease;
   -webkit-tap-highlight-color:rgba(140,142,96,.2);
 }
-.aps-lp__hot:focus-visible{ outline:3px solid #c3a87b; outline-offset:2px; }
-.aps-lp__hot--hero{    left:18.6%; top:88.0%; width:61.2%; height:6.2%; }
-.aps-lp__hot--reserve{ left:4.5%;  top:56.3%; width:47.5%; height:7.3%; }
-.aps-lp__hot--line{    left:53.5%; top:56.3%; width:43%;   height:7.3%; }
+.aps-lp__imgbtn .aps-lp__btn-label{
+  position:relative;
+  display:inline-block;
+  padding-bottom:3px;
+}
+.aps-lp__imgbtn .aps-lp__btn-label::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1.4px;
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .4s cubic-bezier(.22,.61,.36,1);
+}
+@media (hover:hover){
+  .aps-lp__imgbtn:hover{ background-position:100% 50%; transform:translateY(-2px); }
+  .aps-lp__imgbtn:hover .aps-lp__btn-label::after{ transform:scaleX(1); }
+}
+.aps-lp__imgbtn:active{ transform:translateY(1px); }
+.aps-lp__imgbtn:focus-visible{ outline:3px solid #c3a87b; outline-offset:3px; }
+.aps-lp__imgbtn:focus-visible .aps-lp__btn-label::after{ transform:scaleX(1); }
+
+/* 1枚目：ゴールドブラウン */
+.aps-lp__imgbtn--gold{
+  color:#fff;
+  font-size:clamp(12px,3.8vw,18px);
+  border:1px solid rgba(118,101,64,.55);
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 52%),
+    linear-gradient(100deg, #8a7750 0%, #a89265 22%, #99875f 46%, #b09a6c 70%, #8a7750 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
+  box-shadow:
+    0 10px 20px rgba(120,100,62,.30),
+    inset 0 1px 0 rgba(255,255,255,.38),
+    inset 0 -2px 3px rgba(90,74,42,.26);
+  text-shadow:0 1px 2px rgba(90,74,42,.32);
+}
+.aps-lp__imgbtn--gold .aps-lp__btn-label::after{ background:rgba(255,255,255,.92); }
+
+/* 8枚目：ご予約（オリーブ） */
+.aps-lp__imgbtn--olive{
+  color:#fff;
+  font-size:clamp(11px,3.4vw,16px);
+  border:1px solid rgba(90,92,55,.55);
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 52%),
+    linear-gradient(100deg, #787a52 0%, #9ea067 22%, #8c8e60 46%, #a3a56c 70%, #787a52 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
+  box-shadow:
+    0 10px 20px rgba(105,107,64,.30),
+    inset 0 1px 0 rgba(255,255,255,.40),
+    inset 0 -2px 3px rgba(70,72,40,.28);
+  text-shadow:0 1px 2px rgba(70,72,40,.32);
+}
+.aps-lp__imgbtn--olive .aps-lp__btn-label::after{ background:rgba(255,255,255,.92); }
+
+/* 8枚目：LINE（白地に線） */
+.aps-lp__imgbtn--line{
+  color:#6f7148;
+  font-size:clamp(11px,3.4vw,16px);
+  border:1.5px solid #8c8e60;
+  background-image:
+    linear-gradient(100deg, #ffffff 0%, #fbfbf6 30%, #f4f5ea 50%, #fbfbf6 70%, #ffffff 100%);
+  background-size:220% 100%;
+  background-position:0% 50%;
+  box-shadow:0 8px 16px rgba(105,107,64,.16);
+}
+.aps-lp__imgbtn--line .aps-lp__btn-label::after{ background:#8c8e60; }
+
+.aps-lp__imgbtn--hero{    left:18.96%;    top:87.2%;    width:61.94%;    height:7.4%; }
+.aps-lp__imgbtn--reserve{ left:3.7%;  top:54.9%;  width:48.5%;  height:10.0%; }
+.aps-lp__imgbtn--linepos{ left:53.2%;  top:54.9%;  width:43.4%;  height:10.0%; }
 
 .aps-lp__role{
   margin:10px 0 0;
@@ -820,7 +898,7 @@ body{
 }
 
 @media (prefers-reduced-motion:reduce){
-  .aps-lp__offer-btn, .aps-lp-fixed a, .aps-lp__hot, .aps-lp__teaser{ transition:none; }
+  .aps-lp__offer-btn, .aps-lp-fixed a, .aps-lp__imgbtn, .aps-lp__teaser{ transition:none; }
   .aps-lp__offer-btn:hover, .aps-lp-fixed a:hover{ transform:none; }
 }
 </style>
@@ -832,7 +910,7 @@ body{
   <!-- 1枚目：ファーストビュー -->
   <span class="aps-lp__linked">
     <img src="IMAGE_1_URL" alt="A＋salon／頭から、ふっと軽くなる。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
-    <a class="aps-lp__hot aps-lp__hot--hero" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=hero" aria-label="ご予約はこちら"></a>
+    <a class="aps-lp__imgbtn aps-lp__imgbtn--gold aps-lp__imgbtn--hero" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=hero"><span class="aps-lp__btn-label">ご予約はこちら</span><span aria-hidden="true">›</span></a>
   </span>
   <a class="aps-lp__teaser" href="#first-visit">
     <span class="aps-lp__teaser-label">初めての方へ</span>
@@ -1021,8 +1099,8 @@ body{
   <!-- 8枚目：クロージング（画像のボタンにリンクを重ねています） -->
   <span class="aps-lp__linked">
     <img src="IMAGE_8_URL" alt="毎日頑張っているあなたに、頭からゆるむ時間を。A＋salon｜完全予約制・女性専用｜福岡県宗像市">
-    <a class="aps-lp__hot aps-lp__hot--reserve" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=closing" aria-label="ご予約はこちら"></a>
-    <a class="aps-lp__hot aps-lp__hot--line" href="https://utage-system.com/p/mo21mpxjZvXn?utm_source=lp&amp;utm_medium=web&amp;utm_content=line" aria-label="LINEで相談する"></a>
+    <a class="aps-lp__imgbtn aps-lp__imgbtn--olive aps-lp__imgbtn--reserve" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=closing"><span class="aps-lp__btn-label">ご予約はこちら</span><span aria-hidden="true">›</span></a>
+    <a class="aps-lp__imgbtn aps-lp__imgbtn--line aps-lp__imgbtn--linepos" href="https://utage-system.com/p/mo21mpxjZvXn?utm_source=lp&amp;utm_medium=web&amp;utm_content=line"><span class="aps-lp__btn-label">LINEで相談する</span></a>
   </span>
 
   <p class="aps-lp__foot">A＋salon ／ 完全予約制・女性専用 ／ 福岡県宗像市くりえいと ／ 駐車場完備</p>
@@ -1038,7 +1116,7 @@ body{
 /* 最後の画像の「ご予約はこちら」が画面に入ったら、下の固定ボタンを引っ込める */
 (function () {
   var bar = document.querySelector(".aps-lp-fixed");
-  var target = document.querySelector(".aps-lp__hot--reserve");
+  var target = document.querySelector(".aps-lp__imgbtn--reserve");
   if (!bar || !target || !("IntersectionObserver" in window)) return;
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
