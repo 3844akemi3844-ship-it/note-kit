@@ -60,14 +60,14 @@ body{
   display:block;
   border-radius:999px;
   -webkit-tap-highlight-color:rgba(140,142,96,.2);
-  background-image:linear-gradient(115deg, rgba(255,255,255,0) 45%, rgba(255,255,255,.55) 50%, rgba(255,255,255,0) 55%);
-  background-size:250% 100%;
-  background-position:160% 0;
+  background-image:linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.30) 50%, rgba(255,255,255,0) 100%);
+  background-size:220% 100%;
+  background-position:0% 50%;
   background-repeat:no-repeat;
-  transition:background-position .75s ease;
+  transition:background-position 1.1s ease;
 }
 @media (hover:hover){
-  .aps-lp__hot:hover{ background-position:-60% 0; }
+  .aps-lp__hot:hover{ background-position:100% 50%; }
 }
 .aps-lp__hot:focus-visible{ outline:3px solid #c3a87b; outline-offset:2px; }
 .aps-lp__hot--hero{    left:18.6%; top:88.0%; width:61.2%; height:6.2%; }
@@ -392,6 +392,37 @@ body{
   color:#8a6f3f;
   padding:0 .06em;
 }
+.aps-lp__seats{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:14px 0 0;
+}
+.aps-lp__seat-row{ display:flex; gap:6px; }
+.aps-lp__seat{
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  border:1.5px solid #c0a877;
+  background:#fff;
+}
+.aps-lp__seat.is-taken{
+  background:#c0a877;
+  border-color:#c0a877;
+  opacity:.45;
+}
+.aps-lp__seat-text{
+  font-size:clamp(13px,3.7vw,15px);
+  letter-spacing:.06em;
+  color:#a8552f;
+}
+.aps-lp__seat-text b{
+  font-size:1.45em;
+  font-weight:600;
+  padding:0 .1em;
+}
+
 .aps-lp__offer-main{
   margin-top:18px;
   padding-top:18px;
@@ -480,11 +511,10 @@ body{
   letter-spacing:.1em;
   border:1px solid rgba(90,92,55,.55);
   background-image:
-    linear-gradient(115deg, rgba(255,255,255,0) 45%, rgba(255,255,255,.85) 50%, rgba(255,255,255,0) 55%),
     linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 52%),
-    linear-gradient(180deg, #9b9d6d 0%, #8c8e60 50%, #767850 100%);
-  background-size:250% 100%, 100% 100%, 100% 100%;
-  background-position:160% 0, 0 0, 0 0;
+    linear-gradient(100deg, #787a52 0%, #9ea067 22%, #8c8e60 46%, #a3a56c 70%, #787a52 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
   background-repeat:no-repeat;
   box-shadow:
     0 10px 22px rgba(105,107,64,.32),
@@ -492,11 +522,29 @@ body{
     inset 0 1px 0 rgba(255,255,255,.40),
     inset 0 -2px 3px rgba(70,72,40,.28);
   text-shadow:0 1px 2px rgba(70,72,40,.35);
-  transition:background-position .75s ease, transform .25s ease, box-shadow .25s ease;
+  transition:background-position 1.1s ease, transform .25s ease, box-shadow .25s ease;
+}
+.aps-lp__offer-btn .aps-lp__btn-label{
+  position:relative;
+  display:inline-block;
+  padding-bottom:3px;
+}
+.aps-lp__offer-btn .aps-lp__btn-label::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1.5px;
+  background:rgba(255,255,255,.92);
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .4s cubic-bezier(.22,.61,.36,1);
 }
 @media (hover:hover){
   .aps-lp__offer-btn:hover{
-    background-position:-60% 0, 0 0, 0 0;
+    background-position:0 0, 100% 50%;
     transform:translateY(-2px);
     box-shadow:
       0 16px 30px rgba(105,107,64,.38),
@@ -504,6 +552,7 @@ body{
       inset 0 1px 0 rgba(255,255,255,.50),
       inset 0 -2px 3px rgba(70,72,40,.28);
   }
+  .aps-lp__offer-btn:hover .aps-lp__btn-label::after{ transform:scaleX(1); }
 }
 .aps-lp__offer-btn:active{
   transform:translateY(1px);
@@ -512,6 +561,7 @@ body{
     inset 0 2px 5px rgba(70,72,40,.35);
 }
 .aps-lp__offer-btn:focus-visible{ outline:3px solid #c3a87b; outline-offset:3px; }
+.aps-lp__offer-btn:focus-visible .aps-lp__btn-label::after{ transform:scaleX(1); }
 .aps-lp__offer-btn{
   margin:18px auto 0;
   max-width:420px;
@@ -521,11 +571,11 @@ body{
 
 /* ファーストビュー直下のお知らせ帯 */
 .aps-lp__teaser{
-  background-image:linear-gradient(115deg, rgba(255,255,255,0) 45%, rgba(255,255,255,.35) 50%, rgba(255,255,255,0) 55%);
-  background-size:250% 100%;
-  background-position:160% 0;
+  background-image:linear-gradient(100deg, rgba(255,255,255,0) 0%, rgba(255,255,255,.18) 50%, rgba(255,255,255,0) 100%);
+  background-size:220% 100%;
+  background-position:0% 50%;
   background-repeat:no-repeat;
-  transition:background-position .75s ease;
+  transition:background-position 1.1s ease;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -550,7 +600,7 @@ body{
   letter-spacing:.04em;
 }
 @media (hover:hover){
-  .aps-lp__teaser:hover{ background-position:-60% 0; }
+  .aps-lp__teaser:hover{ background-position:100% 50%; }
 }
 .aps-lp__teaser-text b{ font-size:1.25em; font-weight:600; padding:0 .1em; }
 
@@ -715,11 +765,10 @@ body{
   letter-spacing:.1em;
   border:1px solid rgba(90,92,55,.55);
   background-image:
-    linear-gradient(115deg, rgba(255,255,255,0) 45%, rgba(255,255,255,.85) 50%, rgba(255,255,255,0) 55%),
     linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 52%),
-    linear-gradient(180deg, #9b9d6d 0%, #8c8e60 50%, #767850 100%);
-  background-size:250% 100%, 100% 100%, 100% 100%;
-  background-position:160% 0, 0 0, 0 0;
+    linear-gradient(100deg, #787a52 0%, #9ea067 22%, #8c8e60 46%, #a3a56c 70%, #787a52 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
   background-repeat:no-repeat;
   box-shadow:
     0 10px 22px rgba(105,107,64,.32),
@@ -727,11 +776,29 @@ body{
     inset 0 1px 0 rgba(255,255,255,.40),
     inset 0 -2px 3px rgba(70,72,40,.28);
   text-shadow:0 1px 2px rgba(70,72,40,.35);
-  transition:background-position .75s ease, transform .25s ease, box-shadow .25s ease;
+  transition:background-position 1.1s ease, transform .25s ease, box-shadow .25s ease;
+}
+.aps-lp-fixed a .aps-lp__btn-label{
+  position:relative;
+  display:inline-block;
+  padding-bottom:3px;
+}
+.aps-lp-fixed a .aps-lp__btn-label::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1.5px;
+  background:rgba(255,255,255,.92);
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .4s cubic-bezier(.22,.61,.36,1);
 }
 @media (hover:hover){
   .aps-lp-fixed a:hover{
-    background-position:-60% 0, 0 0, 0 0;
+    background-position:0 0, 100% 50%;
     transform:translateY(-2px);
     box-shadow:
       0 16px 30px rgba(105,107,64,.38),
@@ -739,6 +806,7 @@ body{
       inset 0 1px 0 rgba(255,255,255,.50),
       inset 0 -2px 3px rgba(70,72,40,.28);
   }
+  .aps-lp-fixed a:hover .aps-lp__btn-label::after{ transform:scaleX(1); }
 }
 .aps-lp-fixed a:active{
   transform:translateY(1px);
@@ -747,6 +815,7 @@ body{
     inset 0 2px 5px rgba(70,72,40,.35);
 }
 .aps-lp-fixed a:focus-visible{ outline:3px solid #c3a87b; outline-offset:3px; }
+.aps-lp-fixed a:focus-visible .aps-lp__btn-label::after{ transform:scaleX(1); }
 .aps-lp-fixed a{
   width:100%;
   max-width:520px;
@@ -774,7 +843,7 @@ body{
   </span>
   <a class="aps-lp__teaser" href="#first-visit">
     <span class="aps-lp__teaser-label">初めての方へ</span>
-    <span class="aps-lp__teaser-text">先着<b>3</b>名様限定　ヘッドマッサージ <b>¥9,800</b> ›</span>
+    <span class="aps-lp__teaser-text">先着5名様限定　<b>残り3名</b>　ヘッドマッサージ <b>¥9,800</b> ›</span>
   </a>
 
   <!-- 2枚目：こんなお悩み・特長 -->
@@ -816,7 +885,12 @@ body{
   <section class="aps-lp__offer" id="first-visit">
     <div class="aps-lp__offer-box">
       <p class="aps-lp__offer-seal">初回限定</p>
-      <p class="aps-lp__offer-limit"><span>先着</span><b>3</b>名様限定</p>
+      <p class="aps-lp__offer-limit"><span>先着</span><b>5</b>名様限定</p>
+      <!-- 残席：ご予約が入ったら ① 下の is-taken を1つ増やし ② 「残り◯名」の数字を減らしてください -->
+      <p class="aps-lp__seats">
+        <span class="aps-lp__seat-row" aria-hidden="true"><span class="aps-lp__seat is-taken"></span><span class="aps-lp__seat is-taken"></span><span class="aps-lp__seat"></span><span class="aps-lp__seat"></span><span class="aps-lp__seat"></span></span>
+        <span class="aps-lp__seat-text">残り<b>3</b>名</span>
+      </p>
 
       <div class="aps-lp__offer-main">
         <p class="aps-lp__offer-menu">ヘッドマッサージ（60分）<span>アーユルヴェーダに基づくマルマ（ツボ）をゆるめる施術です</span></p>
@@ -836,9 +910,9 @@ body{
       <p class="aps-lp__offer-note">
         ※ はじめてご来店の方に限ります。<br>
         ※ ご予約時に「ホームページを見ました」とお伝えください。<br>
-        ※ 3名様に達し次第、受付を終了します。
+        ※ 5名様に達し次第、受付を終了します。
       </p>
-      <a class="aps-lp__offer-btn" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=offer">この価格で予約する<span aria-hidden="true">›</span></a>
+      <a class="aps-lp__offer-btn" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=offer"><span class="aps-lp__btn-label">この価格で予約する</span><span aria-hidden="true">›</span></a>
     </div>
   </section>
 
@@ -964,7 +1038,7 @@ body{
 
 <!-- 固定ボタン：画面下に出しっぱなしの「ご予約はこちら」。不要ならこの4行を削除してください -->
 <div class="aps-lp-fixed">
-  <a href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=fixed">ご予約はこちら<span aria-hidden="true">›</span></a>
+  <a href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=fixed"><span class="aps-lp__btn-label">ご予約はこちら</span><span aria-hidden="true">›</span></a>
 </div>
 
 <script>
