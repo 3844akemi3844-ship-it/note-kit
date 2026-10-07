@@ -463,48 +463,24 @@ body{
   color:#8a6f3f;
   padding:0 .06em;
 }
-.aps-lp__seats{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:6px 10px;
+.aps-lp__remain{
+  display:inline-flex;
+  align-items:baseline;
+  gap:2px;
   margin:14px 0 0;
-}
-.aps-lp__seat-label{
-  font-size:clamp(11px,3.1vw,12.5px);
-  letter-spacing:.1em;
+  padding:7px 20px;
+  border-radius:999px;
+  background:#fdf4ee;
+  border:1px solid #e8cdbb;
+  font-size:clamp(12px,3.4vw,14px);
+  letter-spacing:.08em;
   color:#8d7a53;
 }
-.aps-lp__seat-row{ display:flex; gap:4px; }
-.aps-lp__seat{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:22px;
-  height:22px;
-  border-radius:50%;
-  background:#fdfaf3;
-  border:1px solid #e3d5b4;
-  font-size:13px;
-  line-height:1;
-  color:#a8903f;
-}
-.aps-lp__seat.is-taken{
-  background:#f1ece2;
-  border-color:#e0d8c8;
-  color:#b3a897;
-}
-.aps-lp__seat-arrow{ font-size:13px; color:#c3a87b; }
-.aps-lp__seat-text{
-  font-size:clamp(13px,3.7vw,15px);
-  letter-spacing:.06em;
-  color:#a8552f;
-}
-.aps-lp__seat-text b{
-  font-size:1.45em;
+.aps-lp__remain b{
+  font-size:1.35em;
   font-weight:600;
-  padding:0 .1em;
+  letter-spacing:.04em;
+  color:#a8552f;
 }
 
 .aps-lp__offer-main{
@@ -970,13 +946,8 @@ body{
     <div class="aps-lp__offer-box">
       <p class="aps-lp__offer-seal">初回限定</p>
       <p class="aps-lp__offer-limit"><span>先着</span><b>5</b>名様限定</p>
-      <!-- ご予約状況：予約が入ったら ① ○ を1つ ×（class に is-taken）に変え ② 「残り◯名」の数字を減らしてください -->
-      <p class="aps-lp__seats" aria-label="5名様のうち、残り3名様">
-        <span class="aps-lp__seat-label">ご予約状況</span>
-        <span class="aps-lp__seat-row" aria-hidden="true"><span class="aps-lp__seat is-taken">×</span><span class="aps-lp__seat is-taken">×</span><span class="aps-lp__seat">○</span><span class="aps-lp__seat">○</span><span class="aps-lp__seat">○</span></span>
-        <span class="aps-lp__seat-arrow" aria-hidden="true">→</span>
-        <span class="aps-lp__seat-text">残り<b>3</b>名</span>
-      </p>
+      <!-- ご予約状況：予約が入ったら「残り◯名」の数字を減らしてください -->
+      <p class="aps-lp__remain">ご予約枠　<b>残り3名</b></p>
 
       <div class="aps-lp__offer-main">
         <p class="aps-lp__offer-menu">ヘッドマッサージ（60分）<span>アーユルヴェーダに基づくマルマ（ツボ）をゆるめる施術です</span></p>
