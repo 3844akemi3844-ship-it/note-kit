@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>A＋salon｜40代女性のための上質なヘッドマッサージ（福岡県宗像市・完全予約制／女性専用）</title>
 <meta name="description" content="福岡県宗像市のA＋salon。頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたヘッドマッサージでゆったり60分。完全予約制・女性専用。">
-<meta property="og:title" content="A＋salon｜頭から、ふっと軽くなる。">
+<meta property="og:title" content="A＋salon｜ふわっと、頭が空っぽになる時間。">
 <meta property="og:description" content="40代女性のための上質なヘッドマッサージ。わたしに、やさしい時間を。">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/images/lp-01.jpg">
@@ -583,6 +583,22 @@
 }
 
 
+  /* 1枚目のキャッチコピー（画像の上に文字をのせています。文言はHTML側を書き換えてください） */
+  .lp__hero{ position:relative; display:block; }
+  .lp__hero-copy{
+    position:absolute;
+    left:6.8%;
+    top:21.6%;
+    margin:0;
+    font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+    font-weight:500;
+    font-size:min(7.0vw,42px);
+    line-height:1.3;
+    letter-spacing:0;
+    font-feature-settings:"palt" 1;
+    color:#3b2a1f;
+  }
+
   /* ファーストビュー直下：ページ上部で見せる予約ボタンはここ1つだけ */
   .lp__first{
     padding:28px 22px 32px;
@@ -929,8 +945,11 @@
      （画像を追加・削除するときは <img> を増やす／減らすだけ）
      ============================================================ -->
 <div class="lp">
-  <!-- 1枚目：ファーストビュー -->
-  <img src="assets/images/lp-01.jpg" alt="A＋salon／頭から、ふっと軽くなる。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
+  <!-- 1枚目：ファーストビュー（キャッチコピーは下の .lp__hero-copy の文字を書き換えてください） -->
+  <div class="lp__hero">
+    <img src="assets/images/lp-01.jpg" alt="A＋salon／ふわっと、頭が空っぽになる時間。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
+    <p class="lp__hero-copy">ふわっと、<br>頭が空っぽになる時間。</p>
+  </div>
 
   <!-- ページ上部に出す予約ボタンは、この1つだけにしています -->
   <section class="lp__first">
@@ -970,7 +989,6 @@
     </p>
   </section>
   <img src="assets/images/lp-04.jpg" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
-  <img src="assets/images/lp-05.jpg" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
 
   <!-- 特別価格（人数・金額・残り枠はこの中の文字を書き換えてください） -->
   <section class="lp__offer" id="first-visit">
@@ -1109,6 +1127,9 @@
       <div><dt>ご予約</dt><dd><a class="lp__link" href="https://utage-system.com/p/mo21mpxjZvXn?utm_source=lp&amp;utm_medium=web&amp;utm_content=salon">公式LINE</a>の「ご予約はこちら」、<br>または<a class="lp__link" href="https://www.instagram.com/iyashino_oheya" target="_blank" rel="noopener">Instagram</a>のプロフィールから</dd></div>
     </dl>
   </section>
+
+  <!-- 全メニュー・料金 -->
+  <img src="assets/images/lp-05.jpg" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
 
   <!-- 最後の1枚もボタン部分をリンクにしています（位置は下の .hot--reserve / .hot--line の % で調整できます） -->
   <span class="lp__linked">
