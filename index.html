@@ -628,15 +628,26 @@
   .lp__hero-copy{
     position:absolute;
     left:6.8%;
-    top:21.6%;
+    top:19.0%;
     margin:0;
     font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+    font-feature-settings:"palt" 1;
+    color:#3b2a1f;
+  }
+  .lp__hero-lead{
+    display:block;
+    margin-bottom:.7em;
+    font-size:min(3.4vw,20.4px);
+    line-height:1.6;
+    letter-spacing:.06em;
+    color:#6f5f4c;
+  }
+  .lp__hero-main{
+    display:block;
     font-weight:500;
     font-size:min(7.0vw,42px);
     line-height:1.3;
     letter-spacing:0;
-    font-feature-settings:"palt" 1;
-    color:#3b2a1f;
   }
 
   /* ファーストビュー直下：ページ上部で見せる予約ボタンはここ1つだけ */
@@ -988,7 +999,10 @@
   <!-- 1枚目：ファーストビュー（キャッチコピーは下の .lp__hero-copy の文字を書き換えてください） -->
   <div class="lp__hero">
     <img src="assets/images/lp-01.jpg" alt="A＋salon／ふわっと、頭が空っぽになる時間。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
-    <p class="lp__hero-copy">ふわっと、<br>頭が空っぽになる時間。</p>
+    <div class="lp__hero-copy">
+      <span class="lp__hero-lead">頭が重い、眠りが浅い。そんな毎日に。</span>
+      <span class="lp__hero-main">ふわっと、<br>頭が空っぽになる時間。</span>
+    </div>
   </div>
 
   <!-- ページ上部に出す予約ボタンは、この1つだけにしています -->
