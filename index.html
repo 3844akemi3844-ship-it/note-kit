@@ -583,6 +583,46 @@
 }
 
 
+  /* 施術前後の変化 */
+  .lp__ba{
+    padding:46px 22px 48px;
+    background:linear-gradient(180deg,#fdfcf8 0%,#faf7f0 100%);
+  }
+  .lp__ba-lead{
+    margin:0 0 24px;
+    font-size:clamp(13px,3.8vw,15px);
+    line-height:2;
+    letter-spacing:.04em;
+    color:#6b5b48;
+    text-align:center;
+  }
+  .lp__ba-item{
+    margin:0 auto 20px;
+    max-width:420px;
+  }
+  .lp__ba-item img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    box-shadow:0 10px 24px rgba(120,100,70,.16);
+  }
+  .lp__ba-cap{
+    margin:10px 0 0;
+    font-size:12px;
+    letter-spacing:.08em;
+    color:#8d7a53;
+    text-align:center;
+  }
+  .lp__ba-note{
+    margin:16px 0 0;
+    font-size:11.5px;
+    line-height:1.8;
+    letter-spacing:.04em;
+    color:#9c8f7e;
+    text-align:center;
+  }
+
   /* 1枚目のキャッチコピー（画像の上に文字をのせています。文言はHTML側を書き換えてください） */
   .lp__hero{ position:relative; display:block; }
   .lp__hero-copy{
@@ -987,6 +1027,21 @@
       <svg class="lp__swash" viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9c60 11 130 13 200 7s88-8 114-11" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
       <span class="lp__script-en">A calmer me.</span>
     </p>
+  </section>
+
+  <!-- 施術前後の変化（ビフォーアフター） -->
+  <section class="lp__ba">
+    <h2 class="lp__head">施術前後の変化</h2>
+    <p class="lp__ba-lead">こり固まった頭がゆるむと、<br>両手ではさんだときの位置が変わります。</p>
+    <figure class="lp__ba-item">
+      <img src="assets/images/before-after-01.jpg" alt="施術前と施術後の比較。両手ではさんだ頭の幅が、施術後には狭くなっています。">
+      <figcaption class="lp__ba-cap">施術前 → 施術後</figcaption>
+    </figure>
+    <figure class="lp__ba-item">
+      <img src="assets/images/before-after-02.jpg" alt="別のお客様の施術前と施術後の比較。両手ではさんだ頭の幅が、施術後には狭くなっています。">
+      <figcaption class="lp__ba-cap">施術前 → 施術後</figcaption>
+    </figure>
+    <p class="lp__ba-note">※ 実際のお客様のお写真です。変化の感じ方には個人差があります。</p>
   </section>
   <img src="assets/images/lp-04.jpg" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
 
