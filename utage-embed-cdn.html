@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A＋salon｜40代女性のための上質なヘッドマッサージ（福岡県宗像市・完全予約制／女性専用）</title>
+<meta name="description" content="福岡県宗像市のA＋salon。頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたヘッドマッサージでゆったり60分。完全予約制・女性専用。">
+<meta property="og:title" content="A＋salon｜ふわっと、頭が空っぽになる時間。">
+<meta property="og:description" content="40代女性のための上質なヘッドマッサージ。わたしに、やさしい時間を。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Parisienne&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     A＋salon ランディングページ ／ UTAGE貼り付け用（HTML全体）
+     ============================================================
+     1. このファイルの中身をすべて、UTAGEのHTML入力欄に貼り付ける
+     2. https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/lp-01.webp 〜 https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/lp-08.webp を、UTAGEにアップロードした画像のURLに差し替える
+        （7番は欠番です。よくある質問は画像ではなくHTMLで作っています）
+     3. 画面下に固定の予約ボタンが不要なら、末尾の「固定ボタン」のブロックを削除する
+     ============================================================ -->
+
+<style>
+html{ -webkit-text-size-adjust:100%; }
+body{
+  margin:0;
+  background:#efe9dd;
+  /* 画面下の固定ボタンに隠れないよう、下に余白をとる */
+  padding-bottom:calc(84px + env(safe-area-inset-bottom, 0px));
+}
+
+.aps-lp{
+  max-width:600px;
+  margin:0 auto;
+  background:#fcfaf5;
+  color:#3a2a20;
+  font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  box-sizing:border-box;
+}
+.aps-lp *,
+.aps-lp *::before,
+.aps-lp *::after{ box-sizing:border-box; }
+
+.aps-lp img{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0;
+  border:0;
+  vertical-align:bottom;
+}
+
+/* 画像の上にボタンを重ねるための枠 */
+.aps-lp__linked{ position:relative; display:block; }
+
+/* 画像の上に置く本物のボタン（画像に描かれたボタンを覆っています） */
+.aps-lp__imgbtn{
+  position:absolute;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.4em;
+  border-radius:999px;
+  text-decoration:none;
+  white-space:nowrap;
+  letter-spacing:.08em;
+  font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+  transition:background-position 1.1s ease, transform .25s ease, box-shadow .25s ease;
+  -webkit-tap-highlight-color:rgba(140,142,96,.2);
+}
+.aps-lp__imgbtn .aps-lp__btn-label{
+  position:relative;
+  display:inline-block;
+  padding-bottom:3px;
+}
+.aps-lp__imgbtn .aps-lp__btn-label::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1.4px;
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .4s cubic-bezier(.22,.61,.36,1);
+}
+@media (hover:hover){
+  .aps-lp__imgbtn:hover{ background-position:100% 50%; transform:translateY(-2px); }
+  .aps-lp__imgbtn:hover .aps-lp__btn-label::after{ transform:scaleX(1); }
+}
+.aps-lp__imgbtn:active{ transform:translateY(1px); }
+.aps-lp__imgbtn:focus-visible{ outline:3px solid #c3a87b; outline-offset:3px; }
+.aps-lp__imgbtn:focus-visible .aps-lp__btn-label::after{ transform:scaleX(1); }
+
+/* 1枚目：ゴールドブラウン */
+.aps-lp__imgbtn--gold{
+  color:#fff;
+  font-size:clamp(12px,3.8vw,18px);
+  border:1px solid rgba(118,101,64,.55);
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 52%),
+    linear-gradient(100deg, #8a7750 0%, #a89265 22%, #99875f 46%, #b09a6c 70%, #8a7750 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
+  box-shadow:
+    0 10px 20px rgba(120,100,62,.30),
+    inset 0 1px 0 rgba(255,255,255,.38),
+    inset 0 -2px 3px rgba(90,74,42,.26);
+  text-shadow:0 1px 2px rgba(90,74,42,.32);
+}
+.aps-lp__imgbtn--gold .aps-lp__btn-label::after{ background:rgba(255,255,255,.92); }
+
+/* 8枚目：ご予約（オリーブ） */
+.aps-lp__imgbtn--olive{
+  color:#fff;
+  font-size:clamp(11px,3.4vw,16px);
+  border:1px solid rgba(90,92,55,.55);
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 52%),
+    linear-gradient(100deg, #787a52 0%, #9ea067 22%, #8c8e60 46%, #a3a56c 70%, #787a52 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
+  box-shadow:
+    0 10px 20px rgba(105,107,64,.30),
+    inset 0 1px 0 rgba(255,255,255,.40),
+    inset 0 -2px 3px rgba(70,72,40,.28);
+  text-shadow:0 1px 2px rgba(70,72,40,.32);
+}
+.aps-lp__imgbtn--olive .aps-lp__btn-label::after{ background:rgba(255,255,255,.92); }
+
+/* 8枚目：LINE（白地に線） */
+.aps-lp__imgbtn--line{
+  color:#6f7148;
+  font-size:clamp(11px,3.4vw,16px);
+  border:1.5px solid #8c8e60;
+  background-image:
+    linear-gradient(100deg, #ffffff 0%, #fbfbf6 30%, #f4f5ea 50%, #fbfbf6 70%, #ffffff 100%);
+  background-size:220% 100%;
+  background-position:0% 50%;
+  box-shadow:0 8px 16px rgba(105,107,64,.16);
+}
+.aps-lp__imgbtn--line .aps-lp__btn-label::after{ background:#8c8e60; }
+
+.aps-lp__imgbtn--reserve{ left:3.7%;  top:54.9%;  width:48.5%;  height:10.0%; }
+.aps-lp__imgbtn--linepos{ left:53.2%;  top:54.9%;  width:43.4%;  height:10.0%; }
+
+.aps-lp__role{
+  margin:10px 0 0;
+  font-size:clamp(12px,3.4vw,14px);
+  line-height:1.8;
+  letter-spacing:.04em;
+  color:#8d7a53;
+}
+.aps-lp__thera-text{ margin-top:22px; }
+.aps-lp__thera-text p{
+  margin:0 0 .9em;
+  font-size:clamp(13px,3.7vw,15.5px);
+  line-height:2;
+  letter-spacing:.02em;
+  color:#5a4a3c;
+}
+.aps-lp__thera-text p:last-child{ margin-bottom:0; }
+.aps-lp__credit{
+  margin-top:22px;
+  padding:18px 18px 16px;
+  background:#faf7f0;
+  border:1px solid #ece2d1;
+  border-radius:12px;
+}
+.aps-lp__credit-title{
+  margin:0 0 10px;
+  font-size:clamp(12px,3.3vw,13.5px);
+  letter-spacing:.14em;
+  color:#8d7a53;
+}
+.aps-lp__credit ul{ margin:0; padding:0; list-style:none; }
+.aps-lp__credit li{
+  position:relative;
+  padding-left:16px;
+  font-size:clamp(12.5px,3.6vw,15px);
+  line-height:1.9;
+  color:#3a2a20;
+}
+.aps-lp__credit li::before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:.85em;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#c3a87b;
+}
+
+/* よくある質問（タップで答えが開きます） */
+.aps-lp__faq{
+  padding:46px 22px 52px;
+  background:linear-gradient(180deg,#faf9f6 0%,#fefefe 55%,#fefefe 100%);
+}
+.aps-lp__faq-head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0 0 22px;
+  padding-left:14px;
+  border-left:3px solid #c3a87b;
+  font-size:clamp(22px,6.8vw,30px);
+  font-weight:600;
+  letter-spacing:.08em;
+  line-height:1.4;
+  color:#3a2a20;
+  white-space:nowrap;
+}
+.aps-lp__faq-head::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:linear-gradient(90deg,#c3a87b,rgba(195,168,123,0));
+}
+.aps-lp__faq-list{ display:flex; flex-direction:column; gap:12px; }
+.aps-lp__item{
+  background:#fff;
+  border:1px solid #efe7da;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(150,125,90,.07);
+  overflow:hidden;
+}
+.aps-lp__q{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px;
+  list-style:none;
+  cursor:pointer;
+  font-size:clamp(14px,4.2vw,17px);
+  line-height:1.55;
+  color:#3a2a20;
+}
+.aps-lp__q::-webkit-details-marker{ display:none; }
+.aps-lp__q::marker{ content:""; }
+.aps-lp__q:focus-visible{ outline:2px solid #c3a87b; outline-offset:-4px; }
+.aps-lp__mark{
+  flex:0 0 auto;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#8d7a53;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:18px;
+  line-height:1;
+}
+.aps-lp__text{ flex:1 1 auto; }
+.aps-lp__chev{
+  flex:0 0 auto;
+  width:18px;
+  height:18px;
+  color:#8d7a53;
+  transition:transform .25s ease;
+}
+.aps-lp__item[open] .aps-lp__chev{ transform:rotate(180deg); }
+.aps-lp__a{
+  display:flex;
+  gap:14px;
+  padding:0 16px 18px;
+  font-size:clamp(13px,3.8vw,15px);
+  line-height:1.95;
+  color:#5a4a3c;
+}
+.aps-lp__a .aps-lp__mark{ background:#efe7da; color:#8d7a53; }
+
+.aps-lp__foot{
+  margin:0;
+  padding:26px 24px 30px;
+  background:#efe9dd;
+  text-align:center;
+  font-size:12px;
+  line-height:1.9;
+  letter-spacing:.06em;
+  color:#8b7c6d;
+}
+
+/* 60分後、こんな感覚を。 */
+.aps-lp__feel{
+  padding:46px 22px 44px;
+  background:linear-gradient(180deg,#fdfcf8 0%,#faf7f0 100%);
+}
+.aps-lp__feel-head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0 0 22px;
+  font-size:clamp(19px,5.6vw,26px);
+  font-weight:500;
+  letter-spacing:.03em;
+  color:#3a2a20;
+  white-space:nowrap;
+}
+.aps-lp__feel-head::before,
+.aps-lp__feel-head::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#c3a87b);
+}
+.aps-lp__feel-head::after{ background:linear-gradient(90deg,#c3a87b,transparent); }
+.aps-lp__feel-list{ display:flex; flex-direction:column; gap:14px; }
+.aps-lp__feel-card{
+  position:relative;
+  margin:0;
+  min-height:168px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 10px 24px rgba(150,125,90,.12);
+}
+.aps-lp__feel-card img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.aps-lp__feel-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(255,253,248,.72),rgba(255,253,248,.60));
+}
+.aps-lp__feel-card figcaption{
+  position:relative;
+  z-index:1;
+  padding:24px 18px 26px;
+  text-align:center;
+  font-size:clamp(17px,5.4vw,25px);
+  line-height:1.6;
+  letter-spacing:.05em;
+  color:#3a2a20;
+  text-shadow:0 1px 12px rgba(255,255,255,.95);
+}
+.aps-lp__feel-card figcaption::after{
+  content:"";
+  display:block;
+  width:62px;
+  height:1px;
+  margin:14px auto 0;
+  background:#c3a87b;
+}
+.aps-lp__script{ margin:32px 0 0; text-align:center; color:#a98553; }
+.aps-lp__script-ja{
+  display:block;
+  font-family:"Klee One","Shippori Mincho",serif;
+  font-size:clamp(17px,5.2vw,23px);
+  letter-spacing:.06em;
+}
+.aps-lp__swash{ display:block; width:min(240px,70%); height:14px; margin:4px auto; color:#c6ad80; }
+.aps-lp__script-en{
+  display:block;
+  font-family:"Parisienne",cursive;
+  font-size:clamp(15px,4.6vw,20px);
+  letter-spacing:.06em;
+}
+
+/* サロン情報 */
+.aps-lp__salon{
+  padding:46px 22px 50px;
+  background:linear-gradient(180deg,#faf7f0 0%,#fdfcfa 100%);
+}
+.aps-lp__salon-photo{ margin:0 0 22px; }
+.aps-lp__salon-photo img{
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(150,125,90,.14);
+}
+.aps-lp__info{ margin:0; }
+.aps-lp__info > div{
+  display:grid;
+  grid-template-columns:78px 1fr;
+  gap:12px;
+  padding:13px 0;
+  border-bottom:1px solid #ece2d1;
+}
+.aps-lp__info > div:first-child{ border-top:1px solid #ece2d1; }
+.aps-lp__info dt{
+  font-size:clamp(12.5px,3.5vw,14px);
+  letter-spacing:.08em;
+  color:#8d7a53;
+}
+.aps-lp__info dd{
+  margin:0;
+  font-size:clamp(13px,3.8vw,15.5px);
+  line-height:1.8;
+  letter-spacing:.02em;
+  color:#3a2a20;
+}.aps-lp__link{
+  color:#8d7a53;
+  text-decoration:none;
+  border-bottom:1px solid #d8c49a;
+  padding-bottom:1px;
+}
+.aps-lp__link:focus-visible{ outline:2px solid #c3a87b; outline-offset:2px; }
+
+.aps-lp__info dd span{ font-size:.82em; color:#9a8b7b; }
+
+/* 特別価格（初回限定） */
+.aps-lp__offer{
+  padding:46px 20px 50px;
+  background:linear-gradient(180deg,#f6f1e6 0%,#f1e9d9 100%);
+}
+.aps-lp__offer-box{
+  position:relative;
+  background:#fffdf9;
+  border:1px solid #d3bd90;
+  border-radius:4px;
+  padding:34px 18px 26px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(150,125,90,.14);
+}
+.aps-lp__offer-box::after{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:1px solid #ece0c6;
+  border-radius:2px;
+  pointer-events:none;
+}
+.aps-lp__offer-seal{
+  position:absolute;
+  top:-13px;
+  left:50%;
+  transform:translateX(-50%);
+  margin:0;
+  padding:6px 22px;
+  background:#8d7a53;
+  color:#fff;
+  font-size:clamp(12px,3.4vw,14px);
+  letter-spacing:.18em;
+  white-space:nowrap;
+  box-shadow:0 4px 12px rgba(141,122,83,.28);
+}
+.aps-lp__offer-limit{
+  margin:6px 0 0;
+  font-size:clamp(22px,6.6vw,30px);
+  line-height:1.35;
+  letter-spacing:.04em;
+  color:#3a2a20;
+}
+.aps-lp__offer-limit span{
+  font-size:.62em;
+  letter-spacing:.08em;
+  color:#5a4a3c;
+  padding-right:.2em;
+}
+.aps-lp__offer-limit b{
+  font-size:1.65em;
+  font-weight:600;
+  color:#8a6f3f;
+  padding:0 .06em;
+}
+.aps-lp__remain{
+  display:inline-flex;
+  align-items:baseline;
+  gap:2px;
+  margin:14px 0 0;
+  padding:7px 20px;
+  border-radius:999px;
+  background:#fdf4ee;
+  border:1px solid #e8cdbb;
+  font-size:clamp(12px,3.4vw,14px);
+  letter-spacing:.08em;
+  color:#8d7a53;
+}
+.aps-lp__remain b{
+  font-size:1.35em;
+  font-weight:600;
+  letter-spacing:.04em;
+  color:#a8552f;
+}
+
+.aps-lp__offer-main{
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid #ece2cd;
+}
+.aps-lp__offer-menu{
+  margin:0;
+  font-size:clamp(15px,4.4vw,18px);
+  letter-spacing:.04em;
+  color:#3a2a20;
+}
+.aps-lp__offer-menu span{
+  display:block;
+  margin-top:6px;
+  font-size:clamp(11px,3.1vw,12.5px);
+  line-height:1.7;
+  letter-spacing:.02em;
+  color:#8d7a53;
+}
+.aps-lp__offer-incl{
+  display:inline-flex;
+  flex-direction:column;
+  gap:6px;
+  margin:14px 0 0;
+  padding:0;
+  list-style:none;
+  text-align:left;
+}
+.aps-lp__offer-incl li{
+  position:relative;
+  padding-left:22px;
+  font-size:clamp(12.5px,3.5vw,14.5px);
+  line-height:1.7;
+  color:#5a4a3c;
+}
+.aps-lp__offer-incl li::before{
+  content:"";
+  position:absolute;
+  left:2px;
+  top:.42em;
+  width:12px;
+  height:7px;
+  border-left:1.6px solid #a98553;
+  border-bottom:1.6px solid #a98553;
+  transform:rotate(-45deg);
+}
+.aps-lp__offer-price{
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:2px 10px;
+  margin:16px 0 0;
+}
+.aps-lp__offer-was{
+  font-size:clamp(13px,3.8vw,16px);
+  color:#9a8b7b;
+  text-decoration:line-through;
+  text-decoration-thickness:1px;
+}
+.aps-lp__offer-arrow{ font-size:11px; color:#c3a87b; }
+.aps-lp__offer-now{
+  font-size:clamp(34px,10vw,46px);
+  font-weight:600;
+  letter-spacing:.01em;
+  color:#3a2a20;
+  font-variant-numeric:tabular-nums;
+}
+.aps-lp__offer-now span{ font-size:.42em; font-weight:400; letter-spacing:.06em; }
+.aps-lp__offer-note{
+  margin:18px 0 0;
+  font-size:clamp(11.5px,3.3vw,13px);
+  line-height:1.9;
+  color:#6b5b4c;
+  text-align:left;
+}
+.aps-lp__offer-btn{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:.1em;
+  border:1px solid rgba(90,92,55,.55);
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 52%),
+    linear-gradient(100deg, #787a52 0%, #9ea067 22%, #8c8e60 46%, #a3a56c 70%, #787a52 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
+  background-repeat:no-repeat;
+  box-shadow:
+    0 10px 22px rgba(105,107,64,.32),
+    0 2px 4px rgba(105,107,64,.20),
+    inset 0 1px 0 rgba(255,255,255,.40),
+    inset 0 -2px 3px rgba(70,72,40,.28);
+  text-shadow:0 1px 2px rgba(70,72,40,.35);
+  transition:background-position 1.1s ease, transform .25s ease, box-shadow .25s ease;
+}
+.aps-lp__offer-btn .aps-lp__btn-label{
+  position:relative;
+  display:inline-block;
+  padding-bottom:3px;
+}
+.aps-lp__offer-btn .aps-lp__btn-label::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1.5px;
+  background:rgba(255,255,255,.92);
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .4s cubic-bezier(.22,.61,.36,1);
+}
+@media (hover:hover){
+  .aps-lp__offer-btn:hover{
+    background-position:0 0, 100% 50%;
+    transform:translateY(-2px);
+    box-shadow:
+      0 16px 30px rgba(105,107,64,.38),
+      0 3px 6px rgba(105,107,64,.24),
+      inset 0 1px 0 rgba(255,255,255,.50),
+      inset 0 -2px 3px rgba(70,72,40,.28);
+  }
+  .aps-lp__offer-btn:hover .aps-lp__btn-label::after{ transform:scaleX(1); }
+}
+.aps-lp__offer-btn:active{
+  transform:translateY(1px);
+  box-shadow:
+    0 4px 10px rgba(105,107,64,.30),
+    inset 0 2px 5px rgba(70,72,40,.35);
+}
+.aps-lp__offer-btn:focus-visible{ outline:3px solid #c3a87b; outline-offset:3px; }
+.aps-lp__offer-btn:focus-visible .aps-lp__btn-label::after{ transform:scaleX(1); }
+.aps-lp__offer-btn{
+  margin:18px auto 0;
+  max-width:420px;
+  min-height:60px;
+  font-size:clamp(15px,4.6vw,18px);
+}
+
+
+  /* 施術前後の変化 */
+  .aps-lp__ba{
+    padding:46px 22px 48px;
+    background:linear-gradient(180deg,#fdfcf8 0%,#faf7f0 100%);
+  }
+  .aps-lp__ba-lead{
+    margin:0 0 24px;
+    font-size:clamp(13px,3.8vw,15px);
+    line-height:2;
+    letter-spacing:.04em;
+    color:#6b5b48;
+    text-align:center;
+  }
+  .aps-lp__ba-item{
+    margin:0 auto 20px;
+    max-width:420px;
+  }
+  .aps-lp__ba-item img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    box-shadow:0 10px 24px rgba(120,100,70,.16);
+  }
+  .aps-lp__ba-cap{
+    margin:10px 0 0;
+    font-size:12px;
+    letter-spacing:.08em;
+    color:#8d7a53;
+    text-align:center;
+  }
+  .aps-lp__ba-note{
+    margin:16px 0 0;
+    font-size:11.5px;
+    line-height:1.8;
+    letter-spacing:.04em;
+    color:#9c8f7e;
+    text-align:center;
+  }
+
+  /* 1枚目のキャッチコピー（画像の上に文字をのせています。文言はHTML側を書き換えてください） */
+  .aps-lp__hero{ position:relative; display:block; }
+  .aps-lp__hero-copy{
+    position:absolute;
+    left:6.8%;
+    top:19.0%;
+    margin:0;
+    font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+    font-feature-settings:"palt" 1;
+    color:#3b2a1f;
+  }
+  .aps-lp__hero-lead{
+    display:block;
+    margin-bottom:.7em;
+    font-size:min(3.4vw,20.4px);
+    line-height:1.6;
+    letter-spacing:.06em;
+    color:#6f5f4c;
+  }
+  .aps-lp__hero-main{
+    display:block;
+    font-weight:500;
+    font-size:min(7.0vw,42px);
+    line-height:1.3;
+    letter-spacing:0;
+  }
+
+  /* ファーストビュー直下：ページ上部で見せる予約ボタンはここ1つだけ */
+  .aps-lp__first{
+    padding:28px 22px 32px;
+    background:linear-gradient(180deg,#fbf6ee 0%,#f5ecdd 100%);
+    border-bottom:1px solid #ebdfcc;
+    text-align:center;
+  }
+  .aps-lp__first-badge{
+    display:inline-block;
+    margin:0;
+    padding:7px 18px;
+    border:1px solid #ddc7a7;
+    border-radius:999px;
+    background:#fff;
+    font-size:clamp(11px,3.2vw,13px);
+    letter-spacing:.1em;
+    color:#8d7a53;
+  }
+  .aps-lp__first-badge b{
+    font-weight:600;
+    font-size:1.15em;
+    letter-spacing:.04em;
+    color:#a8552f;
+  }
+  .aps-lp__first-menu{
+    margin:16px 0 0;
+    font-size:clamp(13px,3.9vw,16px);
+    letter-spacing:.08em;
+    color:#6b5b48;
+  }
+  .aps-lp__first-price{
+    display:flex;
+    align-items:baseline;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px 12px;
+    margin:6px 0 0;
+  }
+  .aps-lp__first-was{
+    font-size:clamp(13px,3.7vw,15px);
+    letter-spacing:.06em;
+    color:#9b8c79;
+  }
+  .aps-lp__first-was s{ text-decoration-thickness:1px; }
+  .aps-lp__first-arrow{
+    font-size:11px;
+    color:#c9a87c;
+  }
+  .aps-lp__first-now{
+    font-family:"Shippori Mincho","Hiragino Mincho ProN","Yu Mincho",serif;
+    font-size:clamp(34px,10vw,46px);
+    font-weight:600;
+    line-height:1.15;
+    letter-spacing:.02em;
+    color:#a8552f;
+  }
+  .aps-lp__first-now span{
+    margin-left:4px;
+    font-size:.32em;
+    letter-spacing:.06em;
+    color:#8d7a53;
+  }
+  .aps-lp__first-note{
+    margin:14px 0 0;
+    font-size:11.5px;
+    line-height:1.8;
+    letter-spacing:.06em;
+    color:#9c8f7e;
+  }
+  .aps-lp__first-btn{ margin-top:20px; min-height:62px; }
+
+/* お客様の声 */
+.aps-lp__voice{
+  padding:46px 22px 50px;
+  background:linear-gradient(180deg,#fbf9f4 0%,#fdfcfa 100%);
+}
+.aps-lp__voice-list{ display:flex; flex-direction:column; gap:14px; }
+.aps-lp__voice-card{
+  background:#fff;
+  border:1px solid #efe7da;
+  border-radius:14px;
+  padding:20px 18px;
+  box-shadow:0 6px 18px rgba(150,125,90,.07);
+}
+.aps-lp__stars{ display:flex; gap:3px; color:#d6b263; margin-bottom:10px; }
+.aps-lp__star{ width:15px; height:15px; }
+.aps-lp__voice-who{
+  margin:0 0 12px;
+  font-size:clamp(13px,3.8vw,15px);
+  letter-spacing:.04em;
+  color:#3a2a20;
+}
+.aps-lp__voice-who span{
+  display:block;
+  margin-top:3px;
+  font-size:.82em;
+  letter-spacing:.02em;
+  color:#9a8b7b;
+}
+.aps-lp__voice-card p:not(.aps-lp__voice-who){
+  margin:0 0 .9em;
+  font-size:clamp(12.5px,3.6vw,14.5px);
+  line-height:1.95;
+  letter-spacing:.01em;
+  color:#5a4a3c;
+}
+.aps-lp__voice-card p:last-child{ margin-bottom:0; }
+.aps-lp__voice-note{
+  margin:16px 0 0;
+  font-size:11.5px;
+  line-height:1.8;
+  color:#9a8b7b;
+}
+
+.aps-lp__voice-who em{
+  font-style:normal;
+  font-size:.82em;
+  color:#9a8b7b;
+  letter-spacing:.02em;
+}
+.aps-lp__more{ margin-top:6px; }
+.aps-lp__more > summary{
+  list-style:none;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:clamp(12px,3.4vw,13.5px);
+  letter-spacing:.04em;
+  color:#8d7a53;
+  border-bottom:1px solid #e0d2b4;
+  padding-bottom:2px;
+}
+.aps-lp__more > summary::-webkit-details-marker{ display:none; }
+.aps-lp__more > summary::marker{ content:""; }
+.aps-lp__more > summary::after{ content:"＋"; font-size:.95em; }
+.aps-lp__more[open] > summary::after{ content:"−"; }
+.aps-lp__more[open] > summary{ margin-bottom:10px; }
+.aps-lp__more > summary:focus-visible{ outline:2px solid #c3a87b; outline-offset:3px; }
+
+/* セラピスト紹介（写真サイズは .aps-lp__photo の width で調整できます） */
+.aps-lp__therapist{
+  padding:44px 22px 46px;
+  background:linear-gradient(180deg,#fdfcfa 0%,#faf9f6 100%);
+}
+.aps-lp__head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:0 0 26px;
+  padding-left:14px;
+  border-left:3px solid #c3a87b;
+  font-size:clamp(22px,6.8vw,30px);
+  font-weight:600;
+  letter-spacing:.08em;
+  line-height:1.4;
+  color:#3a2a20;
+  white-space:nowrap;
+}
+.aps-lp__head::after{
+  content:"";
+  flex:1 1 auto;
+  height:1px;
+  background:linear-gradient(90deg,#c3a87b,rgba(195,168,123,0));
+}
+.aps-lp__thera-body{
+  display:grid;
+  grid-template-columns:38% 1fr;
+  gap:20px;
+  align-items:center;
+}
+.aps-lp__photo{ margin:0; }
+.aps-lp__photo img{
+  width:100%;
+  height:auto;
+  border-radius:10px;
+  box-shadow:0 10px 24px rgba(150,125,90,.16);
+}
+.aps-lp__name{
+  margin:0;
+  font-size:clamp(20px,6vw,27px);
+  letter-spacing:.08em;
+  color:#3a2a20;
+}
+.aps-lp__name::after{
+  content:"";
+  display:block;
+  width:74px;
+  height:1px;
+  margin:12px 0 14px;
+  background:#c3a87b;
+}
+.aps-lp__msg{
+  margin:0;
+  font-size:clamp(12.5px,3.7vw,15px);
+  line-height:2;
+  letter-spacing:.02em;
+  color:#5a4a3c;
+}
+
+/* 画面下に出しっぱなしの予約ボタン（最後の画像のボタンが見えたら引っ込みます） */
+.aps-lp-fixed{
+  transition:transform .3s ease, opacity .3s ease;
+  position:fixed;
+  left:0; right:0; bottom:0;
+  z-index:100;
+  display:flex;
+  justify-content:center;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+  background:rgba(252,250,245,.92);
+  -webkit-backdrop-filter:blur(6px);
+  backdrop-filter:blur(6px);
+  border-top:1px solid #ece2d1;
+  box-sizing:border-box;
+}
+.aps-lp-fixed.is-hidden{
+  transform:translateY(130%);
+  opacity:0;
+  pointer-events:none;
+}
+.aps-lp-fixed a{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.5em;
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+  letter-spacing:.1em;
+  border:1px solid rgba(90,92,55,.55);
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.30) 0%, rgba(255,255,255,0) 52%),
+    linear-gradient(100deg, #787a52 0%, #9ea067 22%, #8c8e60 46%, #a3a56c 70%, #787a52 100%);
+  background-size:100% 100%, 220% 100%;
+  background-position:0 0, 0% 50%;
+  background-repeat:no-repeat;
+  box-shadow:
+    0 10px 22px rgba(105,107,64,.32),
+    0 2px 4px rgba(105,107,64,.20),
+    inset 0 1px 0 rgba(255,255,255,.40),
+    inset 0 -2px 3px rgba(70,72,40,.28);
+  text-shadow:0 1px 2px rgba(70,72,40,.35);
+  transition:background-position 1.1s ease, transform .25s ease, box-shadow .25s ease;
+}
+.aps-lp-fixed a .aps-lp__btn-label{
+  position:relative;
+  display:inline-block;
+  padding-bottom:3px;
+}
+.aps-lp-fixed a .aps-lp__btn-label::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1.5px;
+  background:rgba(255,255,255,.92);
+  border-radius:2px;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:transform .4s cubic-bezier(.22,.61,.36,1);
+}
+@media (hover:hover){
+  .aps-lp-fixed a:hover{
+    background-position:0 0, 100% 50%;
+    transform:translateY(-2px);
+    box-shadow:
+      0 16px 30px rgba(105,107,64,.38),
+      0 3px 6px rgba(105,107,64,.24),
+      inset 0 1px 0 rgba(255,255,255,.50),
+      inset 0 -2px 3px rgba(70,72,40,.28);
+  }
+  .aps-lp-fixed a:hover .aps-lp__btn-label::after{ transform:scaleX(1); }
+}
+.aps-lp-fixed a:active{
+  transform:translateY(1px);
+  box-shadow:
+    0 4px 10px rgba(105,107,64,.30),
+    inset 0 2px 5px rgba(70,72,40,.35);
+}
+.aps-lp-fixed a:focus-visible{ outline:3px solid #c3a87b; outline-offset:3px; }
+.aps-lp-fixed a:focus-visible .aps-lp__btn-label::after{ transform:scaleX(1); }
+.aps-lp-fixed a{
+  width:100%;
+  max-width:520px;
+  min-height:56px;
+  font-size:clamp(14px,4.3vw,17px);
+}
+@media (prefers-reduced-motion:reduce){
+  .aps-lp__chev{ transition:none; }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .aps-lp__offer-btn, .aps-lp-fixed a, .aps-lp__imgbtn{ transition:none; }
+  .aps-lp__offer-btn:hover, .aps-lp-fixed a:hover{ transform:none; }
+}
+</style>
+</head>
+<body>
+
+<div class="aps-lp">
+
+  <!-- 1枚目：ファーストビュー（キャッチコピーは下の .aps-lp__hero-copy の文字を書き換えてください） -->
+  <div class="aps-lp__hero">
+    <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/lp-01.webp" alt="A＋salon／ふわっと、頭が空っぽになる時間。40代女性のための上質なヘッドマッサージ（完全予約制・女性専用／宗像市）">
+    <div class="aps-lp__hero-copy">
+      <span class="aps-lp__hero-lead">頭が重い、眠りが浅い。そんな毎日に。</span>
+      <span class="aps-lp__hero-main">ふわっと、<br>頭が空っぽになる時間。</span>
+    </div>
+  </div>
+
+  <!-- ページ上部に出す予約ボタンは、この1つだけにしています -->
+  <section class="aps-lp__first">
+    <p class="aps-lp__first-badge">初回限定・先着5名様　<b>残り3名</b></p>
+    <p class="aps-lp__first-menu">ヘッドマッサージ（60分）</p>
+    <p class="aps-lp__first-price">
+      <span class="aps-lp__first-was">通常 <s>¥11,000</s></span>
+      <span class="aps-lp__first-arrow" aria-hidden="true">▶</span>
+      <span class="aps-lp__first-now">¥9,800<span>税込</span></span>
+    </p>
+    <a class="aps-lp__offer-btn aps-lp__first-btn" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=hero"><span class="aps-lp__btn-label">この価格で予約する</span><span aria-hidden="true">›</span></a>
+    <p class="aps-lp__first-note">※ はじめてご来店の方に限ります<br>※ 5名様に達し次第、受付を終了します</p>
+  </section>
+
+  <!-- 2枚目：こんなお悩み・特長 -->
+  <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/lp-02.webp" alt="こんなお悩みありませんか？ 頭が重い・眠りが浅い・首肩がつらい・自分時間がほしい。A＋salonのヘッドマッサージは、頭・顔・首・肩・デコルテまで、アーユルヴェーダの知恵を取り入れたケアをゆったり60分。">
+
+  <!-- 3枚目：60分後、こんな感覚を。 -->
+
+  <!-- 60分後、こんな感覚を。（サロンの実写） -->
+  <section class="aps-lp__feel">
+    <h2 class="aps-lp__feel-head">60分後、こんな感覚を。</h2>
+    <div class="aps-lp__feel-list">
+      <figure class="aps-lp__feel-card">
+        <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/feel-01.webp" alt="">
+        <figcaption>頭がふわっと<br>軽く感じる</figcaption>
+      </figure>
+      <figure class="aps-lp__feel-card">
+        <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/feel-02.webp" alt="">
+        <figcaption>深くひと息<br>つける</figcaption>
+      </figure>
+      <figure class="aps-lp__feel-card">
+        <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/feel-03.webp" alt="">
+        <figcaption>鏡を見るのが<br>少し楽しみになる</figcaption>
+      </figure>
+    </div>
+    <p class="aps-lp__script">
+      <span class="aps-lp__script-ja">わたしに、やさしい時間を。</span>
+      <svg class="aps-lp__swash" viewBox="0 0 320 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 9c60 11 130 13 200 7s88-8 114-11" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+      <span class="aps-lp__script-en">A calmer me.</span>
+    </p>
+  </section>
+
+  <!-- 施術前後の変化（ビフォーアフター） -->
+  <section class="aps-lp__ba">
+    <h2 class="aps-lp__head">施術前後の変化</h2>
+    <p class="aps-lp__ba-lead">こり固まった頭がゆるむと、<br>両手ではさんだときの位置が変わります。</p>
+    <figure class="aps-lp__ba-item">
+      <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/before-after-01.webp" alt="施術前と施術後の比較。両手ではさんだ頭の幅が、施術後には狭くなっています。">
+      <figcaption class="aps-lp__ba-cap">施術前 → 施術後</figcaption>
+    </figure>
+    <figure class="aps-lp__ba-item">
+      <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/before-after-02.webp" alt="別のお客様の施術前と施術後の比較。両手ではさんだ頭の幅が、施術後には狭くなっています。">
+      <figcaption class="aps-lp__ba-cap">施術前 → 施術後</figcaption>
+    </figure>
+    <p class="aps-lp__ba-note">※ 実際のお客様のお写真です。<br>変化の感じ方には個人差があります。</p>
+  </section>
+
+  <!-- 4枚目：施術範囲 -->
+  <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/lp-04.webp" alt="施術範囲：頭からデコルテまで、ひと続きに。頭・顔・首・肩・デコルテを、つながっている部分として丁寧に触れていきます。">
+
+
+  <!-- 特別価格（人数・金額・残り枠はこの中の文字を書き換えてください） -->
+  <section class="aps-lp__offer" id="first-visit">
+    <div class="aps-lp__offer-box">
+      <p class="aps-lp__offer-seal">初回限定</p>
+      <p class="aps-lp__offer-limit"><span>先着</span><b>5</b>名様限定</p>
+      <!-- ご予約状況：予約が入ったら「残り◯名」の数字を減らしてください -->
+      <p class="aps-lp__remain">ご予約枠　<b>残り3名</b></p>
+
+      <div class="aps-lp__offer-main">
+        <p class="aps-lp__offer-menu">ヘッドマッサージ（60分）<span>アーユルヴェーダに基づくマルマ（ツボ）をゆるめる施術です</span></p>
+        <ul class="aps-lp__offer-incl">
+          <li>事前カウンセリングつき</li>
+          <li>頭・顔・首・肩・デコルテまで</li>
+          <li>ゆったり60分</li>
+          <li>体にやさしいお茶をご用意</li>
+        </ul>
+        <p class="aps-lp__offer-price">
+          <span class="aps-lp__offer-was">通常 ¥11,000</span>
+          <span class="aps-lp__offer-arrow" aria-hidden="true">▶</span>
+          <span class="aps-lp__offer-now">¥9,800<span>（税込）</span></span>
+        </p>
+      </div>
+
+      <p class="aps-lp__offer-note">
+        ※ はじめてご来店の方に限ります。<br>
+        ※ ご予約時に「ホームページを見ました」とお伝えください。<br>
+        ※ 5名様に達し次第、受付を終了します。
+      </p>
+      <a class="aps-lp__offer-btn" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=offer"><span class="aps-lp__btn-label">この価格で予約する</span><span aria-hidden="true">›</span></a>
+    </div>
+  </section>
+
+  <!-- お客様の声（Googleの口コミ。文言はお客様が書かれたままです） -->
+  <section class="aps-lp__voice">
+    <h2 class="aps-lp__head">お客様の声</h2>
+    <div class="aps-lp__voice-list">
+      <article class="aps-lp__voice-card">
+        <div class="aps-lp__stars" aria-label="5段階評価のうち5"><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="aps-lp__voice-who">30代・宗像市　S様<em>（抜粋）</em><span>足裏ケア ＋ ヘッドマッサージ</span></p>
+        <p>今回初めて、足裏ケアとヘッドマッサージを受けに伺いました。</p>
+        <p>施術後は足裏の血色が良くなり、むくみもスッキリ。歩いた時の何とも言えない心地よい感覚が戻ってきて、とても感動しました。</p>
+        <p>ヘッドマッサージは、1歳になる娘の育児で上半身がガチガチに凝り固まり、日常生活がつらくなっていたためお願いしました。施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。</p>
+        <p>ご自宅でサロンをされているので、まるで友人の家を訪ねるような気軽な気持ちで通えるのも魅力です。サロン内は清潔感があり、とても居心地の良い空間でした。</p>
+        <details class="aps-lp__more">
+          <summary>口コミの全文を読む</summary>
+          <p>今回初めて、足裏ケアとヘッドマッサージを受けに伺いました。</p>
+          <p>普段は靴下が苦手で素足で過ごすことが多いため、自分へのご褒美として足裏ケアをお願いしました。施術後は足裏の血色が良くなり、むくみもスッキリ。歩いた時の何とも言えない心地よい感覚が戻ってきて、とても感動しました。思わずクセになりそうで、ぜひまた受けたいと思っています。</p>
+          <p>ヘッドマッサージは、1歳になる娘の育児で上半身がガチガチに凝り固まり、頭痛まで出て日常生活がつらくなっていたためお願いしました。施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。血行や巡りが良くなったおかげか頭痛もなくなり、生活の質がぐんと上がりました。</p>
+          <p>また、ご自宅でサロンをされているので、まるで友人の家を訪ねるような気軽な気持ちで通えるのも魅力です。サロン内は清潔感があり、とても居心地の良い空間でした。</p>
+          <p>心も体もリフレッシュできる素敵な時間をありがとうございました。これからも定期的に通って、体のメンテナンスをお願いしたいと思います。</p>
+        </details>
+      </article>
+      <article class="aps-lp__voice-card">
+        <div class="aps-lp__stars" aria-label="5段階評価のうち5"><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="aps-lp__voice-who">50代・宗像市　K様<span>シミケア ＋ ヘッドマッサージ</span></p>
+        <p>本当は教えたくない、最高のシミケアサロンです！たった1回の施術で、毎日のメイクが驚くほど楽になりました。シミの変化はもちろんですが、毎月受けているヘッドマッサージも最高に気持ちよくて、自分へのご褒美に欠かせない時間になっています。そして何より、オーナーの明美さんのセンスが抜群！明美さんがおすすめしてくれるものは、どれも本当に間違いがありません。サロン選びに迷っている方に、自信を持っておすすめしたい場所です。宗像の方、是非！</p>
+      </article>
+      <article class="aps-lp__voice-card">
+        <div class="aps-lp__stars" aria-label="5段階評価のうち5"><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg class="aps-lp__star" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="aps-lp__voice-who">40代・宮若市　A様<span>ヘッドマッサージ ＋ 足裏角質ケア</span></p>
+        <p>宗像市でサロンをしていて、月1で宮若市から伺ってます。ここでしかうけれない、ヘッドマッサージ屋、足裏角質ケアをしていただいてます。</p>
+        <p>ヘッドマッサージは、他店とは違い終わったあと顔のトーンアップや小顔効果を感じました。顔のくすみもとんで、気分もスッキリ！リラックス効果も抜群です！</p>
+        <p>足裏角質ケアも一般的な角質ケアと違い地に足がついて本来の感覚がとりもどせました。また、これからもよろしくお願いします！</p>
+      </article>
+    </div>
+    <p class="aps-lp__voice-note">Googleマップにいただいた口コミより掲載しています。<br>※ 感じ方には個人差があります。</p>
+  </section>
+
+
+  <!-- セラピスト紹介（写真の大きさを変えるには .aps-lp__thera-body の grid-template-columns の％） -->
+  <section class="aps-lp__therapist">
+    <h2 class="aps-lp__head">セラピスト紹介</h2>
+    <div class="aps-lp__thera-body">
+      <figure class="aps-lp__photo">
+        <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/therapist-photo.webp" alt="A＋salon セラピスト 後藤あけみ">
+      </figure>
+      <div>
+        <p class="aps-lp__name">後藤 あけみ</p>
+        <p class="aps-lp__role">歯科衛生士<br>A＋salon 代表</p>
+      </div>
+    </div>
+    <div class="aps-lp__thera-text">
+      <p>歯科衛生士として20年以上、お口と体の健康に向き合ってきました。</p>
+      <p>自分自身の健康を見直すできごとをきっかけに、「中からのケア」と「外からのケア」を同時に叶えられるサロンをはじめました。</p>
+      <p>忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。</p>
+    </div>
+    <div class="aps-lp__credit">
+      <p class="aps-lp__credit-title">資格・ディプロマ</p>
+      <ul>
+        <li>歯科衛生士（実務20年以上）</li>
+        <li>韓国式足裏角質ケア ディプロマ</li>
+        <li>シミケア ディプロマ</li>
+        <li>マルマトリートメント ディプロマ</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- よくある質問（画像ではなくHTML。質問・答えはここを直接書き換えてください） -->
+  <section class="aps-lp__faq">
+    <h2 class="aps-lp__faq-head">よくある質問</h2>
+    <div class="aps-lp__faq-list">
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">オイルは使いますか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">ヘッドマッサージではオイルを使用しないため、施術後もそのままお帰りいただけます。</span></div>
+      </details>
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">メイクをしたままでも大丈夫ですか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">基本的にはメイクをしたままでも受けていただけます。気になる方はお気軽にご相談ください。</span></div>
+      </details>
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">初めてでも大丈夫ですか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">もちろんです。最初にお悩みや体の状態をうかがってから、心地よい強さで施術いたします。</span></div>
+      </details>
+
+      <details class="aps-lp__item">
+        <summary class="aps-lp__q"><span class="aps-lp__mark">Q</span><span class="aps-lp__text">駐車場はありますか？</span><svg class="aps-lp__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="aps-lp__a"><span class="aps-lp__mark">A</span><span class="aps-lp__text">はい、ご用意しています。</span></div>
+      </details>
+
+    </div>
+  </section>
+
+
+  <!-- サロン情報・ご予約 -->
+  <section class="aps-lp__salon">
+    <h2 class="aps-lp__head">サロン情報</h2>
+    <figure class="aps-lp__salon-photo">
+      <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/salon-01.webp" alt="カウンセリングの様子">
+    </figure>
+    <dl class="aps-lp__info">
+      <div><dt>所在地</dt><dd>福岡県宗像市くりえいと<br><span>※ 詳しい場所はご予約後にご案内します</span></dd></div>
+      <div><dt>営業時間</dt><dd>9:00〜17:00<br><span>※ 土曜日は午前のみ</span></dd></div>
+      <div><dt>定休日</dt><dd>日曜日・祝日</dd></div>
+      <div><dt>駐車場</dt><dd>あり</dd></div>
+      <div><dt>ご予約</dt><dd><a class="aps-lp__link" href="https://utage-system.com/p/mo21mpxjZvXn?utm_source=lp&amp;utm_medium=web&amp;utm_content=salon">公式LINE</a>の「ご予約はこちら」、<br>または<a class="aps-lp__link" href="https://www.instagram.com/iyashino_oheya" target="_blank" rel="noopener">Instagram</a>のプロフィールから</dd></div>
+    </dl>
+  </section>
+
+  <!-- 全メニュー・料金 -->
+  <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/lp-05.webp" alt="メニュー・料金：ヘッドマッサージ11,000円／シミケア 全顔38,000円・スポット1個6,500円／足裏角質ケア11,000円／毛穴クリアトリートメント11,000円／全身デトックスセラピー（タラソテラピー）13,500円">
+
+  <!-- 8枚目：クロージング（画像のボタンにリンクを重ねています） -->
+  <span class="aps-lp__linked">
+    <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@81e4e7c75356ec982f7130e8cdc6355efdb54669/assets/lp/lp-08.webp" alt="毎日頑張っているあなたに、頭からゆるむ時間を。A＋salon｜完全予約制・女性専用｜福岡県宗像市">
+    <a class="aps-lp__imgbtn aps-lp__imgbtn--olive aps-lp__imgbtn--reserve" href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=closing"><span class="aps-lp__btn-label">ご予約はこちら</span><span aria-hidden="true">›</span></a>
+    <a class="aps-lp__imgbtn aps-lp__imgbtn--line aps-lp__imgbtn--linepos" href="https://utage-system.com/p/mo21mpxjZvXn?utm_source=lp&amp;utm_medium=web&amp;utm_content=line"><span class="aps-lp__btn-label">LINEで相談する</span></a>
+  </span>
+
+  <p class="aps-lp__foot">A＋salon ／ 完全予約制・女性専用 ／ 福岡県宗像市くりえいと ／ 駐車場完備</p>
+
+</div>
+
+<!-- 固定ボタン：画面下に出しっぱなしの「ご予約はこちら」。不要ならこの4行を削除してください -->
+<div class="aps-lp-fixed">
+  <a href="https://utage-system.com/p/iQg0VtOIWxzt?utm_source=lp&amp;utm_medium=web&amp;utm_content=fixed"><span class="aps-lp__btn-label">ご予約はこちら</span><span aria-hidden="true">›</span></a>
+</div>
+
+<script>
+/* 最後の画像の「ご予約はこちら」が画面に入ったら、下の固定ボタンを引っ込める */
+(function () {
+  var bar = document.querySelector(".aps-lp-fixed");
+  var targets = [
+    document.querySelector(".aps-lp__first-btn"),
+    document.querySelector(".aps-lp__imgbtn--reserve")
+  ].filter(Boolean);
+  if (!bar || !targets.length || !("IntersectionObserver" in window)) return;
+  var shown = targets.map(function () { return false; });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      var i = targets.indexOf(e.target);
+      if (i > -1) shown[i] = e.isIntersecting;
+    });
+    bar.classList.toggle("is-hidden", shown.indexOf(true) > -1);
+  }, { threshold: 0.5 });
+  targets.forEach(function (t) { io.observe(t); });
+})();
+</script>
+
+</body>
+</html>
