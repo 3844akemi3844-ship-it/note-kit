@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>マルマトリートメント｜A＋salon（福岡県宗像市・完全予約制／女性専用）</title>
+<meta name="description" content="アーユルヴェーダのマルマ（ツボ）をゆるめる、頭・顔・首・肩・デコルテのヘッドマッサージ。オイルを使わないのでそのままお帰りいただけます。福岡県宗像市くりえいと・完全予約制・女性専用。">
+<meta property="og:title" content="マルマトリートメント｜A＋salon">
+<meta property="og:description" content="頭をほどく、60分。アーユルヴェーダのマルマをゆるめるヘッドマッサージ。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     A＋salon マルマトリートメント LP ／ UTAGE貼り付け用
+     ・このファイルの中身をすべてUTAGEのHTML欄に貼り付けてください
+     ・写真はCDN（jsDelivr）から読み込みます
+     ・文言はHTMLの文字を直接書き換えられます
+     ============================================================ -->
+
+<style>
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; background:#eae4de; padding-bottom:calc(86px + env(safe-area-inset-bottom,0px)); }
+
+.mrm{
+  --navy:#172852;
+  --gold:#efd274;
+  --pink:#ebc7c1;
+  --pinkpale:#f3e6e3;
+  --bg:#fbf8f5;
+  --soft:#56617f;
+  max-width:600px;
+  margin:0 auto;
+  background:var(--bg);
+  color:var(--navy);
+  font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
+  font-size:15px;
+  line-height:1.9;
+  letter-spacing:.03em;
+  box-sizing:border-box;
+  overflow:hidden;
+}
+.mrm *,.mrm *::before,.mrm *::after{ box-sizing:border-box; }
+.mrm img{ display:block; width:100%; height:auto; border:0; }
+.mrm p{ margin:0; }
+
+/* ---------- 共通パーツ ---------- */
+.mrm__sec{ padding:52px 22px 56px; }
+.mrm__sec--pale{ background:var(--pinkpale); }
+.mrm__sec--navy{ background:var(--navy); color:#fff; }
+
+.mrm__eyebrow{
+  display:flex; align-items:center; gap:10px;
+  margin:0 0 12px;
+  font-size:11.5px; letter-spacing:.2em; color:var(--soft);
+}
+.mrm__eyebrow::before{ content:""; width:26px; height:2px; background:var(--gold); flex:0 0 auto; }
+.mrm__sec--navy .mrm__eyebrow{ color:var(--pink); }
+
+.mrm__h2{
+  margin:0 0 26px;
+  font-family:"Shippori Mincho",serif;
+  font-weight:600;
+  font-size:clamp(23px,6.6vw,30px);
+  line-height:1.5;
+  letter-spacing:.04em;
+}
+.mrm__lead{
+  margin:0 0 30px;
+  font-size:clamp(13.5px,3.8vw,15px);
+  line-height:2.1;
+  color:var(--soft);
+}
+.mrm__sec--navy .mrm__lead{ color:rgba(255,255,255,.82); }
+.mrm__note{
+  margin:18px 0 0;
+  font-size:11.5px; line-height:1.9; color:var(--soft);
+}
+
+/* ---------- ボタン ---------- */
+.mrm__btn{
+  display:flex; align-items:center; justify-content:center; gap:.5em;
+  width:100%; max-width:430px; min-height:62px;
+  margin:24px auto 0;
+  padding:14px 20px;
+  border-radius:999px;
+  background:var(--gold);
+  color:var(--navy);
+  font-size:clamp(15px,4.4vw,17px);
+  font-weight:700;
+  letter-spacing:.08em;
+  text-decoration:none;
+  box-shadow:0 10px 22px rgba(23,40,82,.16);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.mrm__btn--line{
+  background:transparent;
+  color:var(--navy);
+  border:1.5px solid var(--navy);
+  box-shadow:none;
+  min-height:56px;
+  font-size:clamp(14px,4vw,15.5px);
+  margin-top:12px;
+}
+.mrm__sec--navy .mrm__btn--line{ color:#fff; border-color:rgba(255,255,255,.55); }
+@media (hover:hover){
+  .mrm__btn:hover{ transform:translateY(-2px); box-shadow:0 16px 28px rgba(23,40,82,.22); }
+}
+.mrm__btn:active{ transform:translateY(1px); }
+.mrm__btn:focus-visible{ outline:3px solid var(--navy); outline-offset:3px; }
+
+/* ---------- ファーストビュー ---------- */
+.mrm__bar{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:13px 20px;
+  background:var(--navy); color:#fff;
+}
+.mrm__logo{ font-family:"Shippori Mincho",serif; font-size:17px; letter-spacing:.1em; }
+.mrm__bar span{ font-size:10.5px; letter-spacing:.12em; color:var(--pink); }
+
+.mrm__hero{ position:relative; }
+.mrm__hero img{ width:100%; }
+.mrm__hero::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:38%;
+  background:linear-gradient(180deg,rgba(251,248,245,0),var(--bg));
+}
+.mrm__card{
+  position:relative; z-index:1;
+  margin:-56px 18px 0;
+  padding:30px 22px 32px;
+  background:var(--bg);
+  border:1px solid var(--pink);
+  border-radius:3px;
+  text-align:center;
+}
+.mrm__place{
+  margin:0 0 14px; font-size:11px; letter-spacing:.2em; color:var(--soft);
+}
+.mrm__h1{
+  margin:0;
+  font-family:"Shippori Mincho",serif;
+  font-weight:600;
+  font-size:clamp(30px,8.6vw,42px);
+  line-height:1.4;
+  letter-spacing:.04em;
+}
+.mrm__h1 small{ display:block; font-size:.44em; letter-spacing:.1em; margin-top:10px; color:var(--soft); font-weight:500; }
+.mrm__rule{ width:40px; height:2px; background:var(--gold); margin:20px auto; }
+.mrm__sub{ font-size:13.5px; line-height:2; color:var(--soft); text-align:left; }
+
+/* ---------- 価格表示 ---------- */
+.mrm__price{
+  margin:24px 0 0; padding:20px 16px 18px;
+  background:var(--pinkpale);
+  border-radius:3px;
+}
+.mrm__tag{
+  display:inline-block; margin:0 0 12px; padding:5px 16px;
+  background:var(--navy); color:#fff;
+  font-size:11px; letter-spacing:.16em;
+}
+.mrm__menu{ margin:0 0 4px; font-size:13.5px; letter-spacing:.06em; }
+.mrm__amount{
+  display:flex; flex-direction:column; align-items:center; gap:2px;
+}
+.mrm__was{ font-size:13px; color:var(--soft); }
+.mrm__was s{ text-decoration-thickness:1px; }
+.mrm__now{
+  font-family:"Shippori Mincho",serif;
+  font-size:clamp(34px,9.6vw,44px); font-weight:600; line-height:1.2; letter-spacing:.02em;
+}
+.mrm__now span{ font-size:.3em; margin-left:4px; letter-spacing:.08em; color:var(--soft); }
+.mrm__limit{ margin:10px 0 0; font-size:11.5px; letter-spacing:.08em; color:var(--soft); }
+.mrm__limit b{ color:var(--navy); font-size:1.15em; }
+
+/* ---------- お悩み ---------- */
+.mrm__worry{ display:grid; gap:12px; }
+.mrm__worry li{
+  display:flex; align-items:flex-start; gap:14px;
+  padding:18px 18px 18px 16px;
+  background:#fff; border-radius:3px; list-style:none;
+}
+.mrm__num{
+  flex:0 0 auto; width:34px; height:34px; border-radius:50%;
+  background:var(--pink); color:var(--navy);
+  display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:700; letter-spacing:.02em;
+}
+.mrm__worry h3{ margin:0 0 3px; font-size:16px; font-weight:700; letter-spacing:.04em; line-height:1.6; }
+.mrm__worry p{ font-size:13px; line-height:1.85; color:var(--soft); }
+.mrm__worry ul{ margin:0; padding:0; }
+.mrm__because{
+  margin:26px 0 0; padding:20px 18px;
+  background:var(--navy); color:#fff; border-radius:3px;
+  font-size:14.5px; line-height:1.95; text-align:center; letter-spacing:.04em;
+}
+.mrm__because b{ color:var(--gold); font-weight:700; }
+
+/* ---------- 特徴 ---------- */
+.mrm__feat{ margin:0 0 34px; }
+.mrm__feat:last-child{ margin-bottom:0; }
+.mrm__feat figure{ margin:0 0 16px; }
+.mrm__feat img{ border-radius:3px; }
+.mrm__badge{
+  display:inline-block; margin:0 0 10px; padding:4px 14px;
+  background:var(--pink); color:var(--navy);
+  font-size:11px; font-weight:700; letter-spacing:.18em;
+}
+.mrm__feat h3{
+  margin:0 0 10px;
+  font-family:"Shippori Mincho",serif; font-weight:600;
+  font-size:clamp(18px,5.2vw,22px); line-height:1.6; letter-spacing:.04em;
+}
+.mrm__feat p{ font-size:13.5px; line-height:2; color:var(--soft); }
+
+/* ---------- 施術範囲 ---------- */
+.mrm__range{ margin:0; padding:0; list-style:none; position:relative; }
+.mrm__range li:not(:last-child)::after{
+  content:""; position:absolute; left:17px; top:30px; bottom:-8px; width:2px; background:var(--gold);
+}
+.mrm__range li{ position:relative; padding:0 0 22px 50px; }
+.mrm__range li:last-child{ padding-bottom:0; }
+.mrm__range li::before{
+  content:""; position:absolute; left:10px; top:8px;
+  width:16px; height:16px; border-radius:50%;
+  background:var(--bg); border:3px solid var(--gold);
+}
+.mrm__sec--pale .mrm__range li::before{ background:var(--pinkpale); }
+.mrm__range b{ display:block; font-size:16px; letter-spacing:.1em; margin-bottom:2px; }
+.mrm__range span{ font-size:13px; line-height:1.85; color:var(--soft); }
+
+/* ---------- 流れ ---------- */
+.mrm__flow{ margin:0; padding:0; list-style:none; }
+.mrm__flow li{
+  display:grid; grid-template-columns:62px 1fr; gap:16px; align-items:start;
+  padding:16px 0; border-top:1px solid var(--pink);
+}
+.mrm__flow li:last-child{ border-bottom:1px solid var(--pink); }
+.mrm__time{
+  font-family:"Shippori Mincho",serif; font-size:19px; letter-spacing:.02em; padding-top:2px;
+}
+.mrm__time i{ font-style:normal; font-size:.62em; margin-left:1px; color:var(--soft); }
+.mrm__flow b{ display:block; font-size:15px; letter-spacing:.06em; }
+.mrm__flow span{ font-size:12.5px; line-height:1.85; color:var(--soft); }
+
+/* ---------- ビフォーアフター ---------- */
+.mrm__ba{ margin:0 0 18px; }
+.mrm__ba img{ border-radius:3px; }
+.mrm__ba figcaption{
+  margin:9px 0 0; text-align:center;
+  font-size:11.5px; letter-spacing:.14em; color:var(--soft);
+}
+
+/* ---------- お客様の声 ---------- */
+.mrm__voice{ display:grid; gap:14px; }
+.mrm__voice article{ padding:22px 20px; background:#fff; border-radius:3px; }
+.mrm__stars{ display:flex; gap:3px; margin:0 0 10px; color:var(--pink); }
+.mrm__stars svg{ width:15px; height:15px; }
+.mrm__who{ margin:0 0 10px; font-size:13.5px; font-weight:700; letter-spacing:.06em; }
+.mrm__who span{ display:block; margin-top:3px; font-size:11.5px; font-weight:400; color:var(--soft); letter-spacing:.04em; }
+.mrm__voice article p:not(.mrm__who){ font-size:13px; line-height:1.95; color:var(--soft); margin-bottom:.85em; }
+.mrm__voice article p:last-child{ margin-bottom:0; }
+.mrm__more>summary{
+  list-style:none; cursor:pointer; display:inline-block; margin-top:4px;
+  font-size:12px; letter-spacing:.06em; color:var(--navy);
+  border-bottom:1px solid var(--gold); padding-bottom:2px;
+}
+.mrm__more>summary::-webkit-details-marker{ display:none; }
+.mrm__more>summary::after{ content:" ＋"; }
+.mrm__more[open]>summary::after{ content:" −"; }
+.mrm__more[open]>summary{ margin-bottom:10px; }
+
+/* ---------- セラピスト ---------- */
+.mrm__thera{ display:grid; grid-template-columns:36% 1fr; gap:18px; align-items:center; margin:0 0 22px; }
+.mrm__thera img{ border-radius:3px; }
+.mrm__name{ font-family:"Shippori Mincho",serif; font-size:clamp(20px,5.6vw,24px); letter-spacing:.08em; }
+.mrm__role{ margin:10px 0 0; font-size:12px; line-height:1.85; color:var(--soft); letter-spacing:.04em; }
+.mrm__thera-text p{ font-size:13.5px; line-height:2.05; color:var(--soft); margin-bottom:.9em; }
+.mrm__thera-text p:last-child{ margin-bottom:0; }
+.mrm__credit{ margin:22px 0 0; padding:20px; background:var(--pinkpale); border-radius:3px; }
+.mrm__credit p{ margin:0 0 10px; font-size:11.5px; letter-spacing:.16em; color:var(--soft); }
+.mrm__credit ul{ margin:0; padding:0; list-style:none; }
+.mrm__credit li{ position:relative; padding-left:16px; font-size:13px; line-height:1.95; }
+.mrm__credit li::before{ content:""; position:absolute; left:0; top:.85em; width:7px; height:1px; background:var(--gold); }
+
+/* ---------- 料金（ネイビー面） ---------- */
+.mrm__offer{ padding:34px 22px 36px; border:1px solid rgba(239,210,116,.5); text-align:center; }
+.mrm__offer .mrm__tag{ background:var(--gold); color:var(--navy); font-weight:700; }
+.mrm__offer .mrm__menu{ color:#fff; }
+.mrm__offer .mrm__was{ color:rgba(255,255,255,.7); }
+.mrm__offer .mrm__now{ color:var(--gold); }
+.mrm__offer .mrm__now span{ color:rgba(255,255,255,.7); }
+.mrm__incl{ display:inline-grid; gap:7px; margin:20px 0 0; padding:0; list-style:none; text-align:left; }
+.mrm__incl li{ position:relative; padding-left:22px; font-size:13px; line-height:1.8; color:rgba(255,255,255,.9); }
+.mrm__incl li::before{
+  content:""; position:absolute; left:2px; top:.42em; width:11px; height:6px;
+  border-left:1.6px solid var(--gold); border-bottom:1.6px solid var(--gold); transform:rotate(-45deg);
+}
+.mrm__sec--navy .mrm__note{ color:rgba(255,255,255,.62); text-align:left; }
+
+/* ---------- よくある質問 ---------- */
+.mrm__faq{ display:grid; gap:10px; }
+.mrm__faq details{ background:#fff; border-radius:3px; overflow:hidden; }
+.mrm__q{
+  display:flex; align-items:center; gap:13px; padding:16px 18px; cursor:pointer; list-style:none;
+  font-size:14.5px; font-weight:700; line-height:1.6; letter-spacing:.03em;
+}
+.mrm__q::-webkit-details-marker{ display:none; }
+.mrm__mark{
+  flex:0 0 auto; width:28px; height:28px; border-radius:50%;
+  background:var(--navy); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700;
+}
+.mrm__q span{ flex:1 1 auto; }
+.mrm__chev{ flex:0 0 auto; width:15px; height:15px; color:var(--soft); transition:transform .25s ease; }
+.mrm__faq details[open] .mrm__chev{ transform:rotate(180deg); }
+.mrm__a{ display:flex; gap:13px; padding:0 18px 18px; font-size:13px; line-height:1.95; color:var(--soft); }
+.mrm__a .mrm__mark{ background:var(--pink); color:var(--navy); }
+
+/* ---------- サロン情報 ---------- */
+.mrm__salon img{ border-radius:3px; margin-bottom:22px; }
+.mrm__info{ margin:0; }
+.mrm__info>div{
+  display:grid; grid-template-columns:82px 1fr; gap:12px;
+  padding:13px 0; border-bottom:1px solid var(--pink);
+}
+.mrm__info>div:first-child{ border-top:1px solid var(--pink); }
+.mrm__info dt{ font-size:12px; letter-spacing:.1em; color:var(--soft); }
+.mrm__info dd{ margin:0; font-size:13.5px; line-height:1.85; }
+.mrm__info dd small{ font-size:11.5px; color:var(--soft); }
+.mrm__link{ color:var(--navy); text-decoration:none; border-bottom:1px solid var(--gold); }
+
+/* ---------- フッター ---------- */
+.mrm__foot{
+  padding:26px 22px calc(30px + env(safe-area-inset-bottom,0px));
+  background:var(--navy); color:rgba(255,255,255,.72);
+  text-align:center; font-size:11.5px; line-height:2; letter-spacing:.06em;
+}
+
+/* ---------- 固定ボタン ---------- */
+.mrm-fixed{
+  position:fixed; left:0; right:0; bottom:0; z-index:100;
+  display:flex; justify-content:center;
+  padding:11px 16px calc(11px + env(safe-area-inset-bottom,0px));
+  background:rgba(251,248,245,.94);
+  -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+  border-top:1px solid #ebc7c1;
+  transition:transform .3s ease, opacity .3s ease;
+  box-sizing:border-box;
+}
+.mrm-fixed.is-hidden{ transform:translateY(130%); opacity:0; pointer-events:none; }
+.mrm-fixed a{
+  display:flex; align-items:center; justify-content:center; gap:.5em;
+  width:100%; max-width:520px; min-height:56px;
+  border-radius:999px; background:#efd274; color:#172852;
+  font-family:"Hiragino Sans","Noto Sans JP",sans-serif;
+  font-size:15px; font-weight:700; letter-spacing:.08em; text-decoration:none;
+  box-shadow:0 8px 18px rgba(23,40,82,.18);
+}
+@media (prefers-reduced-motion:reduce){
+  .mrm__btn,.mrm-fixed,.mrm__chev{ transition:none; }
+  .mrm__btn:hover{ transform:none; }
+}
+</style>
+</head>
+<body>
+
+<div class="mrm">
+
+  <!-- ===== ファーストビュー ===== -->
+  <div class="mrm__bar">
+    <div class="mrm__logo">A＋salon</div>
+    <span>完全予約制 ／ 女性専用</span>
+  </div>
+
+  <div class="mrm__hero">
+    <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@f7165f6ee9e93b076a73352051c64cf3a4024ef2/assets/lp2/hero.webp" alt="A＋salonでマルマトリートメント（ヘッドマッサージ）を受けている女性">
+  </div>
+
+  <div class="mrm__card">
+    <p class="mrm__place">福岡県宗像市くりえいと</p>
+    <h1 class="mrm__h1">頭をほどく、<br>60分。<small>マルマトリートメント</small></h1>
+    <div class="mrm__rule"></div>
+    <p class="mrm__sub">アーユルヴェーダに伝わる「マルマ」をゆるめる、頭・顔・首・肩・デコルテのヘッドマッサージ。オイルを使わないので、そのままお帰りいただけます。</p>
+
+    <div class="mrm__price">
+      <p class="mrm__tag">初回限定</p>
+      <p class="mrm__menu">マルマトリートメント（60分）</p>
+      <p class="mrm__amount">
+        <span class="mrm__was">通常 <s>¥11,000</s></span>
+        <span class="mrm__now">¥9,800<span>税込</span></span>
+      </p>
+      <p class="mrm__limit">先着<b>5</b>名様限定　／　ご予約枠 <b>残り3名</b></p>
+    </div>
+
+    <a class="mrm__btn" href="https://utage-system.com/p/iQg0VtOIWxzt">この価格で予約する</a>
+  </div>
+
+  <!-- ===== お悩み ===== -->
+  <section class="mrm__sec">
+    <p class="mrm__eyebrow">CHECK</p>
+    <h2 class="mrm__h2">こんな毎日が、<br>続いていませんか？</h2>
+    <ul class="mrm__worry">
+      <li>
+        <span class="mrm__num">01</span>
+        <div><h3>頭が重い</h3><p>夕方になると、こめかみのあたりがずっしりしてくる。</p></div>
+      </li>
+      <li>
+        <span class="mrm__num">02</span>
+        <div><h3>眠りが浅い</h3><p>布団に入っても、頭の中がなかなか静かにならない。</p></div>
+      </li>
+      <li>
+        <span class="mrm__num">03</span>
+        <div><h3>目の奥が重い</h3><p>パソコンとスマホで、気づけば一日中、目を使っている。</p></div>
+      </li>
+      <li>
+        <span class="mrm__num">04</span>
+        <div><h3>首肩がガチガチ</h3><p>肩を回してもすぐ元に戻る。自分では、ほぐしきれない。</p></div>
+      </li>
+    </ul>
+    <p class="mrm__because">どれも、<b>頭のこわばり</b>から<br>来ているかもしれません。</p>
+  </section>
+
+  <!-- ===== マルマとは ===== -->
+  <section class="mrm__sec mrm__sec--pale">
+    <p class="mrm__eyebrow">ABOUT MARMA</p>
+    <h2 class="mrm__h2">マルマって、<br>なんですか？</h2>
+    <p class="mrm__lead">インドに古くから伝わるアーユルヴェーダで、体の中でもとくに敏感だとされる「ポイント」のこと。そのマルマが、頭にはたくさん集まっています。</p>
+    <p class="mrm__lead" style="margin-bottom:0;">A＋salonでは、そこを一点ずつ確かめながら、ゆっくりとゆるめていきます。強く押すのではなく、固まった結び目を少しずつ「ほどいていく」ような施術です。</p>
+  </section>
+
+  <!-- ===== 3つの特徴 ===== -->
+  <section class="mrm__sec">
+    <p class="mrm__eyebrow">FEATURES</p>
+    <h2 class="mrm__h2">3つの、<br>こだわり。</h2>
+
+    <div class="mrm__feat">
+      <figure><img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@f7165f6ee9e93b076a73352051c64cf3a4024ef2/assets/lp/feel-01.webp" alt="頭からデコルテまで丁寧に触れていく施術の様子"></figure>
+      <p class="mrm__badge">01</p>
+      <h3>頭からデコルテまで、<br>ひと続きに。</h3>
+      <p>頭・顔・首・肩・デコルテは、本来つながっている部分。切り離さず、ひと続きのものとして丁寧に触れていきます。</p>
+    </div>
+
+    <div class="mrm__feat">
+      <figure><img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@f7165f6ee9e93b076a73352051c64cf3a4024ef2/assets/lp/feel-02.webp" alt="オイルを使わない施術の様子"></figure>
+      <p class="mrm__badge">02</p>
+      <h3>オイルを使わないから、<br>そのまま帰れる。</h3>
+      <p>髪がベタつかないので、このあとのご予定もそのままで大丈夫。お仕事帰りにも、お出かけ前にも寄っていただけます。</p>
+    </div>
+
+    <div class="mrm__feat">
+      <figure><img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@f7165f6ee9e93b076a73352051c64cf3a4024ef2/assets/lp/salon-01.webp" alt="施術前にカウンセリングを受けている様子"></figure>
+      <p class="mrm__badge">03</p>
+      <h3>強さは、<br>相談しながら。</h3>
+      <p>はじめにお悩みと体の状態をうかがってから。「気持ちいい」と感じる強さを確かめながら進めるので、はじめての方もご安心ください。</p>
+    </div>
+  </section>
+
+  <!-- ===== 施術範囲 ===== -->
+  <section class="mrm__sec mrm__sec--pale">
+    <p class="mrm__eyebrow">RANGE</p>
+    <h2 class="mrm__h2">触れるのは、<br>この5か所。</h2>
+    <ul class="mrm__range">
+      <li><b>頭</b><span>マルマが集まる場所。全体をゆっくりとゆるめていきます。</span></li>
+      <li><b>顔</b><span>目の周り、こめかみ、あご。表情をつくる筋肉にそって。</span></li>
+      <li><b>首</b><span>頭と体をつなぐところ。細かい動きで、ていねいに。</span></li>
+      <li><b>肩</b><span>いちばん自覚しやすい場所。頭との続きとしてほぐします。</span></li>
+      <li><b>デコルテ</b><span>見落とされがちですが、ここがゆるむと呼吸が深くなります。</span></li>
+    </ul>
+  </section>
+
+  <!-- ===== 60分の流れ ===== -->
+  <section class="mrm__sec">
+    <p class="mrm__eyebrow">FLOW</p>
+    <h2 class="mrm__h2">60分の、<br>過ごし方。</h2>
+    <ul class="mrm__flow">
+      <li>
+        <div class="mrm__time">10<i>分</i></div>
+        <div><b>カウンセリング</b><span>お悩みと、いまの体の状態をうかがいます。</span></div>
+      </li>
+      <li>
+        <div class="mrm__time">40<i>分</i></div>
+        <div><b>マルマトリートメント</b><span>頭・顔・首・肩・デコルテを、ひと続きに。</span></div>
+      </li>
+      <li>
+        <div class="mrm__time">5<i>分</i></div>
+        <div><b>整える時間</b><span>すぐに起き上がらず、そのまま余韻を。</span></div>
+      </li>
+      <li>
+        <div class="mrm__time">5<i>分</i></div>
+        <div><b>お茶でひと息</b><span>体にやさしいお茶をご用意しています。</span></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== 施術前後の変化 ===== -->
+  <section class="mrm__sec mrm__sec--pale">
+    <p class="mrm__eyebrow">BEFORE / AFTER</p>
+    <h2 class="mrm__h2">施術前後の、<br>変化。</h2>
+    <p class="mrm__lead">こり固まった頭がゆるむと、両手ではさんだときの位置が変わります。</p>
+    <figure class="mrm__ba">
+      <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@f7165f6ee9e93b076a73352051c64cf3a4024ef2/assets/lp/before-after-01.webp" alt="施術前と施術後の比較。両手ではさんだ頭の幅が、施術後には狭くなっています。">
+      <figcaption>施術前 → 施術後</figcaption>
+    </figure>
+    <figure class="mrm__ba">
+      <img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@f7165f6ee9e93b076a73352051c64cf3a4024ef2/assets/lp/before-after-02.webp" alt="別のお客様の施術前と施術後の比較。両手ではさんだ頭の幅が、施術後には狭くなっています。">
+      <figcaption>施術前 → 施術後</figcaption>
+    </figure>
+    <p class="mrm__note">※ 実際のお客様のお写真です。<br>※ 変化の感じ方には個人差があります。</p>
+  </section>
+
+  <!-- ===== お客様の声 ===== -->
+  <section class="mrm__sec">
+    <p class="mrm__eyebrow">VOICE</p>
+    <h2 class="mrm__h2">お客様の声。</h2>
+    <div class="mrm__voice">
+
+      <article>
+        <div class="mrm__stars" aria-label="5段階評価のうち5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="mrm__who">30代・宗像市　S様<span>足裏ケア ＋ ヘッドマッサージ</span></p>
+        <p>1歳の娘の育児で上半身がガチガチに凝り固まり、日常生活がつらくなっていたためお願いしました。</p>
+        <p>施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。ご自宅でのサロンなので、友人の家を訪ねるような気持ちで通えるのも魅力です。</p>
+        <details class="mrm__more">
+          <summary>口コミの全文を読む</summary>
+          <p>今回初めて、足裏ケアとヘッドマッサージを受けに伺いました。</p>
+          <p>普段は靴下が苦手で素足で過ごすことが多いため、自分へのご褒美として足裏ケアをお願いしました。施術後は足裏の血色が良くなり、むくみもスッキリ。歩いた時の何とも言えない心地よい感覚が戻ってきて、とても感動しました。</p>
+          <p>ヘッドマッサージは、1歳になる娘の育児で上半身がガチガチに凝り固まり、頭痛まで出て日常生活がつらくなっていたためお願いしました。施術後は驚くほど眠気を感じ、全身の力がふわっと抜けていくような感覚に。血行や巡りが良くなったおかげか頭痛もなくなり、生活の質がぐんと上がりました。</p>
+          <p>また、ご自宅でサロンをされているので、まるで友人の家を訪ねるような気軽な気持ちで通えるのも魅力です。サロン内は清潔感があり、とても居心地の良い空間でした。</p>
+          <p>心も体もリフレッシュできる素敵な時間をありがとうございました。これからも定期的に通って、体のメンテナンスをお願いしたいと思います。</p>
+        </details>
+      </article>
+
+      <article>
+        <div class="mrm__stars" aria-label="5段階評価のうち5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="mrm__who">50代・宗像市　K様<span>シミケア ＋ ヘッドマッサージ</span></p>
+        <p>毎月受けているヘッドマッサージが最高に気持ちよくて、自分へのご褒美に欠かせない時間になっています。</p>
+        <p>そして何より、オーナーの明美さんのセンスが抜群！ おすすめしてくれるものは、どれも本当に間違いがありません。サロン選びに迷っている方に、自信を持っておすすめしたい場所です。</p>
+      </article>
+
+      <article>
+        <div class="mrm__stars" aria-label="5段階評価のうち5"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.6l2.5 5.3 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8z" fill="currentColor"/></svg></div>
+        <p class="mrm__who">40代・宮若市　A様<span>ヘッドマッサージ ＋ 足裏角質ケア</span></p>
+        <p>宗像市でサロンをしていて、月1で宮若市から伺っています。ここでしか受けられないヘッドマッサージと足裏角質ケアをしていただいています。</p>
+        <p>ヘッドマッサージは、他店とは違い終わったあと顔のトーンアップを感じました。顔のくすみもとんで、気分もスッキリ！ リラックス効果も抜群です！</p>
+      </article>
+
+    </div>
+    <p class="mrm__note">Googleマップにいただいた口コミより掲載しています。<br>※ 感じ方には個人差があります。</p>
+  </section>
+
+  <!-- ===== セラピスト紹介 ===== -->
+  <section class="mrm__sec mrm__sec--pale">
+    <p class="mrm__eyebrow">THERAPIST</p>
+    <h2 class="mrm__h2">施術するのは、<br>この人です。</h2>
+    <div class="mrm__thera">
+      <figure style="margin:0;"><img src="https://cdn.jsdelivr.net/gh/3844akemi3844-ship-it/note-kit@f7165f6ee9e93b076a73352051c64cf3a4024ef2/assets/lp/therapist-photo.webp" alt="A＋salon 代表 後藤あけみ"></figure>
+      <div>
+        <div class="mrm__name">後藤 あけみ</div>
+        <p class="mrm__role">歯科衛生士<br>A＋salon 代表</p>
+      </div>
+    </div>
+    <div class="mrm__thera-text">
+      <p>歯科衛生士として20年以上、お口と体の健康に向き合ってきました。</p>
+      <p>自分自身の健康を見直すできごとをきっかけに、「中からのケア」と「外からのケア」を同時に叶えられるサロンをはじめました。</p>
+      <p>忙しい毎日の中で、少し肩の力が抜ける場所でありたい。そんな想いで、お一人おひとりに丁寧に向き合っています。</p>
+    </div>
+    <div class="mrm__credit">
+      <p>資格・ディプロマ</p>
+      <ul>
+        <li>歯科衛生士（実務20年以上）</li>
+        <li>マルマトリートメント ディプロマ</li>
+        <li>韓国式足裏角質ケア ディプロマ</li>
+        <li>シミケア ディプロマ</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 料金・ご予約 ===== -->
+  <section class="mrm__sec mrm__sec--navy" id="price">
+    <p class="mrm__eyebrow">PRICE</p>
+    <h2 class="mrm__h2">はじめての方へ。</h2>
+    <div class="mrm__offer">
+      <p class="mrm__tag">初回限定</p>
+      <p class="mrm__menu">マルマトリートメント（60分）</p>
+      <p class="mrm__amount">
+        <span class="mrm__was">通常 <s>¥11,000</s></span>
+        <span class="mrm__now">¥9,800<span>税込</span></span>
+      </p>
+      <ul class="mrm__incl">
+        <li>事前カウンセリングつき</li>
+        <li>頭・顔・首・肩・デコルテまで</li>
+        <li>ゆったり60分</li>
+        <li>体にやさしいお茶をご用意</li>
+      </ul>
+      <a class="mrm__btn" href="https://utage-system.com/p/iQg0VtOIWxzt">この価格で予約する</a>
+      <a class="mrm__btn mrm__btn--line" href="https://lin.ee/52UReQL">まずはLINEで相談する</a>
+    </div>
+    <p class="mrm__note">※ はじめてご来店の方に限ります。<br>※ ご予約時に「ホームページを見ました」とお伝えください。<br>※ 5名様に達し次第、受付を終了します。</p>
+  </section>
+
+  <!-- ===== よくある質問 ===== -->
+  <section class="mrm__sec">
+    <p class="mrm__eyebrow">Q &amp; A</p>
+    <h2 class="mrm__h2">よくある質問。</h2>
+    <div class="mrm__faq">
+
+      <details>
+        <summary class="mrm__q"><span class="mrm__mark">Q</span><span>オイルは使いますか？</span><svg class="mrm__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mrm__a"><span class="mrm__mark">A</span><span>使用しません。髪がベタつかないので、施術後もそのままお帰りいただけます。</span></div>
+      </details>
+
+      <details>
+        <summary class="mrm__q"><span class="mrm__mark">Q</span><span>メイクをしたままでも大丈夫ですか？</span><svg class="mrm__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mrm__a"><span class="mrm__mark">A</span><span>基本的にはそのままで受けていただけます。気になる方はお気軽にご相談ください。</span></div>
+      </details>
+
+      <details>
+        <summary class="mrm__q"><span class="mrm__mark">Q</span><span>はじめてでも大丈夫ですか？</span><svg class="mrm__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mrm__a"><span class="mrm__mark">A</span><span>もちろんです。最初にお悩みや体の状態をうかがってから、心地よい強さで施術いたします。</span></div>
+      </details>
+
+      <details>
+        <summary class="mrm__q"><span class="mrm__mark">Q</span><span>駐車場はありますか？</span><svg class="mrm__chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 9l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+        <div class="mrm__a"><span class="mrm__mark">A</span><span>はい、ご用意しています。場所はご予約後にあらためてご案内いたします。</span></div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===== サロン情報 ===== -->
+  <section class="mrm__sec mrm__sec--pale mrm__salon">
+    <p class="mrm__eyebrow">SALON</p>
+    <h2 class="mrm__h2">サロンについて。</h2>
+    <dl class="mrm__info">
+      <div><dt>所在地</dt><dd>福岡県宗像市くりえいと<br><small>※ 詳しい場所はご予約後にご案内します</small></dd></div>
+      <div><dt>営業時間</dt><dd>9:00〜17:00<br><small>※ 土曜日は午前のみ</small></dd></div>
+      <div><dt>定休日</dt><dd>日曜日・祝日</dd></div>
+      <div><dt>駐車場</dt><dd>あり</dd></div>
+      <div><dt>ご予約</dt><dd><a class="mrm__link" href="https://lin.ee/52UReQL">公式LINE</a>、または<a class="mrm__link" href="https://www.instagram.com/iyashino_oheya" target="_blank" rel="noopener">Instagram</a>のプロフィールから</dd></div>
+    </dl>
+  </section>
+
+  <!-- ===== 最後のご案内 ===== -->
+  <section class="mrm__sec mrm__sec--navy" id="closing">
+    <h2 class="mrm__h2" style="text-align:center;">毎日がんばっている<br>あなたに、<br>頭からゆるむ時間を。</h2>
+    <a class="mrm__btn" id="mrm-closing-btn" href="https://utage-system.com/p/iQg0VtOIWxzt">初回 ¥9,800 で予約する</a>
+    <a class="mrm__btn mrm__btn--line" href="https://lin.ee/52UReQL">LINEで相談する</a>
+  </section>
+
+  <p class="mrm__foot">A＋salon ／ 完全予約制・女性専用<br>福岡県宗像市くりえいと ／ 駐車場完備</p>
+
+</div>
+
+<!-- 画面下に出しっぱなしの予約ボタン（不要ならこのブロックを削除してください） -->
+<div class="mrm-fixed">
+  <a href="https://utage-system.com/p/iQg0VtOIWxzt">初回 ¥9,800 で予約する</a>
+</div>
+
+<script>
+/* 最後のボタンが画面に入ったら、下の固定ボタンを引っ込める */
+(function () {
+  var bar = document.querySelector(".mrm-fixed");
+  var target = document.getElementById("mrm-closing-btn");
+  if (!bar || !target || !("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { bar.classList.toggle("is-hidden", e.isIntersecting); });
+  }, { threshold: 0.4 });
+  io.observe(target);
+})();
+</script>
+
+</body>
+</html>
