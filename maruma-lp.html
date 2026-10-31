@@ -238,10 +238,15 @@ body{ margin:0; background:#eae4de; padding-bottom:calc(86px + env(safe-area-ins
 }
 .mrm__flow li:last-child{ border-bottom:1px solid var(--pink); }
 .mrm__time{
-  font-family:"Shippori Mincho",serif; font-size:19px; letter-spacing:.02em; padding-top:2px;
+  font-family:"Shippori Mincho",serif; font-size:20px; letter-spacing:.06em;
+  color:var(--soft); padding-top:1px;
 }
-.mrm__time i{ font-style:normal; font-size:.62em; margin-left:1px; color:var(--soft); }
 .mrm__flow b{ display:block; font-size:15px; letter-spacing:.06em; }
+.mrm__flow b em{
+  display:inline-block; margin-left:8px; padding:2px 9px;
+  background:var(--pink); color:var(--navy);
+  font-style:normal; font-size:11px; font-weight:700; letter-spacing:.08em; vertical-align:2px;
+}
 .mrm__flow span{ font-size:12.5px; line-height:1.85; color:var(--soft); }
 
 /* ---------- ビフォーアフター ---------- */
@@ -473,22 +478,22 @@ body{ margin:0; background:#eae4de; padding-bottom:calc(86px + env(safe-area-ins
   <!-- ===== 60分の流れ ===== -->
   <section class="mrm__sec">
     <p class="mrm__eyebrow">FLOW</p>
-    <h2 class="mrm__h2">60分の、<br>過ごし方。</h2>
+    <h2 class="mrm__h2">ご来店から、<br>お帰りまで。</h2>
     <ul class="mrm__flow">
       <li>
-        <div class="mrm__time">10<i>分</i></div>
+        <div class="mrm__time">01</div>
         <div><b>カウンセリング</b><span>お悩みと、いまの体の状態をうかがいます。</span></div>
       </li>
       <li>
-        <div class="mrm__time">40<i>分</i></div>
-        <div><b>マルマトリートメント</b><span>頭・顔・首・肩・デコルテを、ひと続きに。</span></div>
+        <div class="mrm__time">02</div>
+        <div><b>マルマトリートメント<em>約60分</em></b><span>頭・顔・首・肩・デコルテを、ひと続きに。</span></div>
       </li>
       <li>
-        <div class="mrm__time">5<i>分</i></div>
+        <div class="mrm__time">03</div>
         <div><b>整える時間</b><span>すぐに起き上がらず、そのまま余韻を。</span></div>
       </li>
       <li>
-        <div class="mrm__time">5<i>分</i></div>
+        <div class="mrm__time">04</div>
         <div><b>お茶でひと息</b><span>体にやさしいお茶をご用意しています。</span></div>
       </li>
     </ul>
